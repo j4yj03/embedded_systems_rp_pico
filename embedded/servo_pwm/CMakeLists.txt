@@ -1,5 +1,5 @@
 add_executable(servo_pwm
-        servo_pwm.c
+        servo_pwm_button.c
         )
 
 # pull in common dependencies and additional pwm hardware support
