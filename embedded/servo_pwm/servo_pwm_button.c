@@ -10,7 +10,7 @@
 /* one timeout for each gpio, set as debounce_timeouts[gpio] */
 static volatile absolute_time_t debounce_timeouts[NGPIO] = { 0u };
 
-static SERVO servo;
+static SERVO * servo;
 
 
 /** debounce function takes gpio pin to debounce as argument and
@@ -40,7 +40,7 @@ void on_pwm_wrap()
     pwm_set_gpio_level(PWM_OUT, servo->duty);
 }
 
-void on_button_edge(uint gpio, uint32_t events)
+void on_button_falling(uint gpio, uint32_t events)
 {
     /* check/register debounce on gpio */
     if (debounce (gpio)) 
@@ -52,10 +52,10 @@ void on_button_edge(uint gpio, uint32_t events)
     {
         default: break;
         case SERVO_BUTTON_L:
-            servo->duty = servo->duty + SERVO_STEP
+            servo->duty = servo->duty + SERVO_STEP;
             break;
         case SERVO_BUTTON_R:
-            servo->duty = servo->duty - SERVO_STEP
+            servo->duty = servo->duty - SERVO_STEP;
             break;
     }
 }
@@ -70,7 +70,7 @@ int main()
     // Find out which PWM slice is connected to GPIO 16 (it's slice 16)
     uint16_t slice_num = pwm_gpio_to_slice_num(PWM_OUT);
 
-    servo->pwm_slice_num = slice_num
+    servo->pwm_slice_num = slice_num;
 
     // Mask our slice's IRQ output into the PWM block's single interrupt line,
     // and register our interrupt handler
@@ -83,15 +83,19 @@ int main()
     // counter is allowed to wrap over its maximum range (0 to 2**16-1)
     pwm_config config = pwm_get_default_config();
 
-    servo->pwm_config = config
+    
 
     // Set divider, target requeny is 50Hz or 20ms
     const float divider = _XTAL_FREQ / _PWM_FREQ / 4096 / 16; //12bit (8.4) mask + shift right 4 Bit
     pwm_config_set_clkdiv(&config, divider);
 
+    //servo->pwm_devider = divider;
+
     // Set new wrap to adjust
     const uint16_t wrap = _XTAL_FREQ / divider / _PWM_FREQ - 1;
     pwm_config_set_wrap(&config, wrap);
+
+    //servo->pwm_wrap = wrap;
 
     // Load the configuration into our PWM slice, and set it running.
     pwm_init(slice_num, &config, true);
@@ -105,7 +109,7 @@ int main()
     gpio_pull_up (SERVO_BUTTON_R);
 
     /* set button_callback */
-    gpio_set_irq_enabled_with_callback (SERVO_BUTTON_L, GPIO_IRQ_EDGE_FALL, true, button_callback);
+    gpio_set_irq_enabled_with_callback (SERVO_BUTTON_L, GPIO_IRQ_EDGE_FALL, true, on_button_falling);
     gpio_set_irq_enabled (SERVO_BUTTON_R, GPIO_IRQ_EDGE_FALL, true);
 
 

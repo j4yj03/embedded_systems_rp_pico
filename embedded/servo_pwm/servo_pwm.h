@@ -17,6 +17,7 @@
 #define SERVO_BUTTON_L 18
 #define SERVO_BUTTON_R 19
 
+#define NGPIO          2
 
 
 #define SERVO_MIN 1638
@@ -25,11 +26,12 @@
 #define SERVO_STEP 32
 
 typedef struct {
-    uint16_t gpio;
-    uint16_t pwm_slice_num;
-    uint16_t pwm_config;
+    unsigned int gpio;
+    unsigned int pwm_slice_num;
+    //unsigned int pwm_wrap;
+    //float pwm_devider;
 
-    uint16_t duty;
+    unsigned int duty;
 } SERVO;
 
 
