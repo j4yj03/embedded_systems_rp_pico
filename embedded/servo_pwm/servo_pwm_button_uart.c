@@ -10,7 +10,7 @@
 /* one timeout for each gpio, set as debounce_timeouts[gpio] 
 static volatile absolute_time_t debounce_timeouts[NGPIO] = { 0u };
 */
-static SERVO servo;
+static volatile SERVO servo;
 
 struct repeating_timer delay_timer;
 struct repeating_timer cont_timer;
@@ -70,11 +70,12 @@ bool debounce (uint gpio)
 */
 
 
-void change_duty_cycle(uint gpio)
+void change_duty_cycle()
 {
+
     uint16_t duty;
 
-    switch(gpio)
+    switch(servo.gpio)
     {
         default: break;
         case SERVO_BUTTON_L:
@@ -106,9 +107,7 @@ bool cont_timer_isr(struct repeating_timer *t)
 
     //uint * gpio = t->user_data;
 
-    uint gpio = servo.gpio;
-
-    change_duty_cycle(gpio);
+    change_duty_cycle();
 
     return true;
 }
@@ -117,9 +116,6 @@ bool delay_timer_isr(struct repeating_timer *t)
 {
 
     //void * gpio = t->user_data;
-
-    
-    //change_duty_cycle(&gpio);
 
     cancel_repeating_timer(t);
 
@@ -151,6 +147,8 @@ void on_button(uint gpio, uint32_t events)
         return;
     }
     */
+
+    servo.gpio = gpio;
     
     switch(events)
     {
@@ -160,8 +158,7 @@ void on_button(uint gpio, uint32_t events)
                                 cancel_repeating_timer(&cont_timer);
                                 break;
         case GPIO_IRQ_EDGE_RISE:   // button release
-                                change_duty_cycle(gpio);
-                                servo.gpio = gpio;
+                                change_duty_cycle();
                                 add_repeating_timer_ms(TIMER_DELAY_MS, delay_timer_isr, NULL, &delay_timer);
                                 break;
 
