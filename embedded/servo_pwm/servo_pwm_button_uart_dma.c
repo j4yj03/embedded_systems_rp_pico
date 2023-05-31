@@ -6,28 +6,31 @@
 #include "hardware/pwm.h"
 #include "hardware/gpio.h"
 #include "hardware/uart.h"
+#include <hardware/dma.h>
 
 /* one timeout for each gpio, set as debounce_timeouts[gpio] 
 static volatile absolute_time_t debounce_timeouts[NGPIO] = { 0u };
 */
 static SERVO servo;
 
+// The buffer size needs to be a power of two and alignment must be the same
+__attribute__((aligned(8)))
+static char buffer[8];
+
 struct repeating_timer delay_timer;
 struct repeating_timer cont_timer;
 
 
-/**
- * C++ version 0.4 char* style "itoa":
- * Written by Lukás Chmela
- * Released under GPLv3.
- */
-char* itoa(int value, char* result, int base) 
+char* itoa(int value) 
 {
-    // check that the base if valid
-    if (base < 2 || base > 36) { *result = '\0'; return result; }
+    char result[8];
+
 
     char* ptr = result, *ptr1 = result, tmp_char;
     int tmp_value;
+
+    // Apply negative sign
+    if (tmp_value < 0) *ptr++ = '-';
 
     do 
     {
@@ -36,15 +39,8 @@ char* itoa(int value, char* result, int base)
         *ptr++ = "zyxwvutsrqponmlkjihgfedcba9876543210123456789abcdefghijklmnopqrstuvwxyz" [35 + (tmp_value - value * base)];
     } while ( value );
 
-    // Apply negative sign
-    if (tmp_value < 0) *ptr++ = '-';
-    *ptr-- = '\0';
-    while(ptr1 < ptr) 
-    {
-        tmp_char = *ptr;
-        *ptr--= *ptr1;
-        *ptr1++ = tmp_char;
-    }
+
+
     return result;
 }
 
@@ -70,9 +66,11 @@ bool debounce (uint gpio)
 */
 
 
-void change_duty_cycle(uint gpio)
+void change_duty_cycle()
 {
-    uint16_t duty;
+    uint duty;
+
+    uint gpio = servo.gpio;
 
     switch(gpio)
     {
@@ -81,23 +79,26 @@ void change_duty_cycle(uint gpio)
             duty = servo.duty + SERVO_STEP;
             servo.duty = duty > SERVO_MAX ? SERVO_MAX : duty;
 
+            buffer = "--> " + itoa(duty) + "\n";
 
             break;
         case SERVO_BUTTON_R:
             duty = servo.duty - SERVO_STEP;
             servo.duty = duty < SERVO_MIN ? SERVO_MIN : duty;
+
+            buffer = "<--" + itoa(duty) + "\n";
             break;
     }
 
-    char snum[20];
+    /*
 
     uart_puts(UART_ID, "GPIO: ");
-    uart_puts(UART_ID, itoa(gpio, snum, 10));
+    uart_puts(UART_ID, itoa(gpio, buffer, 10));
     uart_puts(UART_ID, "\n\r");
     uart_puts(UART_ID, "DC: ");
-    uart_puts(UART_ID, itoa(duty, snum, 10));
+    uart_puts(UART_ID, itoa(duty, buffer, 10));
     uart_puts(UART_ID, "\n\r");
-
+    */
 }
 
 
@@ -108,7 +109,7 @@ bool cont_timer_isr(struct repeating_timer *t)
 
     uint gpio = servo.gpio;
 
-    change_duty_cycle(gpio);
+    change_duty_cycle();
 
     return true;
 }
@@ -160,7 +161,7 @@ void on_button(uint gpio, uint32_t events)
                                 cancel_repeating_timer(&cont_timer);
                                 break;
         case GPIO_IRQ_EDGE_RISE:   // button release
-                                change_duty_cycle(gpio);
+                                change_duty_cycle();
                                 servo.gpio = gpio;
                                 add_repeating_timer_ms(TIMER_DELAY_MS, delay_timer_isr, NULL, &delay_timer);
                                 break;
@@ -191,12 +192,9 @@ void on_uart_rx()
     }
 }
 
-int main()
+
+static void configure_gpio()
 {
-
-     // Set up our UART
-    uart_init(UART_ID, BAUD_RATE);
-
     gpio_set_function(UART_TX_PIN, GPIO_FUNC_UART);
     gpio_set_function(UART_RX_PIN, GPIO_FUNC_UART);
     
@@ -210,35 +208,15 @@ int main()
     gpio_init (SERVO_BUTTON_R);
     gpio_pull_up (SERVO_BUTTON_R);
 
+}
 
-    
-    // Set UART flow control CTS/RTS, we don't want these, so turn them off
-    uart_set_hw_flow(UART_ID, false, false);
-
-    // Set our data format
-    uart_set_format(UART_ID, DATA_BITS, STOP_BITS, PARITY);
-
-    // Turn off FIFO's - we want to do this character by character
-    uart_set_fifo_enabled(UART_ID, false);
-
-    // Set up a RX interrupt
-    // We need to set up the handler first
-    // Select correct interrupt for the UART we are using
-    int UART_IRQ = UART_ID == uart0 ? UART0_IRQ : UART1_IRQ;
-
-    // And set up and enable the interrupt handlers
-    irq_set_exclusive_handler(UART_IRQ, on_uart_rx);
+static void configure_pwm()
+{
 
     // Find out which PWM slice is connected to GPIO 16 (it's slice 16)
     uint16_t slice_num = pwm_gpio_to_slice_num(PWM_OUT);
 
     servo.pwm_slice_num = slice_num;
-
-    // Mask our slice's IRQ output into the PWM block's single interrupt line,
-    // and register our interrupt handler
-    pwm_clear_irq(slice_num);
-    pwm_set_irq_enabled(slice_num, true);
-    irq_set_exclusive_handler(PWM_IRQ_WRAP, on_pwm_wrap);
     
 
     // Get some sensible defaults for the slice configuration. By default, the
@@ -266,12 +244,63 @@ int main()
 
     servo.duty = SERVO_INIT;
 
+}
+
+static void configure_uart()
+{
+    // Set up our UART
+    uart_init(UART_ID, BAUD_RATE);
+
+    // Set UART flow control CTS/RTS, we don't want these, so turn them off
+    uart_set_hw_flow(UART_ID, false, false);
+
+    // Set our data format
+    uart_set_format(UART_ID, DATA_BITS, STOP_BITS, PARITY);
+
+    // Turn off FIFO's - we want to do this character by character
+    uart_set_fifo_enabled(UART_ID, false);
+
+    // Set up a RX interrupt
+    // We need to set up the handler first
+    // Select correct interrupt for the UART we are using
+    int UART_IRQ = UART_ID == uart0 ? UART0_IRQ : UART1_IRQ;
+
+    // And set up and enable the interrupt handlers
+    irq_set_exclusive_handler(UART_IRQ, on_uart_rx);
+
     uart_puts(UART_ID, "\n\rHello, Servo!\n\r");
 
+}
 
-    sleep_ms(SLEEP_MS);
 
-    // set button_callback and enable
+
+static void configure_dma() 
+{
+    dma_channel_config config = dma_channel_get_default_config(DMA_CHANNEL);
+    channel_config_set_transfer_data_size(&config, DMA_SIZE_8);
+
+    // The read and write address are constant
+    channel_config_set_read_increment(&config, false);
+    channel_config_set_write_increment(&config, false);
+
+    // 
+    channel_config_set_dreq(&config, DREQ_UART0_TX);
+
+    // Transmit '2^32 - 1' symbols, this should suffice for any practical case,
+    // otherwise, the channel could be triggered again
+    dma_channel_configure(
+        channel,    // Channel to be configured
+        &config,    // The configuration we just created
+        &uart0_hw->dr,  // The initial write address
+        &buffer,         // The initial read address
+        count_of(buffer),     // Number of transfers; in this case each is 1 byte.
+        true                  // Start immediately.
+    );
+}
+
+static void configure_irq()
+{
+        // set button_callback and enable
     gpio_set_irq_enabled_with_callback (SERVO_BUTTON_L, GPIO_IRQ_EDGE_FALL + GPIO_IRQ_EDGE_RISE, true, on_button);
     gpio_set_irq_enabled (SERVO_BUTTON_R, GPIO_IRQ_EDGE_FALL + GPIO_IRQ_EDGE_RISE, true);
 
@@ -280,8 +309,33 @@ int main()
     // enable the UART to send interrupts - RX only
     uart_set_irq_enables(UART_ID, true, false);
 
-    // Enable pwm wrap (+ global?) interrupt
+    // Mask our slice's IRQ output into the PWM block's single interrupt line,
+    // and register our interrupt handler
+    pwm_clear_irq(slice_num);
+    pwm_set_irq_enabled(slice_num, true);
+    irq_set_exclusive_handler(PWM_IRQ_WRAP, on_pwm_wrap);
+
+    // Enable pwm wrap interrupt
     irq_set_enabled(PWM_IRQ_WRAP, true);
+
+}
+
+int main()
+{
+  
+    configure_gpio();
+
+    configure_uart();
+
+    configure_pwm();
+
+    configure_dma();
+    
+    configure_irq();
+
+
+    sleep_ms(SLEEP_MS);
+
 
     // Everything after this point happens in the PWM interrupt handler
     while (1)
