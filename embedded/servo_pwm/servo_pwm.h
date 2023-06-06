@@ -32,13 +32,16 @@
 
 // uart defines
 #define UART_ID uart0
-#define BAUD_RATE 115200
+#define BAUD_RATE 57600 //115200
 #define DATA_BITS 8
 #define STOP_BITS 1
 #define PARITY    UART_PARITY_NONE
 
 // dma define
 #define DMA_CHANNEL 0
+
+#define DMA_RING_SIZE 4
+#define MAX_STRING_LEN (1 << DMA_RING_SIZE)
 
 
 
