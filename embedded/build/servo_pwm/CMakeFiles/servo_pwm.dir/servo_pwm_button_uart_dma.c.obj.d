@@ -71,6 +71,9 @@ servo_pwm/CMakeFiles/servo_pwm.dir/servo_pwm_button_uart_dma.c.obj: \
  d:\vsrm\armcc\10_2021_10\arm-none-eabi\include\sys\sched.h \
  d:\vsrm\armcc\10_2021_10\arm-none-eabi\include\machine\types.h \
  d:\vsrm\armcc\10_2021_10\arm-none-eabi\include\sys\stdio.h \
+ d:\vsrm\armcc\10_2021_10\arm-none-eabi\include\stdlib.h \
+ d:\vsrm\armcc\10_2021_10\arm-none-eabi\include\machine\stdlib.h \
+ d:\vsrm\armcc\10_2021_10\arm-none-eabi\include\alloca.h \
  d:\vsrm\armcc\10_2021_10\arm-none-eabi\include\string.h \
  d:\vsrm\armcc\10_2021_10\arm-none-eabi\include\sys\_locale.h \
  d:\vsrm\armcc\10_2021_10\arm-none-eabi\include\strings.h \

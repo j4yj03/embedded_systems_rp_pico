@@ -10,7 +10,7 @@
 // define time constants
 //#define DEBOUNCE_MS 50
 #define SLEEP_MS 200
-#define TIMER_DELAY_MS 300
+#define TIMER_DELAY_MS 200
 #define TIMER_CONST_MS 2
 
 

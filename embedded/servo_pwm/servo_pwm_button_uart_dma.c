@@ -1,6 +1,7 @@
 #include "servo_pwm.h"
 #include "pico/stdlib.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "pico/time.h"
 #include "hardware/irq.h"
@@ -93,13 +94,32 @@ bool debounce (uint gpio)
 */
 
 
+void fprintf_(char * s)
+{
+
+    //while (!uart_is_writable(UART_ID))
+    //        tight_loop_contents();
+
+    //strcpy(buffer, s);
+
+    memset(buffer, 0, MAX_STRING_LEN);
+    memcpy(buffer, s, MAX_STRING_LEN);
+    //memcpy(buffer, s, MAX_STRING_LEN);
+
+    dma_channel_hw_addr(DMA_CHANNEL)->al3_read_addr_trig = (uintptr_t) buffer;
+    //dma_channel_transfer_from_buffer_now(DMA_CHANNEL, buffer, DMA_SIZE_8);
+    
+}
+
 void change_duty_cycle()
 {
     uint duty;
 
     uint gpio = servo.gpio;
 
-    char string[8];
+    char * string = (char *) calloc(MAX_STRING_LEN, sizeof(char));
+    char * string_arrow = (char *) calloc(MAX_STRING_LEN, sizeof(char));
+    char * string_duty = (char *) calloc(4, sizeof(char));
 
     switch(gpio)
     {
@@ -108,28 +128,31 @@ void change_duty_cycle()
             duty = servo.duty + SERVO_STEP;
             servo.duty = duty > SERVO_MAX ? SERVO_MAX : duty;
 
-            //strcpy(buffer, "hi");
-            if (uart_is_writable(UART_ID))
-            {
-                strcpy(buffer, strcat( itoa(duty, string, 10), " <--\n\r"));
-            }
-
+            strcpy(string_arrow, "<--\n\r");
+            
             break;
         case SERVO_BUTTON_R:
             duty = servo.duty - SERVO_STEP;
             servo.duty = duty < SERVO_MIN ? SERVO_MIN : duty;
 
-            //strcpy(buffer, "ho");
-            if (uart_is_writable(UART_ID))
-            {
-                
-                strcpy(buffer, strcat( itoa(duty, string, 10), " -->\n\r"));
-            }
+            strcpy(string_arrow, "-->\n\r"); 
             
             break;
     }
 
-    
+    if (duty == servo.duty)
+    {
+   
+        strcpy(string, strcat(itoa(duty, string_duty, 10), string_arrow));
+
+        fprintf_(string);
+    //}
+    }
+
+    free(string);
+    free(string_arrow);
+
+    //dma_channel_transfer_from_buffer_now(DMA_CHANNEL, &buffer, DMA_SIZE_8);
 
     //uart_puts(UART_ID, buffer);
 
@@ -195,6 +218,7 @@ void on_button(uint gpio, uint32_t events)
         return;
     }
     */
+   
    servo.gpio = gpio;
     
     switch(events)
@@ -227,9 +251,9 @@ void on_uart_rx()
             default:break;
 
             case 'a':
-                        change_duty_cycle(18);
+                        change_duty_cycle(SERVO_BUTTON_L);
                         break;
-            case 'd':   change_duty_cycle(19);
+            case 'd':   change_duty_cycle(SERVO_BUTTON_R);
                         break;
         }
 
@@ -293,20 +317,32 @@ static void configure_pwm()
 static void configure_uart()
 {
     // Set up our UART
-    uart_init(UART_ID, BAUD_RATE);
+    //uart_init(UART_ID, BAUD_RATE);
+
+    //uart_reset(UART_ID);
+    //uart_unreset(UART_ID);
+
+    uart_set_baudrate(UART_ID, BAUD_RATE);
 
     // Set UART flow control CTS/RTS, we don't want these, so turn them off
-    uart_set_hw_flow(UART_ID, false, false);
+    uart_set_hw_flow(UART_ID, true, false);
 
     // Set our data format
     uart_set_format(UART_ID, DATA_BITS, STOP_BITS, PARITY);
 
+    // Enable the UART, both TX and RX
+    uart_get_hw(UART_ID)->cr = UART_UARTCR_UARTEN_BITS | UART_UARTCR_TXE_BITS | UART_UARTCR_RXE_BITS;
+
+
+    // Enable FIFOs
+    //hw_set_bits(&uart_get_hw(UART_ID)->lcr_h, UART_UARTLCR_H_FEN_RESET);
     // Turn off FIFO's - we want to do this character by character
-    // uart_set_fifo_enabled(UART_ID, false);
+    //uart_set_fifo_enabled(UART_ID, false);
 
+    // Transmit DMA enable
+    uart_get_hw(UART_ID)->dmacr = UART_UARTDMACR_TXDMAE_BITS;
 
-
-    uart_puts(UART_ID, "\n\rHello, Servo!\n\r");
+    uart_puts(UART_ID, "\n\rHello, uart!\n\r");
 
 }
 
@@ -316,6 +352,8 @@ static void configure_dma()
 {
     dma_channel_config config = dma_channel_get_default_config(DMA_CHANNEL);
 
+    memcpy(buffer, "Hello, dma!\n\r", MAX_STRING_LEN);
+
 
     // 8 bit per transfers. read address increments after each transfer
     channel_config_set_transfer_data_size(&config, DMA_SIZE_8);
@@ -323,7 +361,7 @@ static void configure_dma()
     channel_config_set_write_increment(&config, false);
     channel_config_set_read_increment(&config, true);
 
-    channel_config_set_ring(&config, false, DMA_RING_SIZE);
+    channel_config_set_ring(&config, false, MAX_STRING_LEN);
     // set data request
     channel_config_set_dreq(&config, uart_get_dreq(UART_ID, true));
 
@@ -332,9 +370,20 @@ static void configure_dma()
         &config,    // The configuration we just created
         &uart_get_hw(UART_ID)->dr,  // The initial write address
         &buffer,         // The initial read address
-        count_of(buffer),     // Number of transfers; in this case each is 1 byte.
-        false                  // Start immediately.
+        MAX_STRING_LEN,     // Number of transfers; in this case each is 1 byte.
+        true                  // Start immediately.
     );
+    
+    
+    //strcpy(buffer, "\n\rhello DMA\n\r");
+
+    //dma_channel_hw_addr(DMA_CHANNEL)->al1_transfer_count_trig = MAX_STRING_LEN;
+
+    //sleep_ms(SLEEP_MS);
+
+    //strcpy(buffer, "2+hello DMA");
+
+   // dma_channel_transfer_to_buffer_now(DMA_CHANNEL, &uart_get_hw(UART_ID)->dr, DMA_SIZE_8);
 }
 
 static void configure_irq()
@@ -383,6 +432,8 @@ int main()
 
 
     sleep_ms(SLEEP_MS);
+
+    
 
 
     // Everything after this point happens in the PWM interrupt handler
