@@ -11,7 +11,7 @@
 //#define DEBOUNCE_MS 50
 #define SLEEP_MS 200
 #define TIMER_DELAY_MS 200
-#define TIMER_CONST_MS 2
+#define TIMER_CONST_MS 4
 
 
 // define GPIOS
@@ -40,7 +40,7 @@
 // dma define
 #define DMA_CHANNEL 0
 
-#define DMA_RING_SIZE 4
+#define DMA_RING_SIZE 5
 #define MAX_STRING_LEN (1 << DMA_RING_SIZE)
 
 

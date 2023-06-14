@@ -94,7 +94,7 @@ bool debounce (uint gpio)
 */
 
 
-void fprintf_(char * s)
+void fprint(char * s)
 {
 
     //while (!uart_is_writable(UART_ID))
@@ -128,14 +128,14 @@ void change_duty_cycle()
             duty = servo.duty + SERVO_STEP;
             servo.duty = duty > SERVO_MAX ? SERVO_MAX : duty;
 
-            strcpy(string_arrow, "<--\n\r");
+            strcpy(string_arrow, " <--\n\r");
             
             break;
         case SERVO_BUTTON_R:
             duty = servo.duty - SERVO_STEP;
             servo.duty = duty < SERVO_MIN ? SERVO_MIN : duty;
 
-            strcpy(string_arrow, "-->\n\r"); 
+            strcpy(string_arrow, " -->\n\r"); 
             
             break;
     }
@@ -145,26 +145,13 @@ void change_duty_cycle()
    
         strcpy(string, strcat(itoa(duty, string_duty, 10), string_arrow));
 
-        fprintf_(string);
-    //}
+        fprint(string);
     }
 
     free(string);
     free(string_arrow);
+    free(string_duty);
 
-    //dma_channel_transfer_from_buffer_now(DMA_CHANNEL, &buffer, DMA_SIZE_8);
-
-    //uart_puts(UART_ID, buffer);
-
-    /*
-
-    uart_puts(UART_ID, "GPIO: ");
-    uart_puts(UART_ID, itoa(gpio, buffer, 10));
-    uart_puts(UART_ID, "\n\r");
-    uart_puts(UART_ID, "DC: ");
-    uart_puts(UART_ID, itoa(duty, buffer, 10));
-    uart_puts(UART_ID, "\n\r");
-    */
 }
 
 
@@ -352,8 +339,6 @@ static void configure_dma()
 {
     dma_channel_config config = dma_channel_get_default_config(DMA_CHANNEL);
 
-    memcpy(buffer, "Hello, dma!\n\r", MAX_STRING_LEN);
-
 
     // 8 bit per transfers. read address increments after each transfer
     channel_config_set_transfer_data_size(&config, DMA_SIZE_8);
@@ -371,19 +356,11 @@ static void configure_dma()
         &uart_get_hw(UART_ID)->dr,  // The initial write address
         &buffer,         // The initial read address
         MAX_STRING_LEN,     // Number of transfers; in this case each is 1 byte.
-        true                  // Start immediately.
+        false                  // Start immediately.
     );
+
+    fprint("Hello, dma!\n\r");
     
-    
-    //strcpy(buffer, "\n\rhello DMA\n\r");
-
-    //dma_channel_hw_addr(DMA_CHANNEL)->al1_transfer_count_trig = MAX_STRING_LEN;
-
-    //sleep_ms(SLEEP_MS);
-
-    //strcpy(buffer, "2+hello DMA");
-
-   // dma_channel_transfer_to_buffer_now(DMA_CHANNEL, &uart_get_hw(UART_ID)->dr, DMA_SIZE_8);
 }
 
 static void configure_irq()
