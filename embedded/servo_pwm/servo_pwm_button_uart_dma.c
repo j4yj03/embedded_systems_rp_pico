@@ -240,8 +240,6 @@ void on_uart_rx()
         fprint(string);
         */
 
-
-       
         servo.gpio = ch - SERVO_UART_OFFSET;
 
         change_duty_cycle();
