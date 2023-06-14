@@ -227,24 +227,30 @@ void on_button(uint gpio, uint32_t events)
 }
 
 void on_uart_rx() 
-
 {
 
-    while (uart_is_readable(UART_ID)) {
+    while (uart_is_readable(UART_ID)) 
+    {
         uint8_t ch = uart_getc(UART_ID);
+        /*
+        char * string = (char *) calloc(MAX_STRING_LEN, sizeof(char));
 
-        switch(ch)
-        {
-            default:break;
+        itoa(ch, string, 10);
 
-            case 'a':
-                        change_duty_cycle(SERVO_BUTTON_L);
-                        break;
-            case 'd':   change_duty_cycle(SERVO_BUTTON_R);
-                        break;
-        }
+        fprint(string);
+        */
+
+
+       
+        servo.gpio = ch - SERVO_UART_OFFSET;
+
+        change_duty_cycle();
+
+        //free(string);
 
     }
+
+    
 }
 
 
@@ -337,6 +343,8 @@ static void configure_uart()
 
 static void configure_dma() 
 {
+    char * string = (char *) calloc(MAX_STRING_LEN, sizeof(char));
+
     dma_channel_config config = dma_channel_get_default_config(DMA_CHANNEL);
 
 
@@ -359,7 +367,11 @@ static void configure_dma()
         false                  // Start immediately.
     );
 
-    fprint("Hello, dma!\n\r");
+    strcpy(string, "Hello, dma!\n\r"); 
+
+    fprint(string);
+
+    free(string);
     
 }
 

@@ -29,10 +29,11 @@
 #define SERVO_INIT 4096
 #define SERVO_MAX 8192
 #define SERVO_STEP 16
+#define SERVO_UART_OFFSET 31 // make '1'and '2' valid characters to change dutycycle
 
 // uart defines
 #define UART_ID uart0
-#define BAUD_RATE 57600 //115200
+#define BAUD_RATE 115200
 #define DATA_BITS 8
 #define STOP_BITS 1
 #define PARITY    UART_PARITY_NONE
