@@ -7,10 +7,10 @@
 
 // GPIOs
 
-#define HSYNC_A 9
-#define HSYNC_B 8
-#define VSYNC_A 7
-#define VSYNC_B 6
+#define HSYNC_B 9   // PWM Channel 4B
+#define HSYNC_A 8   // PWM Channel 4A
+#define VSYNC_B 7   // PWM Channel 3B
+#define VSYNC_A 6   // PWM Channel 3A
 
 
 // Duty cycles
@@ -20,7 +20,13 @@
 
 
 
+static uint16_t slice_num_hsync;
 
+static uint16_t slice_num_vsync;
+
+static pwm_config hsync_config;
+
+static pwm_config vsync_config;
 
 
 

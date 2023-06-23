@@ -1,5 +1,5 @@
 #include "vga.h"
-#include "vga_uart.h"
+
 
 
 /** \brief configure uart
@@ -27,6 +27,5 @@ static void configure_uart()
     uart_set_fifo_enabled(UART_ID, true);
 
 
-    uart_puts(UART_ID, "\n\rHello, uart!\n\r");
-
 }
+

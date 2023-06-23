@@ -11,6 +11,9 @@ int main()
 
     configure_uart();
 
+    
+    printf("Hello UART! \n\r")
+
     configure_pwm_hsync();
 
     configure_pwm_vsync();

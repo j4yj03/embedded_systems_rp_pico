@@ -1,6 +1,4 @@
 #include "vga.h"
-#include "vga_sync.h"
-
 
 
 /** \brief configure pwm channel for hsync
@@ -12,9 +10,9 @@ static inline void configure_pwm_hsync()
 
     const uint16_t hsync_wrap = _XTAL_FREQ / hsync_divider / _HSYNC_PWM_FREQ - 1;
 
-    const uint16_t slice_num_chan_hsync = pwm_gpio_to_slice_num(HSYNC_A);
+    slice_num_hsync = pwm_gpio_to_slice_num(HSYNC_A);
 
-    pwm_config hsync_config = {0, 0, 0};
+    hsync_config = {0, 0, 0};
 
     pwm_config_set_phase_correct(&hsync_config, false);
     pwm_config_set_clkdiv(&hsync_config, hsync_divider);
@@ -25,9 +23,9 @@ static inline void configure_pwm_hsync()
     gpio_set_function(HSYNC_A, GPIO_FUNC_PWM);
     gpio_set_function(HSYNC_B, GPIO_FUNC_PWM);
 
-    pwm_init(slice_num_chan_hsync, &hsync_config, false);
+    pwm_init(slice_num_hsync, &hsync_config, false);
 
-    pwm_set_both_levels(slice_num_chan_hsync, 0);
+    pwm_set_both_levels(slice_num_hsync, 0);
 
 }
 
@@ -40,9 +38,9 @@ static inline void configure_pwm_vsync()
 
     const uint16_t vsync_wrap = _XTAL_FREQ / vsync_divider / _VSYNC_PWM_FREQ - 1;
 
-    const uint16_t slice_num_vsync = pwm_gpio_to_slice_num(VSYNC_A);
+    slice_num_vsync = pwm_gpio_to_slice_num(VSYNC_A);
 
-    pwm_config vsync_config = {0, 0, 0};
+    vsync_config = {0, 0, 0};
 
     pwm_config_set_phase_correct(&vsync_config, false);
     pwm_config_set_clkdiv(&vsync_config, vsync_divider);

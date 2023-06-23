@@ -1,11 +1,17 @@
 #ifndef VGA_H
 #define	VGA_H
 
-#include "pico/stdlib.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "pico/time.h"
+
+#include "vga_sync.h"
+#include "vga_pixel.h"
+#include "vga_uart.h"
+
+//#include "pico/time.h"
+#include "pico/stdlib.h"
 #include "hardware/irq.h"
 #include "hardware/pwm.h"
 #include "hardware/gpio.h"
@@ -14,21 +20,13 @@
 
 
 
-
-
 // clocks
 #define _XTAL_FREQ 125e6
 
 #define SLEEP_MS 100
 
-typedef struct 
-{
-    unsigned int r;
-    unsigned int g;
-    unsigned int b;
-} RGB;
-
-
+//
+uint8_t framebuffer[FRAME_HEIGHT][FRAME_WIDTH] = {{0}};
 
 
 char* itoa(int value, char* result) 
