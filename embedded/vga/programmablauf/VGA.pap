@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="A676E93C6A1C1F1C">
+  <PROJECT FORMAT="1.00" NAME="VGA" AUTHOR="Sidney" CREATED="2023.06.22 14:21:55" MODIFIED="2023.06.23 11:19:00">
+    <DIAGRAMS>
+      <DIAGRAM FORMAT="1.00" ID="0" NAME="main" CREATED="2023.06.22 14:22:02" MODIFIED="2023.06.23 11:19:00">
+        <LAYOUT FORMAT="1.00" COLUMNS="1" ROWS="14">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[main]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[GPIO initialisieren:
+6 GPIO OUT (RGB)
+2 PWM OUT (HSYNC + VSYNC)
+2 UART (TX RX)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="10">
+                <TEXT><![CDATA[UART initialisieren:]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="25">
+                <TEXT><![CDATA[PWMs initialisieren]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="5">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="23">
+                <TEXT><![CDATA[PWM HSYNC:
+CHAN A+B -> OUT
+Freerunning @ 31250Hz
+12% DC]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="6">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[PWM VSYNC:
+CHAN A -> OUT
+CHAN B -> IN
+Trig CHAN B rising edge @ 59.88Hz
+0.38% DC]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="7">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="21">
+                <TEXT><![CDATA[PWM PIXEL_TAKT:
+Freerunning @ 25MHz
+50% DC
+DREQ für DMA]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="8">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="8">
+                <TEXT><![CDATA[DMA initialisieren:
+Memory -> Periperal transfer 8 Bit
+PIXEL_TAKT DREQ
+write increment = false
+read inscremt = true]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="9">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="12">
+                <TEXT><![CDATA[IRQs initialisieren:]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="10">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="19">
+                <TEXT><![CDATA[PWM Channels simultan starten]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="11">
+              <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="14" ASSOCIATE="16">
+                <TEXT><![CDATA[endlos]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="12">
+              <FIGURE SUBTYPE="PapLoopEnd" FORMAT="1.00" ID="16" ASSOCIATE="14">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="13">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="18" FROM="10" TO="23" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="7" FROM="6" TO="21" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="5" FROM="4" TO="10" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="9" FROM="8" TO="12" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="13" FROM="12" TO="19" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="17" FROM="16" TO="2" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="15" FROM="14" TO="16" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="20" FROM="19" TO="14" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="22" FROM="21" TO="8" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="24" FROM="23" TO="6" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="1" NAME="irq_pwm_hsync" CREATED="2023.06.22 19:22:17" MODIFIED="2023.06.22 19:22:17">
+        <LAYOUT FORMAT="1.00" COLUMNS="1" ROWS="5">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[irq_pwm_hsync]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[Farb GPIOs -> 0
+(Schwarzwert einstellen)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[DMA Channel konfigurieren und starten]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="5" FROM="4" TO="6" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="7" FROM="6" TO="2" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="2" NAME="irq_pwm_vsync" CREATED="2023.06.22 19:23:22" MODIFIED="2023.06.22 19:23:22">
+        <LAYOUT FORMAT="1.00" COLUMNS="1" ROWS="4">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[irq_pwm_vsync]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[Farb GPIOs -> 0
+(Schwarzwert einstellen)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="5" FROM="4" TO="2" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+    </DIAGRAMS>
+  </PROJECT>
+</FRAME>

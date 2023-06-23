@@ -101,12 +101,21 @@ void fprint(char * s)
     //        tight_loop_contents();
 
     //strcpy(buffer, s);
-
+    // TO DO String länge berechnen
     memset(buffer, 0, MAX_STRING_LEN);
     memcpy(buffer, s, MAX_STRING_LEN);
     //memcpy(buffer, s, MAX_STRING_LEN);
 
-    dma_channel_hw_addr(DMA_CHANNEL)->al3_read_addr_trig = (uintptr_t) buffer;
+    // dma transfer trigger
+    dma_channel_configure(
+        DMA_CHANNEL,    // Channel to be configured
+        &config,    // The configuration we just created
+        &uart_get_hw(UART_ID)->dr,  // The initial write address
+        &buffer,         // The initial read address
+        MAX_STRING_LEN,     // Number of transfers; in this case each is 1 byte.
+        true                  // Start immediately.
+    );
+    //dma_channel_hw_addr(DMA_CHANNEL)->al3_read_addr_trig = (uintptr_t) buffer;
     //dma_channel_transfer_from_buffer_now(DMA_CHANNEL, buffer, DMA_SIZE_8);
     
 }
@@ -301,6 +310,7 @@ static void configure_pwm()
     // Move Servo to middle position
     pwm_set_gpio_level(PWM_OUT, SERVO_INIT);
 
+    
     servo.duty = SERVO_INIT;
 
 }
@@ -316,7 +326,7 @@ static void configure_uart()
     uart_set_baudrate(UART_ID, BAUD_RATE);
 
     // Set UART flow control CTS/RTS, we don't want these, so turn them off
-    uart_set_hw_flow(UART_ID, true, false);
+    uart_set_hw_flow(UART_ID, false, false);
 
     // Set our data format
     uart_set_format(UART_ID, DATA_BITS, STOP_BITS, PARITY);
@@ -356,14 +366,7 @@ static void configure_dma()
     // set data request
     channel_config_set_dreq(&config, uart_get_dreq(UART_ID, true));
 
-    dma_channel_configure(
-        DMA_CHANNEL,    // Channel to be configured
-        &config,    // The configuration we just created
-        &uart_get_hw(UART_ID)->dr,  // The initial write address
-        &buffer,         // The initial read address
-        MAX_STRING_LEN,     // Number of transfers; in this case each is 1 byte.
-        false                  // Start immediately.
-    );
+
 
     strcpy(string, "Hello, dma!\n\r"); 
 
