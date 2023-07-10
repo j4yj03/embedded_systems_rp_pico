@@ -15,6 +15,8 @@ static volatile absolute_time_t debounce_timeouts[NGPIO] = { 0u };
 */
 static SERVO servo;
 
+static pwm_config config;
+
 // The buffer size needs to be a power of two and alignment must be the same
 //__attribute__((aligned(MAX_STRING_LEN)))
 static char buffer[MAX_STRING_LEN];
@@ -289,7 +291,7 @@ static void configure_pwm()
 
     // Get some sensible defaults for the slice configuration. By default, the
     // counter is allowed to wrap over its maximum range (0 to 2**16-1)
-    pwm_config config = pwm_get_default_config();
+    config = pwm_get_default_config();
 
     // Set divider, target requeny is 50Hz or 20ms
     const float divider = _XTAL_FREQ / _PWM_FREQ / 4096 / 16; //12bit (8.4) mask + shift right 4 Bit

@@ -5,7 +5,7 @@
 /** \brief configure uart
  *   
 */
-static void configure_uart()
+inline void configure_uart()
 {
 
     gpio_set_function(UART_TX_PIN, GPIO_FUNC_UART);
@@ -25,6 +25,9 @@ static void configure_uart()
 
     // Enable FIFO
     uart_set_fifo_enabled(UART_ID, true);
+
+
+    uart_puts(UART_ID,"Hello UART! \n\r");
 
 
 }

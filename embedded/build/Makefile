@@ -181,17 +181,17 @@ cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast:
 .PHONY : cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast
 
 #=============================================================================
-# Target rules for targets named servo_pwm
+# Target rules for targets named vga
 
 # Build rule for target.
-servo_pwm: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 servo_pwm
-.PHONY : servo_pwm
+vga: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 vga
+.PHONY : vga
 
 # fast build rule for target.
-servo_pwm/fast:
-	$(MAKE) $(MAKESILENT) -f servo_pwm\CMakeFiles\servo_pwm.dir\build.make servo_pwm/CMakeFiles/servo_pwm.dir/build
-.PHONY : servo_pwm/fast
+vga/fast:
+	$(MAKE) $(MAKESILENT) -f vga\CMakeFiles\vga.dir\build.make vga/CMakeFiles/vga.dir/build
+.PHONY : vga/fast
 
 #=============================================================================
 # Target rules for targets named ELF2UF2Build
@@ -203,7 +203,7 @@ ELF2UF2Build: cmake_check_build_system
 
 # fast build rule for target.
 ELF2UF2Build/fast:
-	$(MAKE) $(MAKESILENT) -f servo_pwm\CMakeFiles\ELF2UF2Build.dir\build.make servo_pwm/CMakeFiles/ELF2UF2Build.dir/build
+	$(MAKE) $(MAKESILENT) -f vga\CMakeFiles\ELF2UF2Build.dir\build.make vga/CMakeFiles/ELF2UF2Build.dir/build
 .PHONY : ELF2UF2Build/fast
 
 # Help Target
@@ -220,7 +220,7 @@ help:
 	@echo ... bs2_default_padded_checksummed_asm
 	@echo ... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h
 	@echo ... bs2_default
-	@echo ... servo_pwm
+	@echo ... vga
 .PHONY : help
 
 

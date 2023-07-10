@@ -29,4 +29,4 @@ add_compile_options(-Wall
         )
 
 # Hardware-specific examples in subdirectories:
-add_subdirectory(servo_pwm)
+add_subdirectory(vga)

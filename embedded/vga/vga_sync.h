@@ -3,35 +3,37 @@
 
 // Clocks
 #define _HSYNC_PWM_FREQ 31250
-#define _VSYNC_PWM_FREQ 59.88
+#define _VSYNC_PWM_FREQ 60
 
 // GPIOs
 
 #define HSYNC_B 9   // PWM Channel 4B
 #define HSYNC_A 8   // PWM Channel 4A
-#define VSYNC_B 7   // PWM Channel 3B
-#define VSYNC_A 6   // PWM Channel 3A
+
+#define V_SYNC_GPIO_OFFSET 6 // V-sync GPIO pin
+#define V_SYNC_GPIO_MASK (1ul << V_SYNC_GPIO_OFFSET)
+
+//#define VSYNC_B 7   // PWM Channel 3B
+//#define VSYNC_A 6   // PWM Channel 3A
 
 
 // Duty cycles
 
 #define HSYNC_DC 0.12
 
+#define HSYNC_BLANKING_DC 0.18
+
+#define VSYNC_DC 0.003838
 
 
 
-static uint16_t slice_num_hsync;
-
-static uint16_t slice_num_vsync;
-
-static pwm_config hsync_config;
-
-static pwm_config vsync_config;
 
 
 
-static inline void configure_pwm_hsync();
+extern void configure_pwm_hsync();
+extern void configure_pwm_vsync();
+extern void start_pwm_sync();
 
-static inline void configure_pwm_vsync();
+extern void configure_irq();
 
 #endif

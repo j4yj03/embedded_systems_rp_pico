@@ -14,6 +14,7 @@
 #define PARITY    UART_PARITY_NONE
 
 
+extern void configure_uart();
 
 
 #endif

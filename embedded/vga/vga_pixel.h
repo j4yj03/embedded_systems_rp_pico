@@ -7,8 +7,11 @@
 // clock GPIO
 #define PX_CLOCK 4  // PWM Channel 2A
 
+//duty cycle
+#define PX_DC 0.5
+
 // color GPIOs
-#define COLOR_GPIO_OFFSET 16 // First color GPIO pin
+#define COLOR_GPIO_OFFSET 10 // First color GPIO pin
 #define COLOR_GPIO_MASK (0x3F << COLOR_GPIO_OFFSET) // Color GPIO mask
 
 
@@ -16,16 +19,16 @@
 #define DMA_CHANNEL 0
 
 
-#define FRAME_WIDTH 640 // Frame width in picture
-#define FRAME_HEIGHT 480 // Frame height in picture
+#define DISPLAY_WIDTH 640 // Frame width in picture
+#define DISPLAY_HEIGHT 480 // Frame height in picture
 
 
 
-static dma_channel_config dma_config;
-
-static uint16_t slice_num_px;
-
-static pwm_config px_config;
+extern void configure_gpio();
+extern void configure_dma_px();
+extern void configure_pwm_px();
+extern void output_colorbits();
+extern void calculate_colorbits(); 
 
 
 #endif

@@ -1,8 +1,11 @@
 add_executable(vga
         vga.c
+        vga_uart.c
+        vga_sync.c
+        vga_pixel.c 
         )
 
-# pull in common dependencies and additional hardware support
+# pull in common dependencvgaies and additional hardware support
 target_link_libraries(vga pico_stdlib pico_time hardware_irq hardware_pwm hardware_gpio hardware_uart hardware_dma)
 
 # create map/bin/hex file etc.

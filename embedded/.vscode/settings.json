@@ -1,5 +1,16 @@
 {
     "files.associations": {
-        "servo_pwm.h": "c"
+        "servo_pwm.h": "c",
+        "pwm.h": "c",
+        "irq.h": "c",
+        "dma.h": "c",
+        "gpio.h": "c",
+        "stddef.h": "c",
+        "vga.h": "c",
+        "stdlib.h": "c",
+        "stdio.h": "c",
+        "math.h": "c",
+        "vga_pixel.h": "c",
+        "uart.h": "c"
     }
 }

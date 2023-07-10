@@ -1,5 +1,5 @@
 mkdir build
 cd build
 cmake -G "MinGW Makefiles" ..
-cd servo_pwm
+cd vga
 make
