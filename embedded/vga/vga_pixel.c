@@ -135,9 +135,9 @@ void calculate_colorbits() {
 
     //vga.color = ((vga.frame_counter * (hsync_get_counter() * vga.line_counter)) >> vga.color_param_1) & (0x3F); // wachsendes zebra
 
-    //vga.color = ((vga.frame_counter * (hsync_get_counter())) >> vga.color_param_1) & (0x3F);
+    vga.color = ((vga.frame_counter * (hsync_get_counter())) >> vga.color_param_1) & (0x3F);
 
-    vga.color = ((vga.frame_counter | vga.line_counter) >> vga.color_param_1) & (0x3F);
+    //vga.color = ((vga.frame_counter | vga.line_counter) >> vga.color_param_1) & (0x3F);
 
     //vga.color = ((vga.line_counter) >> 3) & (0x3F);
 
