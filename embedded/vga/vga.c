@@ -34,16 +34,18 @@ int main()
         {
             
             busy_wait_us_32(1);
+            //tight_loop_contents();
         }
 
-        busy_wait_us_32(5);
+        //busy_wait_us_32(5);
 
         calculate_colorbits();
 
         gpio_clr_mask(COLOR_GPIO_MASK);
 
-        busy_wait_us_32(1);
+        //busy_wait_us_32(1);
 
+        
         if (vga.vsync_counter > old_frame)
         {
             uart_puts(UART_ID,"frame count: ");
@@ -51,7 +53,7 @@ int main()
             uart_puts(UART_ID,"\n\r");
             old_frame = vga.vsync_counter;
         }
-    
+        
         
     }
         

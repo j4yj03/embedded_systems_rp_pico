@@ -7,14 +7,14 @@
 */
 inline void configure_gpio() {
 
-    gpio_init_mask(COLOR_GPIO_MASK);
-    gpio_set_dir_out_masked(COLOR_GPIO_MASK);
+    gpio_init_mask(COLOR_GPIO_MASK | V_SYNC_GPIO_MASK);
+    gpio_set_dir_out_masked(COLOR_GPIO_MASK | V_SYNC_GPIO_MASK);
 
-    gpio_init(V_SYNC_GPIO);
-    gpio_set_dir_out_masked(V_SYNC_GPIO_MASK);
+    //gpio_init_mask(V_SYNC_GPIO_MASK);
+    //gpio_set_dir_out_masked(V_SYNC_GPIO_MASK);
 
-    gpio_clr_mask(V_SYNC_GPIO_MASK);
-    gpio_clr_mask(COLOR_GPIO_MASK);
+    gpio_clr_mask(V_SYNC_GPIO_MASK | COLOR_GPIO_MASK);
+    //gpio_clr_mask(COLOR_GPIO_MASK);
 }
 
 
@@ -39,7 +39,7 @@ inline void configure_dma_px()
 
 }
 
-/** \brief configure pwm channel for pixel clock
+** \brief configure pwm channel for pixel clock
  *   
  *
 
@@ -65,7 +65,7 @@ inline void configure_pwm_px()
 
 
 
-/** \brief function to configure read and write adress for DMA and start DMA channel
+** \brief function to configure read and write adress for DMA and start DMA channel
  *   
 
 void output_color() {
@@ -96,7 +96,7 @@ void output_color() {
 
 }
 
-/** \brief function to calculate color bytes
+** \brief function to calculate color bytes
  *   
  *  
 
@@ -118,7 +118,7 @@ void calculate_color(uint16_t vertical_counter)
  *   
  *  
 */
-inline void set_colorbits(unsigned int color) {
+static inline void set_colorbits(unsigned int color) {
 
     gpio_put_masked(COLOR_GPIO_MASK, (color << COLOR_GPIO_OFFSET));
 
@@ -135,8 +135,8 @@ void calculate_colorbits() {
 
     unsigned int color = (vga.hsync_counter & 0x1F8) >> 3;
 
-    uart_puts(UART_ID, itoa(color, int_string, 2));
-    uart_puts(UART_ID,"\n\r");
+    //uart_puts(UART_ID, itoa(color, int_string, 2));
+    //uart_puts(UART_ID,"\n\r");
 
     set_colorbits(color);
 

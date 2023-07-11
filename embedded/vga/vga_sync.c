@@ -19,12 +19,12 @@ void hsync_irq()
 
     // is current sync cycle in visible position
     // assert left to right
-    vga.display_on =  (vga.hsync_counter < DISPLAY_HEIGHT) && vga.vsync_level;
+    vga.display_on = true;//(vga.hsync_counter < DISPLAY_HEIGHT) && vga.vsync_level;
 
     // set vsync level
     gpio_put_masked(V_SYNC_GPIO_MASK, (vga.vsync_level << V_SYNC_GPIO_OFFSET));
     //gpio_put(V_SYNC_GPIO, vga.vsync_level);
-    
+
 
     if (vga.hsync_counter > 533) {
         //vga.hsync_block = true;
