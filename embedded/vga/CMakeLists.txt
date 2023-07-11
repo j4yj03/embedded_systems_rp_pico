@@ -1,5 +1,6 @@
 add_executable(vga
         vga.c
+        vga_button.c
         vga_uart.c
         vga_sync.c
         vga_pixel.c 

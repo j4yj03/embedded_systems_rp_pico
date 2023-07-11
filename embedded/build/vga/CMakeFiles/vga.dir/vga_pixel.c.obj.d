@@ -37,6 +37,7 @@ vga/CMakeFiles/vga.dir/vga_pixel.c.obj: \
  D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga\vga_sync.h \
  D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga\vga_pixel.h \
  D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga\vga_uart.h \
+ D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga\vga_button.h \
  D:\VSRM\sdk\pico\pico-sdk\src\common\pico_stdlib\include/pico/stdlib.h \
  D:\VSRM\sdk\pico\pico-sdk\src\common\pico_base\include/pico.h \
  D:\VSRM\sdk\pico\pico-sdk\src\common\pico_base\include/pico/types.h \
@@ -83,4 +84,5 @@ vga/CMakeFiles/vga.dir/vga_pixel.c.obj: \
  D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/pwm.h \
  D:\VSRM\sdk\pico\pico-sdk\src\rp2_common\hardware_dma\include/hardware/dma.h \
  D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_structs\include/hardware/structs/dma.h \
- D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/dma.h
+ D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/dma.h \
+ D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_structs\include/hardware/structs/systick.h

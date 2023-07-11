@@ -13,25 +13,31 @@ void hsync_irq()
 
     gpio_clr_mask(COLOR_GPIO_MASK);
 
-    vga.hsync_counter++; 
+    vga.line_counter++; 
 
-    vga.vsync_level = (vga.hsync_counter > 0);
-
-    // is current sync cycle in visible position
-    // assert left to right
-    vga.display_on = true;//(vga.hsync_counter < DISPLAY_HEIGHT) && vga.vsync_level;
+    vga.vsync_level = (vga.line_counter > 0);
 
     // set vsync level
     gpio_put_masked(V_SYNC_GPIO_MASK, (vga.vsync_level << V_SYNC_GPIO_OFFSET));
-    //gpio_put(V_SYNC_GPIO, vga.vsync_level);
+    //gpio_put(V_SYNC_GPIO_OFFSET, vga.vsync_level);
 
 
-    if (vga.hsync_counter > 533) {
-        //vga.hsync_block = true;
+    // is current sync cycle in visible position
+    // assert left to right
+    vga.display_on = (vga.line_counter > VSYNC_FP_LINES) && (vga.line_counter < (VSYNC_DISPLAY_LINES + VSYNC_BP_LINES));
+
+    
+    
+    
+
+    //if (vga.line_counter > 519) {
+    if (vga.line_counter > VSYNC_NPW_LINES) {
+
         
-        vga.hsync_counter = -2;
+        //vga.line_counter = -2;
+        vga.line_counter = - VSYNC_PW_LINES;
         //vga.vsync_level = ()
-        vga.vsync_counter++;
+        vga.frame_counter++;
     }
 
     pwm_clear_irq(slice_num_hsync);
@@ -82,7 +88,7 @@ inline void configure_pwm_hsync()
 
 }
 
-static inline uint16_t hsync_get_counter() {
+uint16_t hsync_get_counter() {
     return (uint16_t)(pwm_hw->slice[slice_num_hsync].ctr);
 }
 

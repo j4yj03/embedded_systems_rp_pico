@@ -23,6 +23,13 @@
 
 #define HSYNC_BLANKING_DC 0.18
 
+#define VSYNC_BP_LINES 29
+#define VSYNC_FP_LINES 10
+#define VSYNC_DISPLAY_LINES 480
+#define VSYNC_PW_LINES 2
+#define VSYNC_TOTAL_LINES 521
+#define VSYNC_NPW_LINES 519
+
 #define VSYNC_DC 0.003838
 
 
@@ -35,5 +42,7 @@ extern void configure_pwm_vsync();
 extern void start_pwm_sync();
 
 extern void configure_irq();
+
+extern uint16_t hsync_get_counter();
 
 #endif

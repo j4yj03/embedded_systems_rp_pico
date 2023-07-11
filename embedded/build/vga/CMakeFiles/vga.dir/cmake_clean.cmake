@@ -82,6 +82,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/vga.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj.d"
   "CMakeFiles/vga.dir/vga.c.obj"
   "CMakeFiles/vga.dir/vga.c.obj.d"
+  "CMakeFiles/vga.dir/vga_button.c.obj"
+  "CMakeFiles/vga.dir/vga_button.c.obj.d"
   "CMakeFiles/vga.dir/vga_pixel.c.obj"
   "CMakeFiles/vga.dir/vga_pixel.c.obj.d"
   "CMakeFiles/vga.dir/vga_sync.c.obj"

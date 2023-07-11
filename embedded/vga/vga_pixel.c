@@ -118,9 +118,9 @@ void calculate_color(uint16_t vertical_counter)
  *   
  *  
 */
-static inline void set_colorbits(unsigned int color) {
+void calculate_colormasks() {
 
-    gpio_put_masked(COLOR_GPIO_MASK, (color << COLOR_GPIO_OFFSET));
+    
 
     //sio_hw->gpio_togl = (sio_hw->gpio_out ^ (color << COLOR_GPIO_OFFSET)) & (COLOR_GPIO_MASK);
 
@@ -133,12 +133,21 @@ static inline void set_colorbits(unsigned int color) {
 */
 void calculate_colorbits() {
 
-    unsigned int color = (vga.hsync_counter & 0x1F8) >> 3;
+    //vga.color = ((vga.frame_counter * (hsync_get_counter() * vga.line_counter)) >> vga.color_param_1) & (0x3F); // wachsendes zebra
 
-    //uart_puts(UART_ID, itoa(color, int_string, 2));
-    //uart_puts(UART_ID,"\n\r");
+    //vga.color = ((vga.frame_counter * (hsync_get_counter())) >> vga.color_param_1) & (0x3F);
 
-    set_colorbits(color);
+    vga.color = ((vga.frame_counter | vga.line_counter) >> vga.color_param_1) & (0x3F);
+
+    //vga.color = ((vga.line_counter) >> 3) & (0x3F);
+
+    //vga.color = ((hsync_get_counter()) >> 3) & (0x3F);  //zu langsam
+
+    //vga.color = (vga.line_counter & 0x1F8) >> 3;
+
+    gpio_put_masked(COLOR_GPIO_MASK, (vga.color << COLOR_GPIO_OFFSET));
+
+  
 
     //set_color((vga.hsync_counter & 0x1F8) >> 3);
 

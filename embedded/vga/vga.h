@@ -10,6 +10,7 @@
 #include "vga_sync.h"
 #include "vga_pixel.h"
 #include "vga_uart.h"
+#include "vga_button.h"
 
 //#include "pico/time.h"
 #include "pico/stdlib.h"
@@ -18,11 +19,13 @@
 #include "hardware/gpio.h"
 #include "hardware/uart.h"
 #include "hardware/dma.h"
+#include "hardware/structs/systick.h"
 
 
 
 // clocks
 #define _XTAL_FREQ 125e6
+
 
 #define SLEEP_MS 1000
 
@@ -31,12 +34,20 @@
 extern char int_string[];
 
 typedef struct {
-    int hsync_counter;
-    int vsync_counter;
+    int line_counter;
+    int frame_counter;
+
+    unsigned int color;
+
+    unsigned int color_param_1;
 
     bool vsync_level;
 
     bool display_on;
+
+    unsigned int button_gpio;
+
+
 
     //bool hsync_blanking;
 

@@ -11,6 +11,8 @@
         "stdio.h": "c",
         "math.h": "c",
         "vga_pixel.h": "c",
-        "uart.h": "c"
+        "uart.h": "c",
+        "m0plus.h": "c",
+        "systick.h": "c"
     }
 }
