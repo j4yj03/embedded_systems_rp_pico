@@ -30,8 +30,6 @@ int main()
     configure_irq();    
 
     //configure_dma_px();
-    
-    
 
     // startup
     // shift right by 2
@@ -41,7 +39,7 @@ int main()
     //
     gpio_put(PICO_DEFAULT_LED_PIN, 1);
     // start animation
-    vga.animation = 5;
+    vga.animation = 2;
 
     
     
@@ -59,8 +57,7 @@ int main()
             tight_loop_contents();
         };
         
-
-        
+  
         switch (vga.animation)
         {
             default: break;
@@ -68,43 +65,41 @@ int main()
             case 0: // horizontale Streifen
                     temp = (int) (vga.line_counter / (64)); 
                     vga.color =  bits[temp % 8]; 
-                    gpio_put_masked(vga.color_bit_mask, (vga.color << COLOR_GPIO_OFFSET)); 
+                    gpio_put_masked(vga.color_bit_mask, (vga.color << COLOR_GPIO_OFFSET));
                     break;
                 
             case 1: // vertikale Streifen
                     while(hsync_get_counter() < 3800)
                     {
-                        temp = (int) ((hsync_get_counter() - 500) / (4096 >> vga.color_param_1)); 
- 
-                        gpio_put_masked(vga.color_bit_mask, (bits[temp % 8] << COLOR_GPIO_OFFSET)); 
+                        temp = (int) ((hsync_get_counter() - 500) / (4096 >> vga.color_param_1));
+                        gpio_put_masked(vga.color_bit_mask, (bits[temp % 8] << COLOR_GPIO_OFFSET));
+
                     };
                     break;
 
             case 2: // schachbrett
                     while(hsync_get_counter() < 3800)
                     {
-
-                        temp = (int) (vga.line_counter / (24)) ^ (hsync_get_counter() / 8);             
-                        
+                        temp = (int) (vga.line_counter / (24)) ^ ((hsync_get_counter()) / 8);                       
                         gpio_put_masked(vga.color_bit_mask, (chess[temp % 2] << COLOR_GPIO_OFFSET));
-                        
+                
                     };
                     break;
 
-            case 3: // aufsteigende Farbbalken
+            case 3: // aufsteigende horizontale Steifen
                     vga.color = (((vga.frame_counter ^ vga.line_counter) |~ 0x1F8) >> vga.color_param_1) & (0xFF); 
                     gpio_put_masked(vga.color_bit_mask, (vga.color << COLOR_GPIO_OFFSET)); 
                     break;
 
             case 4: // (ver)laufende Farben
-                    vga.color = (((vga.frame_counter * ((hsync_get_counter() - 600) * 3 ^~ vga.line_counter)))  >> (vga.color_param_1 + 13)) & (0xFF);
+                    vga.color = (((vga.frame_counter * ((hsync_get_counter() - 600) * 3 ^~ vga.line_counter)))  >> (vga.color_param_1 + 17)) & (0xFF);
                     gpio_put_masked(vga.color_bit_mask, (vga.color << COLOR_GPIO_OFFSET)); 
                     break;   
 
             
 
             case 5: // geordnetes Chaos
-                    vga.color = (vga.frame_counter * (((hsync_get_counter() - 100 ) / 2 * vga.line_counter)) >> (vga.color_param_1 + 20)) & (0xFF);
+                    vga.color = (vga.frame_counter * (((hsync_get_counter() - 100 ) / 2 * vga.line_counter)) >> (vga.color_param_1 + 14)) & (0xFF);
                     gpio_put_masked(vga.color_bit_mask, (vga.color << COLOR_GPIO_OFFSET)); 
                     break;
 

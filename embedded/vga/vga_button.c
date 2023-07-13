@@ -12,11 +12,13 @@ void change_color_param()
         case VGA_BUTTON_1: 
                         if (gpio_get(VGA_BUTTON_2))
                         {
-                            vga.animation = (vga.animation + 1) % 6;
+                            vga.color_bit_depth_index = (vga.color_bit_depth_index + 1) % 3;
+                            // drive on board LED when in 256 color mode
+                            gpio_put(PICO_DEFAULT_LED_PIN, (vga.color_bit_depth_index == 0));
                             break;
                         }
 
-                        vga.color_param_1 = (vga.color_param_1 + 1) % 10;
+                        vga.color_param_1 = (vga.color_param_1 + 1) % 17;
                         break;
         
 
@@ -24,13 +26,16 @@ void change_color_param()
 
                         if (gpio_get(VGA_BUTTON_1))
                         {
-                            vga.animation = (vga.animation + 1) % 6;
+                            
+
+                            vga.color_bit_depth_index = (vga.color_bit_depth_index + 1) % 3;
+                            // drive on board LED when in 256 color mode
+                            gpio_put(PICO_DEFAULT_LED_PIN, (vga.color_bit_depth_index == 0));
                             break;
                         }
-                        vga.color_bit_depth_index = (vga.color_bit_depth_index + 1) % 3;
                         
-                        // drive on board LED when in 256 color mode
-                        gpio_put(PICO_DEFAULT_LED_PIN, (vga.color_bit_depth_index == 0));
+                        
+                        vga.animation = (vga.animation + 1) % 6;
 
                         vga.color_bit_mask = COLOR_BITMASKS[vga.color_bit_depth_index];
                         break;

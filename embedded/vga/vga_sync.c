@@ -2,9 +2,6 @@
 
 static uint16_t slice_num_hsync;
 
-
-
-
 /** \brief configure pwm channel for hsync
  *   
 */
