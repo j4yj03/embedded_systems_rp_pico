@@ -1634,12 +1634,12 @@ vga/CMakeFiles/vga.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_d
 vga/CMakeFiles/vga.dir/all: vga/CMakeFiles/ELF2UF2Build.dir/all
 	$(MAKE) $(MAKESILENT) -f vga\CMakeFiles\vga.dir\build.make vga/CMakeFiles/vga.dir/depend
 	$(MAKE) $(MAKESILENT) -f vga\CMakeFiles\vga.dir\build.make vga/CMakeFiles/vga.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74 "Built target vga"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73 "Built target vga"
 .PHONY : vga/CMakeFiles/vga.dir/all
 
 # Build rule for subdir invocation for target.
 vga/CMakeFiles/vga.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles 64
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles 63
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 vga/CMakeFiles/vga.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles 0
 .PHONY : vga/CMakeFiles/vga.dir/rule

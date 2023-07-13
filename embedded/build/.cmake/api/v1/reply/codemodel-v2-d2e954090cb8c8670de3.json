@@ -1135,7 +1135,7 @@
 				{
 					"directoryIndex" : 80,
 					"id" : "ELF2UF2Build::@44cf649d1212b7b2d563",
-					"jsonFile" : "target-ELF2UF2Build-Debug-22a1b1781fb5fd0fce58.json",
+					"jsonFile" : "target-ELF2UF2Build-Debug-409c26b00535238dbfbe.json",
 					"name" : "ELF2UF2Build",
 					"projectIndex" : 0
 				},
@@ -1177,7 +1177,7 @@
 				{
 					"directoryIndex" : 80,
 					"id" : "vga::@44cf649d1212b7b2d563",
-					"jsonFile" : "target-vga-Debug-6791da41976dd5b184d8.json",
+					"jsonFile" : "target-vga-Debug-c85f534dedcaef80c48e.json",
 					"name" : "vga",
 					"projectIndex" : 0
 				}

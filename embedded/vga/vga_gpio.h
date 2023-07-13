@@ -1,5 +1,5 @@
-#ifndef VGA_PIXEL_H
-#define	VGA_PIXEL_H
+#ifndef VGA_GPIO_H
+#define	VGA_GPIO_H
 
 // clock
 #define _PIXEL_FREQ 25e6
@@ -22,26 +22,24 @@
 #define DMA_CHANNEL 0
 
 
-#define DISPLAY_WIDTH 640 // Frame width in picture
-#define DISPLAY_HEIGHT 480 // Frame height in picture
+#define LED_PIN PICO_DEFAULT_LED_PIN
 
 
+#define VGA_BUTTON_1 16
+#define VGA_BUTTON_2 17
 
 
-
+extern void configure_button();
 
 
 
 
 extern void configure_gpio();
-extern void configure_dma_px();
-extern void configure_pwm_px();
-extern void output_colorbits();
-extern void calculate_colorbits();
+//extern void configure_dma_px();
+//extern void configure_pwm_px();
 
-extern int COLOR_BITMASKS[];
 
-extern int COLOR_ANIMATION[];
+
 
 
 #endif

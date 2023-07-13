@@ -1,5 +1,6 @@
 #include "vga.h"
 
+    
 
 
 void change_color_param()
@@ -40,18 +41,7 @@ void change_color_param()
                         vga.color_bit_mask = COLOR_BITMASKS[vga.color_bit_depth_index];
                         break;
                         
-    }
-    /*
-    uart_puts(UART_ID,"\n\r");
-    uart_puts(UART_ID,"color shift right: ");
-    uart_puts(UART_ID, itoa(vga.color_param_1 , int_string, 10));
-    uart_puts(UART_ID,"\n\r");
-
-    uart_puts(UART_ID,"bit depth: ");
-    uart_puts(UART_ID, itoa(((vga.color_bit_depth_index + 1) % 3) + 1, int_string, 10));
-    uart_puts(UART_ID," (bit per channel) ");
-    uart_puts(UART_ID,"\n\r");*/
-    
+    }    
 }
 
 
@@ -81,11 +71,28 @@ void on_button(uint gpio, uint32_t events)
     }
     
 
-}
+}  
+
+/** \brief configure gpio for color output
+ *   
+*/
+inline void configure_gpio() {
+
+    gpio_init_mask(COLOR_GPIO_MASK_256 | V_SYNC_GPIO_MASK);
+    gpio_set_dir_out_masked(COLOR_GPIO_MASK_256 | V_SYNC_GPIO_MASK);
+
+    //gpio_init_mask(V_SYNC_GPIO_MASK);
+    //gpio_set_dir_out_masked(V_SYNC_GPIO_MASK);
+
+    gpio_clr_mask(V_SYNC_GPIO_MASK | COLOR_GPIO_MASK_256);
+    //gpio_clr_mask(COLOR_GPIO_MASK);
 
 
-void configure_button()
-{
+    gpio_init(LED_PIN);
+    gpio_set_dir(LED_PIN, GPIO_OUT);
+
+
+    // buttons
 
     gpio_init (VGA_BUTTON_1);
     gpio_pull_up (VGA_BUTTON_1);

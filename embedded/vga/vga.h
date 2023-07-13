@@ -8,9 +8,8 @@
 //#include <string.h>
 
 #include "vga_sync.h"
-#include "vga_pixel.h"
+#include "vga_gpio.h"
 #include "vga_uart.h"
-#include "vga_button.h"
 
 //#include "pico/time.h"
 #include "pico/stdlib.h"
@@ -29,19 +28,29 @@
 
 #define SLEEP_MS 1000
 
-#define LED_PIN PICO_DEFAULT_LED_PIN
+
+
+#define FRAME_WIDTH 320 //640 // Frame width in picture
+#define FRAME_HEIGHT 240 //480 // Frame height in picture
+
+extern int COLOR_BITMASKS[];
+
+extern int COLOR_ANIMATION[];
+
 
 
 extern char int_string[];
 
 typedef struct {
-    int line_counter;
-    int frame_counter;
+    
+    int line_counter;   // linecounter incremented with each hsynq irq
+    int frame_counter;  // framecounter incremented with each "vsync irq"
 
-    unsigned int color;
 
-    unsigned int color_param_1;
-    unsigned int color_bit_depth_index;
+    unsigned int color; // colorvalue in n bits 
+
+    unsigned int color_param_1;     // value to shift output colorbits right
+    unsigned int color_bit_depth_index; // index value 
     unsigned int color_bit_mask;
 
     unsigned int animation;

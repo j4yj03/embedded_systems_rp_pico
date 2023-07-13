@@ -1095,53 +1095,29 @@ vga.c.s:
 	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga\CMakeFiles\vga.dir\build.make vga/CMakeFiles/vga.dir/vga.c.s
 .PHONY : vga.c.s
 
-vga_button.obj: vga_button.c.obj
-.PHONY : vga_button.obj
+vga_gpio.obj: vga_gpio.c.obj
+.PHONY : vga_gpio.obj
 
 # target to build an object file
-vga_button.c.obj:
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga\CMakeFiles\vga.dir\build.make vga/CMakeFiles/vga.dir/vga_button.c.obj
-.PHONY : vga_button.c.obj
+vga_gpio.c.obj:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga\CMakeFiles\vga.dir\build.make vga/CMakeFiles/vga.dir/vga_gpio.c.obj
+.PHONY : vga_gpio.c.obj
 
-vga_button.i: vga_button.c.i
-.PHONY : vga_button.i
-
-# target to preprocess a source file
-vga_button.c.i:
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga\CMakeFiles\vga.dir\build.make vga/CMakeFiles/vga.dir/vga_button.c.i
-.PHONY : vga_button.c.i
-
-vga_button.s: vga_button.c.s
-.PHONY : vga_button.s
-
-# target to generate assembly for a file
-vga_button.c.s:
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga\CMakeFiles\vga.dir\build.make vga/CMakeFiles/vga.dir/vga_button.c.s
-.PHONY : vga_button.c.s
-
-vga_pixel.obj: vga_pixel.c.obj
-.PHONY : vga_pixel.obj
-
-# target to build an object file
-vga_pixel.c.obj:
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga\CMakeFiles\vga.dir\build.make vga/CMakeFiles/vga.dir/vga_pixel.c.obj
-.PHONY : vga_pixel.c.obj
-
-vga_pixel.i: vga_pixel.c.i
-.PHONY : vga_pixel.i
+vga_gpio.i: vga_gpio.c.i
+.PHONY : vga_gpio.i
 
 # target to preprocess a source file
-vga_pixel.c.i:
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga\CMakeFiles\vga.dir\build.make vga/CMakeFiles/vga.dir/vga_pixel.c.i
-.PHONY : vga_pixel.c.i
+vga_gpio.c.i:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga\CMakeFiles\vga.dir\build.make vga/CMakeFiles/vga.dir/vga_gpio.c.i
+.PHONY : vga_gpio.c.i
 
-vga_pixel.s: vga_pixel.c.s
-.PHONY : vga_pixel.s
+vga_gpio.s: vga_gpio.c.s
+.PHONY : vga_gpio.s
 
 # target to generate assembly for a file
-vga_pixel.c.s:
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga\CMakeFiles\vga.dir\build.make vga/CMakeFiles/vga.dir/vga_pixel.c.s
-.PHONY : vga_pixel.c.s
+vga_gpio.c.s:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga\CMakeFiles\vga.dir\build.make vga/CMakeFiles/vga.dir/vga_gpio.c.s
+.PHONY : vga_gpio.c.s
 
 vga_sync.obj: vga_sync.c.obj
 .PHONY : vga_sync.obj
@@ -1320,12 +1296,9 @@ help:
 	@echo ... vga.obj
 	@echo ... vga.i
 	@echo ... vga.s
-	@echo ... vga_button.obj
-	@echo ... vga_button.i
-	@echo ... vga_button.s
-	@echo ... vga_pixel.obj
-	@echo ... vga_pixel.i
-	@echo ... vga_pixel.s
+	@echo ... vga_gpio.obj
+	@echo ... vga_gpio.i
+	@echo ... vga_gpio.s
 	@echo ... vga_sync.obj
 	@echo ... vga_sync.i
 	@echo ... vga_sync.s

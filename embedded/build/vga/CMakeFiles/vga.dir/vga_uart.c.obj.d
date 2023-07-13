@@ -35,9 +35,8 @@ vga/CMakeFiles/vga.dir/vga_uart.c.obj: \
  d:\vsrm\armcc\10_2021_10\arm-none-eabi\include\alloca.h \
  d:\vsrm\armcc\10_2021_10\arm-none-eabi\include\math.h \
  D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga\vga_sync.h \
- D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga\vga_pixel.h \
+ D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga\vga_gpio.h \
  D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga\vga_uart.h \
- D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga\vga_button.h \
  D:\VSRM\sdk\pico\pico-sdk\src\common\pico_stdlib\include/pico/stdlib.h \
  D:\VSRM\sdk\pico\pico-sdk\src\common\pico_base\include/pico.h \
  D:\VSRM\sdk\pico\pico-sdk\src\common\pico_base\include/pico/types.h \

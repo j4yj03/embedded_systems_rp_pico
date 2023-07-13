@@ -16,14 +16,20 @@ int temp;
 
 unsigned int hysnc_count;
 
+
+
+void generate_frames()
+{
+
+}
+
+
 int main()
 {
   
     configure_gpio();
 
     //configure_uart();
-
-    configure_button();
 
     configure_pwm_hsync();
 
@@ -34,17 +40,19 @@ int main()
     // startup
     // shift right by 2
     vga.color_param_1 = 2;
+
     // 8 bit
     vga.color_bit_mask = COLOR_BITMASKS[0];
     //
     gpio_put(PICO_DEFAULT_LED_PIN, 1);
+    
     // start animation
     vga.animation = 2;
 
     
     
 
-    // Everything after this point happens in the PWM interrupt handler
+    //mainloop
     while (true)
     {
         
