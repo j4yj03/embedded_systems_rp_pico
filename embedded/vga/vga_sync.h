@@ -7,10 +7,10 @@
 
 // GPIOs
 
-#define HSYNC_B 9   // PWM Channel 4B
-#define HSYNC_A 8   // PWM Channel 4A
+#define H_SYNC_GPIO_OFFSET 4   // PWM Channel 4B
+#define H_SYNC_GPIO_MASK (1ul << H_SYNC_GPIO_OFFSET)
 
-#define V_SYNC_GPIO_OFFSET 6 // V-sync GPIO pin
+#define V_SYNC_GPIO_OFFSET 2 // V-sync GPIO pin
 #define V_SYNC_GPIO_MASK (1ul << V_SYNC_GPIO_OFFSET)
 
 //#define VSYNC_B 7   // PWM Channel 3B
@@ -43,6 +43,6 @@ extern void start_pwm_sync();
 
 extern void configure_irq();
 
-extern uint16_t hsync_get_counter();
+extern unsigned int hsync_get_counter();
 
 #endif

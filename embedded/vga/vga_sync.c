@@ -11,7 +11,7 @@ static uint16_t slice_num_hsync;
 void hsync_irq()
 {
 
-    gpio_clr_mask(COLOR_GPIO_MASK);
+    gpio_clr_mask(COLOR_GPIO_MASK_256);
 
     vga.line_counter++; 
 
@@ -24,11 +24,8 @@ void hsync_irq()
 
     // is current sync cycle in visible position
     // assert left to right
-    vga.display_on = (vga.line_counter > VSYNC_FP_LINES) && (vga.line_counter < (VSYNC_DISPLAY_LINES + VSYNC_BP_LINES));
+    //vga.display_on = (vga.line_counter > VSYNC_BP_LINES) && (vga.line_counter < (VSYNC_DISPLAY_LINES + VSYNC_FP_LINES));
 
-    
-    
-    
 
     //if (vga.line_counter > 519) {
     if (vga.line_counter > VSYNC_NPW_LINES) {
@@ -36,7 +33,7 @@ void hsync_irq()
         
         //vga.line_counter = -2;
         vga.line_counter = - VSYNC_PW_LINES;
-        //vga.vsync_level = ()
+        
         vga.frame_counter++;
     }
 
@@ -56,7 +53,7 @@ inline void configure_pwm_hsync()
 
     const uint16_t hsync_wrap = _XTAL_FREQ / _HSYNC_PWM_FREQ;// / hsync_divider;
 
-    slice_num_hsync = pwm_gpio_to_slice_num(HSYNC_A);
+    slice_num_hsync = pwm_gpio_to_slice_num(H_SYNC_GPIO_OFFSET);
 
     static pwm_config hsync_config = {0, 0, 0};
 
@@ -75,11 +72,11 @@ inline void configure_pwm_hsync()
     pwm_config_set_output_polarity(&hsync_config, true, true);
     pwm_config_set_wrap(&hsync_config, hsync_wrap);
 
-    gpio_set_function(HSYNC_A, GPIO_FUNC_PWM);
+    gpio_set_function(H_SYNC_GPIO_OFFSET, GPIO_FUNC_PWM);
 
     pwm_init(slice_num_hsync, &hsync_config, false);
 
-    uart_puts(UART_ID, "Start HSYNC!\n\r");
+    //uart_puts(UART_ID, "Start HSYNC!\n\r");
     
     pwm_set_enabled(slice_num_hsync, true);
 
@@ -88,8 +85,9 @@ inline void configure_pwm_hsync()
 
 }
 
-uint16_t hsync_get_counter() {
-    return (uint16_t)(pwm_hw->slice[slice_num_hsync].ctr);
+inline unsigned int hsync_get_counter() 
+{
+    return (pwm_hw->slice[slice_num_hsync].ctr);
 }
 
 

@@ -22,7 +22,7 @@ include(example_auto_set_url.cmake)
 
 
 add_compile_options(-Wall
-        #-O1                  # most common forms of optimization, including function inlining
+        -O1                  # most common forms of optimization, including function inlining
         -Wno-format          # int != int32_t as far as the compiler is concerned because gcc has int32_t as long int
         -Wno-unused-function # we have some for the docs that aren't called
         -Wno-maybe-uninitialized

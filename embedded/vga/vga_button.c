@@ -9,9 +9,43 @@ void change_color_param()
     switch(gpio)
     {
         default: break;
-        case VGA_BUTTON_1: vga.color_param_1++; break;
-        case VGA_BUTTON_2: vga.color_param_1--; break;
+        case VGA_BUTTON_1: 
+                        if (gpio_get(VGA_BUTTON_2))
+                        {
+                            vga.animation = (vga.animation + 1) % 6;
+                            break;
+                        }
+
+                        vga.color_param_1 = (vga.color_param_1 + 1) % 10;
+                        break;
+        
+
+        case VGA_BUTTON_2:
+
+                        if (gpio_get(VGA_BUTTON_1))
+                        {
+                            vga.animation = (vga.animation + 1) % 6;
+                            break;
+                        }
+                        vga.color_bit_depth_index = (vga.color_bit_depth_index + 1) % 3;
+                        
+                        // drive on board LED when in 256 color mode
+                        gpio_put(PICO_DEFAULT_LED_PIN, (vga.color_bit_depth_index == 0));
+
+                        vga.color_bit_mask = COLOR_BITMASKS[vga.color_bit_depth_index];
+                        break;
+                        
     }
+    /*
+    uart_puts(UART_ID,"\n\r");
+    uart_puts(UART_ID,"color shift right: ");
+    uart_puts(UART_ID, itoa(vga.color_param_1 , int_string, 10));
+    uart_puts(UART_ID,"\n\r");
+
+    uart_puts(UART_ID,"bit depth: ");
+    uart_puts(UART_ID, itoa(((vga.color_bit_depth_index + 1) % 3) + 1, int_string, 10));
+    uart_puts(UART_ID," (bit per channel) ");
+    uart_puts(UART_ID,"\n\r");*/
     
 }
 

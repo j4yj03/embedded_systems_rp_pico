@@ -29,6 +29,7 @@
 
 #define SLEEP_MS 1000
 
+#define LED_PIN PICO_DEFAULT_LED_PIN
 
 
 extern char int_string[];
@@ -40,6 +41,10 @@ typedef struct {
     unsigned int color;
 
     unsigned int color_param_1;
+    unsigned int color_bit_depth_index;
+    unsigned int color_bit_mask;
+
+    unsigned int animation;
 
     bool vsync_level;
 
@@ -56,6 +61,13 @@ typedef struct {
 } VGA;
 
 extern VGA vga;
+
+
+
+
+
+
+
 
 /*
 

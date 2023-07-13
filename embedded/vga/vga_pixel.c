@@ -7,14 +7,19 @@
 */
 inline void configure_gpio() {
 
-    gpio_init_mask(COLOR_GPIO_MASK | V_SYNC_GPIO_MASK);
-    gpio_set_dir_out_masked(COLOR_GPIO_MASK | V_SYNC_GPIO_MASK);
+    gpio_init_mask(COLOR_GPIO_MASK_256 | V_SYNC_GPIO_MASK);
+    gpio_set_dir_out_masked(COLOR_GPIO_MASK_256 | V_SYNC_GPIO_MASK);
 
     //gpio_init_mask(V_SYNC_GPIO_MASK);
     //gpio_set_dir_out_masked(V_SYNC_GPIO_MASK);
 
-    gpio_clr_mask(V_SYNC_GPIO_MASK | COLOR_GPIO_MASK);
+    gpio_clr_mask(V_SYNC_GPIO_MASK | COLOR_GPIO_MASK_256);
     //gpio_clr_mask(COLOR_GPIO_MASK);
+
+
+    gpio_init(LED_PIN);
+    gpio_set_dir(LED_PIN, GPIO_OUT);
+    
 }
 
 
@@ -125,30 +130,65 @@ void calculate_colormasks() {
     //sio_hw->gpio_togl = (sio_hw->gpio_out ^ (color << COLOR_GPIO_OFFSET)) & (COLOR_GPIO_MASK);
 
 }
+/*
 
-
+int bits[8] = {0x0, 0x07, 0x3F, 0x38, 0xF8, 0xF, 0xC0, 0xFF};
+int check[8] = {0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00};
+*/
 /** \brief function to calculate color bytes
  *   
  *  
-*/
-void calculate_colorbits() {
 
-    //vga.color = ((vga.frame_counter * (hsync_get_counter() * vga.line_counter)) >> vga.color_param_1) & (0x3F); // wachsendes zebra
+inline void calculate_colorbits() 
+{
 
-    vga.color = ((vga.frame_counter * (hsync_get_counter())) >> vga.color_param_1) & (0x3F);
+    int temp;
 
-    //vga.color = ((vga.frame_counter | vga.line_counter) >> vga.color_param_1) & (0x3F);
+    unsigned int hysnc_count = hsync_get_counter();
 
-    //vga.color = ((vga.line_counter) >> 3) & (0x3F);
+    switch (vga.animation)
+    {
+        default: break;
 
-    //vga.color = ((hsync_get_counter()) >> 3) & (0x3F);  //zu langsam
+        case 0: // horizontale Streifen
+            temp = (int) (vga.line_counter / 64); 
+            vga.color =  bits[temp % 8]; 
+            gpio_put_masked(vga.color_bit_mask, (vga.color << COLOR_GPIO_OFFSET)); 
+            break;
+            
+        case 1: // vertikale Streifen
+                while(hsync_get_counter() < 3800)
+                {
+                    temp = (int) (~(hsync_get_counter()) / (4096 >> vga.color_param_1)); 
 
-    //vga.color = (vga.line_counter & 0x1F8) >> 3;
+                    gpio_put_masked(vga.color_bit_mask, (bits[temp % 8] << COLOR_GPIO_OFFSET)); 
+                };
+                break;
 
-    gpio_put_masked(COLOR_GPIO_MASK, (vga.color << COLOR_GPIO_OFFSET));
+        case 2: // schachbrett
+            while(hsync_get_counter() < 3800)
+                {
+                    temp = (int) (~(hsync_get_counter()) / (4096 >> vga.color_param_1)); 
 
-  
+                    gpio_put_masked(vga.color_bit_mask, (bits[temp % 8] << COLOR_GPIO_OFFSET)); 
+                };
+                break;
 
-    //set_color((vga.hsync_counter & 0x1F8) >> 3);
+        case 3: 
+            vga.color = (((vga.frame_counter ^ vga.line_counter) |~ 0x1F8) >> vga.color_param_1) & (0xFF); 
+            gpio_put_masked(vga.color_bit_mask, (vga.color << COLOR_GPIO_OFFSET)); 
+            break;
+
+        case 4: vga.color = (((vga.frame_counter * ((hsync_get_counter() - 600) * 3 ^~ vga.line_counter)))  >> (vga.color_param_1 + 13)) & (0xFF);
+                gpio_put_masked(vga.color_bit_mask, (vga.color << COLOR_GPIO_OFFSET)); 
+                
+                break;   
+
+        
+
+        case 5: vga.color = (vga.frame_counter * (((hsync_get_counter()) *~ vga.line_counter)) >> (vga.color_param_1 + 20)) & (0xFF);
+                gpio_put_masked(vga.color_bit_mask, (vga.color << COLOR_GPIO_OFFSET)); 
+                break;
 
 }
+*/    
