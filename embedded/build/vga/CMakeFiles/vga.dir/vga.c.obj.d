@@ -35,9 +35,7 @@ vga/CMakeFiles/vga.dir/vga.c.obj: \
  d:\vsrm\armcc\10_2021_10\arm-none-eabi\include\alloca.h \
  d:\vsrm\armcc\10_2021_10\arm-none-eabi\include\math.h \
  D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga\vga_sync.h \
- D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga\vga_gpio.h \
- D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga\vga_uart.h \
- D:\VSRM\sdk\pico\pico-sdk\src\common\pico_stdlib\include/pico/stdlib.h \
+ D:\VSRM\sdk\pico\pico-sdk\src\rp2_common\hardware_pwm\include/hardware/pwm.h \
  D:\VSRM\sdk\pico\pico-sdk\src\common\pico_base\include/pico.h \
  D:\VSRM\sdk\pico\pico-sdk\src\common\pico_base\include/pico/types.h \
  D:\VSRM\sdk\pico\pico-sdk\src\common\pico_base\include/pico/assert.h \
@@ -57,11 +55,20 @@ vga/CMakeFiles/vga.dir/vga.c.obj: \
  D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/sio.h \
  D:\VSRM\sdk\pico\pico-sdk\src\common\pico_base\include/pico/types.h \
  D:\VSRM\sdk\pico\pico-sdk\src\common\pico_base\include/pico/error.h \
+ D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_structs\include/hardware/structs/pwm.h \
+ D:\VSRM\sdk\pico\pico-sdk\src\rp2_common\hardware_base\include/hardware/address_mapped.h \
+ D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/pwm.h \
+ D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/dreq.h \
+ D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga\vga_gpio.h \
+ D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga\vga_uart.h \
+ D:\VSRM\sdk\pico\pico-sdk\src\rp2_common\hardware_uart\include/hardware/uart.h \
+ D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_structs\include/hardware/structs/uart.h \
+ D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/uart.h \
+ D:\VSRM\sdk\pico\pico-sdk\src\common\pico_stdlib\include/pico/stdlib.h \
  D:\VSRM\sdk\pico\pico-sdk\src\rp2_common\pico_stdio\include/pico/stdio.h \
  D:\VSRM\sdk\pico\pico-sdk\src\common\pico_time\include/pico/time.h \
  D:\VSRM\sdk\pico\pico-sdk\src\rp2_common\hardware_timer\include/hardware/timer.h \
  D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_structs\include/hardware/structs/timer.h \
- D:\VSRM\sdk\pico\pico-sdk\src\rp2_common\hardware_base\include/hardware/address_mapped.h \
  D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/timer.h \
  D:\VSRM\sdk\pico\pico-sdk\src\rp2_common\hardware_gpio\include/hardware/gpio.h \
  D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_structs\include/hardware/structs/sio.h \
@@ -73,15 +80,10 @@ vga/CMakeFiles/vga.dir/vga.c.obj: \
  D:\VSRM\sdk\pico\pico-sdk\src\rp2_common\hardware_irq\include/hardware/irq.h \
  D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/intctrl.h \
  D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/m0plus.h \
- D:\VSRM\sdk\pico\pico-sdk\src\rp2_common\hardware_uart\include/hardware/uart.h \
- D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_structs\include/hardware/structs/uart.h \
- D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/uart.h \
- D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/dreq.h \
  D:\VSRM\sdk\pico\pico-sdk\src\rp2_common\pico_stdio_uart\include/pico/stdio_uart.h \
- D:\VSRM\sdk\pico\pico-sdk\src\rp2_common\hardware_pwm\include/hardware/pwm.h \
- D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_structs\include/hardware/structs/pwm.h \
- D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/pwm.h \
- D:\VSRM\sdk\pico\pico-sdk\src\rp2_common\hardware_dma\include/hardware/dma.h \
- D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_structs\include/hardware/structs/dma.h \
- D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/dma.h \
- D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_structs\include/hardware/structs/systick.h
+ D:\VSRM\sdk\pico\pico-sdk\src\common\pico_sync\include/pico/sync.h \
+ D:\VSRM\sdk\pico\pico-sdk\src\common\pico_sync\include/pico/sem.h \
+ D:\VSRM\sdk\pico\pico-sdk\src\common\pico_sync\include/pico/lock_core.h \
+ D:\VSRM\sdk\pico\pico-sdk\src\rp2_common\hardware_sync\include/hardware/sync.h \
+ D:\VSRM\sdk\pico\pico-sdk\src\common\pico_sync\include/pico/mutex.h \
+ D:\VSRM\sdk\pico\pico-sdk\src\common\pico_sync\include/pico/critical_section.h

@@ -27,7 +27,7 @@ inline void configure_uart()
     uart_set_fifo_enabled(UART_ID, true);
 
 
-    uart_puts(UART_ID,"Hello UART! \n\r");
+    uart_puts(UART_ID,"\n\rHello UART!");
 
 
 }

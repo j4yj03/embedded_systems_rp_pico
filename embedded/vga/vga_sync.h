@@ -1,17 +1,23 @@
 #ifndef VGA_SYNC_H
 #define	VGA_SYNC_H
 
+
+#include "hardware/pwm.h"
+
+
 // Clocks
 #define _HSYNC_PWM_FREQ 31250
 #define _VSYNC_PWM_FREQ 60
 
 // GPIOs
 
-#define H_SYNC_GPIO_OFFSET 4   // PWM Channel 4B
+#define H_SYNC_GPIO_OFFSET 4   // PWM Channel 2A
 #define H_SYNC_GPIO_MASK (1ul << H_SYNC_GPIO_OFFSET)
 
 #define V_SYNC_GPIO_OFFSET 2 // V-sync GPIO pin
 #define V_SYNC_GPIO_MASK (1ul << V_SYNC_GPIO_OFFSET)
+
+#define HSYNC_PWM_SLICE 2   // GPIO 4-5
 
 //#define VSYNC_B 7   // PWM Channel 3B
 //#define VSYNC_A 6   // PWM Channel 3A
@@ -38,11 +44,14 @@
 
 
 extern void configure_pwm_hsync();
-extern void configure_pwm_vsync();
-extern void start_pwm_sync();
 
-extern void configure_irq();
+extern void configure_pwm_irq();
 
-extern unsigned int hsync_get_counter();
+//extern unsigned int hsync_get_counter();
+
+static inline int hsync_get_counter() {
+    return pwm_hw->slice[HSYNC_PWM_SLICE].ctr;
+}
+
 
 #endif

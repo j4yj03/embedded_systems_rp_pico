@@ -3,9 +3,8 @@
     
 
 
-void change_color_param()
+void change_color_param(unsigned int gpio)
 {
-    unsigned int gpio = vga.button_gpio;
 
     switch(gpio)
     {
@@ -13,13 +12,13 @@ void change_color_param()
         case VGA_BUTTON_1: 
                         if (gpio_get(VGA_BUTTON_2))
                         {
-                            vga.color_bit_depth_index = (vga.color_bit_depth_index + 1) % 3;
+                            color_bit_depth_index = (color_bit_depth_index + 1) % 3;
                             // drive on board LED when in 256 color mode
-                            gpio_put(PICO_DEFAULT_LED_PIN, (vga.color_bit_depth_index == 0));
+                            gpio_put(PICO_DEFAULT_LED_PIN, (color_bit_depth_index == 0));
                             break;
                         }
 
-                        vga.color_param_1 = (vga.color_param_1 + 1) % 17;
+                        color_param_1 = (color_param_1 + 1) % 17;
                         break;
         
 
@@ -29,19 +28,23 @@ void change_color_param()
                         {
                             
 
-                            vga.color_bit_depth_index = (vga.color_bit_depth_index + 1) % 3;
+                            color_bit_depth_index = (color_bit_depth_index + 1) % 3;
                             // drive on board LED when in 256 color mode
-                            gpio_put(PICO_DEFAULT_LED_PIN, (vga.color_bit_depth_index == 0));
+                            gpio_put(PICO_DEFAULT_LED_PIN, (color_bit_depth_index == 0));
                             break;
                         }
                         
                         
-                        vga.animation = (vga.animation + 1) % 6;
+                        animation = (animation + 1) % 6;
 
-                        vga.color_bit_mask = COLOR_BITMASKS[vga.color_bit_depth_index];
+                        color_bit_mask = COLOR_BITMASKS[color_bit_depth_index];
                         break;
                         
     }    
+    uart_puts(UART_ID,"\n\ranimation: ");
+    uart_puts(UART_ID, itoa(animation, int_string, 10));
+    uart_puts(UART_ID," color_param_1: ");
+    uart_puts(UART_ID, itoa(color_param_1, int_string, 10));
 }
 
 
@@ -54,14 +57,13 @@ void on_button(uint gpio, uint32_t events)
         return;
     }
     */
-   
-   vga.button_gpio = gpio;
+
     
     switch(events)
     {
         default: break;
         case GPIO_IRQ_EDGE_FALL:    // button press
-                                change_color_param();
+                                change_color_param(gpio);
                                 break;
 
         case GPIO_IRQ_EDGE_RISE:   // button release                              
@@ -104,5 +106,9 @@ inline void configure_gpio() {
     // set button_callback and enable
     gpio_set_irq_enabled_with_callback (VGA_BUTTON_1, GPIO_IRQ_EDGE_FALL + GPIO_IRQ_EDGE_RISE, true, on_button);
     gpio_set_irq_enabled (VGA_BUTTON_2, GPIO_IRQ_EDGE_FALL + GPIO_IRQ_EDGE_RISE, true);
+
+    gpio_put(PICO_DEFAULT_LED_PIN, 1);
+
+    uart_puts(UART_ID,"\n\rHello GPIO!");
 
 }

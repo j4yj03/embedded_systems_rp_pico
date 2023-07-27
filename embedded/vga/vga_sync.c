@@ -7,31 +7,30 @@ static uint16_t slice_num_hsync;
 */
 void hsync_irq()
 {
-
+    // clear color bits
     gpio_clr_mask(COLOR_GPIO_MASK_256);
 
-    vga.line_counter++; 
+    sem_release(&display_on);
+    // release semaphore
+    //hsync_high = true;
 
-    vga.vsync_level = (vga.line_counter > 0);
+    // increment linecounter 
+    line_counter++;
 
-    // set vsync level
-    gpio_put_masked(V_SYNC_GPIO_MASK, (vga.vsync_level << V_SYNC_GPIO_OFFSET));
+    //uart_puts(UART_ID, itoa(line_counter, int_string, 10));
+
+    gpio_put_masked(V_SYNC_GPIO_MASK, ((line_counter > 0) << V_SYNC_GPIO_OFFSET));
     //gpio_put(V_SYNC_GPIO_OFFSET, vga.vsync_level);
 
 
-    // is current sync cycle in visible position
-    // assert left to right
-    //vga.display_on = (vga.line_counter > VSYNC_BP_LINES) && (vga.line_counter < (VSYNC_DISPLAY_LINES + VSYNC_FP_LINES));
+    // line_counter > 519 ?
+    if (line_counter > VSYNC_NPW_LINES) 
+    {
+        // line_counter = -2 start with negative Pulse
+        line_counter = - VSYNC_PW_LINES;
 
-
-    //if (vga.line_counter > 519) {
-    if (vga.line_counter > VSYNC_NPW_LINES) {
-
-        
-        //vga.line_counter = -2;
-        vga.line_counter = - VSYNC_PW_LINES;
-        
-        vga.frame_counter++;
+        // increment framecounter
+        frame_counter++;
     }
 
     pwm_clear_irq(slice_num_hsync);
@@ -73,22 +72,25 @@ inline void configure_pwm_hsync()
 
     pwm_init(slice_num_hsync, &hsync_config, false);
 
-    //uart_puts(UART_ID, "Start HSYNC!\n\r");
-    
+
+
     pwm_set_enabled(slice_num_hsync, true);
 
     pwm_set_chan_level(slice_num_hsync, 0, hsync_duty);
 
+    uart_puts(UART_ID, "\n\rStart HSYNC! pwm_slice: ");
+    uart_puts(UART_ID, itoa(slice_num_hsync, int_string, 10));
+
 
 }
-
+/*
 inline unsigned int hsync_get_counter() 
 {
     return (pwm_hw->slice[slice_num_hsync].ctr);
 }
+*/
 
-
-void configure_irq()
+void configure_pwm_irq()
 {
     pwm_clear_irq(slice_num_hsync);    
 
@@ -97,5 +99,7 @@ void configure_irq()
 
     pwm_set_irq_enabled(slice_num_hsync, true);
     irq_set_enabled(PWM_IRQ_WRAP, true);
+
+    uart_puts(UART_ID, "\n\rPWM Interrupt enabled!");
 
 }

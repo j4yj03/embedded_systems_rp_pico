@@ -1,3 +1,14 @@
 {
-    "cmake.sourceDirectory": "D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/vga"
+    "cmake.sourceDirectory": "D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/vga",
+    "files.associations": {
+        "uart.h": "c",
+        "irq.h": "c",
+        "vga_uart.h": "c",
+        "vga.h": "c",
+        "sync.h": "c",
+        "stdlib.h": "c",
+        "dma.h": "c",
+        "gpio.h": "c",
+        "pwm.h": "c"
+    }
 }

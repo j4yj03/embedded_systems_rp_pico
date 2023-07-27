@@ -2,6 +2,8 @@
 #define	VGA_UART_H
 
 
+#include "hardware/uart.h"
+
 // GPIOs
 #define UART_TX_PIN 0
 #define UART_RX_PIN 1

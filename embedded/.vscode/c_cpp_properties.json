@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "D:/VSRM/sdk/pico/pico-sdk/src/**",
-                "D:/VSRM/sdk/pico/pico-sdk/src/rp2040/**"
+                "D:/VSRM/sdk/pico/pico-sdk/src/rp2040/**",
+                "D:/VSRM/sdk/pico/pico-sdk/src/common/**"
             ],
             "defines": [
                 "_DEBUG",
