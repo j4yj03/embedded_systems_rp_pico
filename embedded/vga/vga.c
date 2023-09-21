@@ -5,8 +5,7 @@ char int_string[10];
 
 int COLOR_BITMASKS[3] = {COLOR_GPIO_MASK_256, COLOR_GPIO_MASK_64, COLOR_GPIO_MASK_8};
 
-int color_line_1[FRAME_WIDTH] = {0};
-int color_line_2[FRAME_WIDTH] = {0};
+int color_lines[2][FRAME_WIDTH] = {{0}};
 
 
 int bits[8] = {0x0, 0x07, 0x3F, 0x38, 0xF8, 0xF, 0xC0, 0xFF};
@@ -61,8 +60,8 @@ void generate_line(int n_bins)
 
         for(int px_idx = start_idx; px_idx < end_idx; px_idx++)
         {
-            color_line_1[px_idx] = chess[color_idx % 2]; //((((start_idx + px_idx) | end_idx) & hysnc_count)) & (0xFF);
-            color_line_2[px_idx] = chess[(color_idx + 1) % 2]; //((((start_idx - px_idx) | end_idx) & hysnc_count)) & (0xFF);
+            color_lines[0][px_idx] = chess[color_idx % 2]; //((((start_idx + px_idx) | end_idx) & hysnc_count)) & (0xFF);
+            color_lines[1][px_idx] = chess[(color_idx + 1) % 2]; //((((start_idx - px_idx) | end_idx) & hysnc_count)) & (0xFF);
         }
     };
     
@@ -128,7 +127,7 @@ int main()
                     };
                     break;
 
-            case 2: // schachbrett
+            case 2: // live generiertes schachbrett
                     while(hsync_get_counter() < last_visible_col)
                     {
                         temp_index = (int) (line_counter / (24)) ^ ((hsync_get_counter()) / 4);                       
@@ -142,27 +141,17 @@ int main()
                     gpio_put_masked(vga.color_bit_mask, (vga.color << COLOR_GPIO_OFFSET)); 
                     break;
                     */
-            case 3: // generiertes Schachbrett
+            case 3: // berechnetes Schachbrett aus zwei farbarrays
 
                     value = (int) (line_counter / 40) % 2;
     
-                    if (value == 0)
-                    {
-                        for (idx = 0; idx < FRAME_WIDTH; idx++)          
-                        {       
-                            color = color_line_1[idx];
-                            gpio_put_masked(color_bit_mask, (color << COLOR_GPIO_OFFSET));
-                        }
-                        break;
-                    }else
-                    {
-                        for (idx = 0; idx < FRAME_WIDTH; idx++)          
-                        {       
-                            color = color_line_2[idx];
-                            gpio_put_masked(color_bit_mask, (color << COLOR_GPIO_OFFSET));
-                        }
-                        break;
+                    for (idx = 0; idx < FRAME_WIDTH; idx++)          
+                    {       
+                        color = color_lines[value][idx];
+                        gpio_put_masked(color_bit_mask, (color << COLOR_GPIO_OFFSET));
                     }
+                    break;
+
                     
 
             case 4: // (ver)laufende Farben im diagonalmuster
