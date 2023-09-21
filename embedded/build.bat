@@ -1,5 +1,5 @@
 mkdir build
 cd build
 cmake -G "MinGW Makefiles" ..
-cd vga
+cd vga_pio
 make

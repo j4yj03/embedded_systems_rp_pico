@@ -163,7 +163,7 @@ D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/build/pico-sdk/s
 D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/build/pico-sdk/src/rp2040/hardware_structs/CMakeFiles/rebuild_cache.dir
 D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/build/pico-sdk/docs/CMakeFiles/edit_cache.dir
 D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/build/pico-sdk/docs/CMakeFiles/rebuild_cache.dir
-D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/build/vga/CMakeFiles/vga.dir
-D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/build/vga/CMakeFiles/ELF2UF2Build.dir
-D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/build/vga/CMakeFiles/edit_cache.dir
-D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/build/vga/CMakeFiles/rebuild_cache.dir
+D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/build/vga_pio/CMakeFiles/vga_pio.dir
+D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/build/vga_pio/CMakeFiles/ELF2UF2Build.dir
+D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/build/vga_pio/CMakeFiles/edit_cache.dir
+D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/build/vga_pio/CMakeFiles/rebuild_cache.dir
