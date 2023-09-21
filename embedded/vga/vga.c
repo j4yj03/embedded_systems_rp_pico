@@ -8,18 +8,19 @@ int COLOR_BITMASKS[3] = {COLOR_GPIO_MASK_256, COLOR_GPIO_MASK_64, COLOR_GPIO_MAS
 int color_line_1[FRAME_WIDTH] = {0};
 int color_line_2[FRAME_WIDTH] = {0};
 
+
 int bits[8] = {0x0, 0x07, 0x3F, 0x38, 0xF8, 0xF, 0xC0, 0xFF};
 int chess[2] = {0x0, 0xFF};
 
 //unsigned int old_frame = 0;
 
-int temp_index, hysnc_count, line_counter, frame_counter, color, color_bit_depth_index, idx = 0;
+int temp_index, hysnc_count, line_counter, frame_counter, color, color_bit_depth_index, idx, value = 0;
 
 int color_param_1 = 3;
 
 int color_bit_mask = COLOR_GPIO_MASK_256;
 
-int animation = 0;
+int animation = 3;
 
 semaphore_t display_on;
 
@@ -34,10 +35,8 @@ semaphore_t display_on;
     800 clocks @ 125MHz blanking (6.4µs) 
     
 */
-int first_visible_col = 605;  // 18% (3.84µs PW + 1.92µs BP)
+int first_visible_col = 600;  // 18% (3.84µs PW + 1.92µs BP)
 int last_visible_col = 3900; // 98% (32µs TOP - 0.640µs FP)
-
-
 
 
 
@@ -45,29 +44,30 @@ int last_visible_col = 3900; // 98% (32µs TOP - 0.640µs FP)
  * \param width width of bins
  * 
 */
-void generate_line(int width)
+void generate_line(int n_bins)
 {
 
-    int bin_size = FRAME_WIDTH / width;
-    int start_idx, end_idx = 0;
+    // each bin consists of 320 / width pixel
+    int bin_size = FRAME_WIDTH / n_bins;
+    int start_idx, end_idx, color_idx = 0;
 
-
-    for (int bin = 0; bin < width; bin++)
+    for (int bin = 0; bin < n_bins; bin++)
     {
-        hysnc_count = hsync_get_counter();
+        // calculate start idx
         start_idx = bin * bin_size;
         end_idx = (bin + 1) * bin_size;
 
+        color_idx++; 
+
         for(int px_idx = start_idx; px_idx < end_idx; px_idx++)
         {
-
-            color_line_1[px_idx] = ((((start_idx + px_idx) | end_idx) & hysnc_count)) & (0xFF);
-            color_line_2[px_idx] = ((((start_idx - px_idx) | end_idx) & hysnc_count)) & (0xFF);
+            color_line_1[px_idx] = chess[color_idx % 2]; //((((start_idx + px_idx) | end_idx) & hysnc_count)) & (0xFF);
+            color_line_2[px_idx] = chess[(color_idx + 1) % 2]; //((((start_idx - px_idx) | end_idx) & hysnc_count)) & (0xFF);
         }
     };
     
     uart_puts(UART_ID, "\n\rPixels generated! n bins=");
-    uart_puts(UART_ID, itoa(width, int_string, 10));
+    uart_puts(UART_ID, itoa(n_bins, int_string, 10));
     uart_puts(UART_ID, " binsize=");
     uart_puts(UART_ID, itoa(bin_size, int_string, 10));
 }
@@ -84,7 +84,7 @@ int main()
 
     configure_pwm_irq();    // pwm interrupt handler config + start
 
-    generate_line(8);    // calculate pixel array
+    generate_line(12);    // calculate pixel array
 
     //configure_dma_px();
     sem_init(&display_on, 0, 1);
@@ -142,9 +142,11 @@ int main()
                     gpio_put_masked(vga.color_bit_mask, (vga.color << COLOR_GPIO_OFFSET)); 
                     break;
                     */
-            case 3: // generiert
+            case 3: // generiertes Schachbrett
+
+                    value = (int) (line_counter / 40) % 2;
     
-                    if (line_counter > 270)
+                    if (value == 0)
                     {
                         for (idx = 0; idx < FRAME_WIDTH; idx++)          
                         {       
@@ -152,8 +154,7 @@ int main()
                             gpio_put_masked(color_bit_mask, (color << COLOR_GPIO_OFFSET));
                         }
                         break;
-                    }
-                    else
+                    }else
                     {
                         for (idx = 0; idx < FRAME_WIDTH; idx++)          
                         {       
