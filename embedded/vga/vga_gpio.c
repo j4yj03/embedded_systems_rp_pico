@@ -15,10 +15,12 @@ void change_color_param(unsigned int gpio)
                             color_bit_depth_index = (color_bit_depth_index + 1) % 3;
                             // drive on board LED when in 256 color mode
                             gpio_put(PICO_DEFAULT_LED_PIN, (color_bit_depth_index == 0));
+
+                            color_gpoio_mask = COLOR_BITMASKS[color_bit_depth_index];
                             break;
                         }
 
-                        color_param_1 = (color_param_1 + 1) % 20;
+                        color_shift_bits = (color_shift_bits + 1) % 20;
                         break;
         
 
@@ -31,20 +33,21 @@ void change_color_param(unsigned int gpio)
                             color_bit_depth_index = (color_bit_depth_index + 1) % 3;
                             // drive on board LED when in 256 color mode
                             gpio_put(PICO_DEFAULT_LED_PIN, (color_bit_depth_index == 0));
+
+                            color_gpoio_mask = COLOR_BITMASKS[color_bit_depth_index];
                             break;
                         }
                         
                         
                         animation = (animation + 1) % 6;
 
-                        color_bit_mask = COLOR_BITMASKS[color_bit_depth_index];
                         break;
                         
     }    
-    uart_puts(UART_ID,"\n\ranimation: ");
+    uart_puts(UART_ID,"\n\ranimation id: ");
     uart_puts(UART_ID, itoa(animation, int_string, 10));
-    uart_puts(UART_ID," color_param_1: ");
-    uart_puts(UART_ID, itoa(color_param_1, int_string, 10));
+    uart_puts(UART_ID," - color bits shifted right by: ");
+    uart_puts(UART_ID, itoa(color_shift_bits, int_string, 10));
 }
 
 

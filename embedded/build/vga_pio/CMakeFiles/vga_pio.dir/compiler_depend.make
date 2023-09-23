@@ -652,6 +652,55 @@ vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware
   D:/VSRM/sdk/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
   D:/VSRM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h
 
+vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c \
+  D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/include/hardware/claim.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/common/pico_base/include/pico.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/common/pico_base/include/pico/assert.h \
+  D:/VSRM/armcc/10_2021_10/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/assert.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/_ansi.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/newlib.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/_newlib_version.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/sys/config.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/machine/ieeefp.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/sys/features.h \
+  D:/VSRM/armcc/10_2021_10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/stdint.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/machine/_default_types.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/sys/_intsup.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/sys/_stdint.h \
+  D:/VSRM/armcc/10_2021_10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  generated/pico_base/pico/version.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
+  generated/pico_base/pico/config_autogen.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/boards/include/boards/pico.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/sys/cdefs.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/common/pico_base/include/pico/error.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pio.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pio.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/padsbank0.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pads_bank0.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/iobank0.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/io_bank0.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/m0plus.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
+  D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio_instructions.h
+
 vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj: D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c \
   D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/include/hardware/clocks.h \
   D:/VSRM/sdk/pico/pico-sdk/src/common/pico_base/include/pico.h \
@@ -1783,6 +1832,8 @@ D:/VSRM/sdk/pico/pico-sdk/src/common/pico_util/include/pico/util/pheap.h:
 
 D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c:
 
+D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio_instructions.h:
+
 D:/VSRM/sdk/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h:
 
 D:/VSRM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.c:
@@ -1870,6 +1921,14 @@ D:/VSRM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.
 D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c:
 
 D:/VSRM/sdk/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/scb.h:
+
+D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c:
+
+D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio.h:
+
+D:/VSRM/sdk/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pio.h:
+
+D:/VSRM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pio.h:
 
 D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h:
 

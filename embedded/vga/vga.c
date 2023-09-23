@@ -15,11 +15,11 @@ int chess[2] = {0x0, 0xFF};
 
 //unsigned int old_frame = 0;
 
-int  hysnc_count, line_counter, frame_counter, color, color_bit_depth_index, px_idx, colorline_idx, tmp_idx = 0;
+int line_counter, frame_counter, color, color_bit_depth_index, px_idx, colorline_idx, tmp_idx = 0;
 
-int color_param_1 = 10;
+int color_shift_bits = 10;
 
-int color_bit_mask = COLOR_GPIO_MASK_256;
+int color_gpoio_mask = COLOR_GPIO_MASK_256;
 
 int animation = 0;
 
@@ -29,15 +29,6 @@ semaphore_t display_on;
 
 
 
-/*
-    4000 clocks @ 125MHz TOP (32 µs)
-
-    3200 clocks @ 125MHz displaytime (25.6µs)
-    800 clocks @ 125MHz blanking (6.4µs) 
-    
-*/
-int first_visible_col = 600;  // 18% (3.84µs PW + 1.92µs BP)
-int last_visible_col = 3900; // 98% (32µs TOP - 0.640µs FP)
 
 
 
@@ -106,7 +97,7 @@ int main()
         // new line starts here
         
         // wait for hsync PW + BP
-        while(hsync_get_counter() < first_visible_col) 
+        while(hsync_get_counter() < FIRST_VISIBLE_COL) 
         {
             tight_loop_contents();
         };
@@ -117,19 +108,19 @@ int main()
             default: break;
 
             case 0: // horizontale Streifen
-                    while(hsync_get_counter() < last_visible_col)
+                    while(hsync_get_counter() < LAST_VISIBLE_COL)
                     {
                         tmp_idx = (int) (line_counter / 64); 
                         color =  bits[tmp_idx % 8]; 
-                        gpio_put_masked(color_bit_mask, (color << COLOR_GPIO_OFFSET));
+                        gpio_put_masked(color_gpoio_mask, (color << COLOR_GPIO_OFFSET));
                     };
                     break;
                 
             case 1: // vertikale Streifen
-                    while(hsync_get_counter() < last_visible_col)
+                    while(hsync_get_counter() < LAST_VISIBLE_COL)
                     {
                         tmp_idx = (int) (hsync_get_counter() / 256);
-                        gpio_put_masked(color_bit_mask, (bits[tmp_idx % 8] << COLOR_GPIO_OFFSET));
+                        gpio_put_masked(color_gpoio_mask, (bits[tmp_idx % 8] << COLOR_GPIO_OFFSET));
 
                     };
                     break;
@@ -142,20 +133,20 @@ int main()
                     for (px_idx = 0; px_idx < FRAME_WIDTH; px_idx++)          
                     {       
                         color = colorlines[colorline_idx][px_idx];
-                        gpio_put_masked(color_bit_mask, (color << COLOR_GPIO_OFFSET));
+                        gpio_put_masked(color_gpoio_mask, (color << COLOR_GPIO_OFFSET));
                     }
                     break;
             /*
             case 3: // aufsteigende horizontale Steifen
-                    vga.color = (((vga.frame_counter ^ vga.line_counter) |~ 0x1F8) >> vga.color_param_1) & (0xFF); 
-                    gpio_put_masked(vga.color_bit_mask, (vga.color << COLOR_GPIO_OFFSET)); 
+                    vga.color = (((vga.frame_counter ^ vga.line_counter) |~ 0x1F8) >> vga.color_shift_bits) & (0xFF); 
+                    gpio_put_masked(vga.color_gpoio_mask, (vga.color << COLOR_GPIO_OFFSET)); 
                     break;
                     */
             case 3: // zur Laufzeit berechnetes Schachbrett
-                    while(hsync_get_counter() < last_visible_col)
+                    while(hsync_get_counter() < LAST_VISIBLE_COL)
                     {
                         tmp_idx = (int) (line_counter / 24) ^ (hsync_get_counter() / 4);                       
-                        gpio_put_masked(color_bit_mask, (chess[tmp_idx % 2] << COLOR_GPIO_OFFSET));
+                        gpio_put_masked(color_gpoio_mask, (chess[tmp_idx % 2] << COLOR_GPIO_OFFSET));
                 
                     };
                     break;
@@ -163,20 +154,20 @@ int main()
                     
 
             case 4: // (ver)laufende Farben im diagonalmuster
-                    while(hsync_get_counter() < last_visible_col)
+                    while(hsync_get_counter() < LAST_VISIBLE_COL)
                     {
-                        color = (((frame_counter * ((hsync_get_counter() / 2) ^~ line_counter)))  >> (color_param_1 + 5)) & (0xFF);
-                        gpio_put_masked(color_bit_mask, (color << COLOR_GPIO_OFFSET));
+                        color = (((frame_counter * ((hsync_get_counter() / 2) ^~ line_counter)))  >> (color_shift_bits + 5)) & (0xFF);
+                        gpio_put_masked(color_gpoio_mask, (color << COLOR_GPIO_OFFSET));
                     }
                     break;   
 
             
 
             case 5: // logarithmisch mosaik
-                    while(hsync_get_counter() < last_visible_col)
+                    while(hsync_get_counter() < LAST_VISIBLE_COL)
                     {
-                        color = (frame_counter * (((hsync_get_counter() / 2)  * line_counter)) >> (color_param_1 + 14)) & (0xFF);
-                        gpio_put_masked(color_bit_mask, (color << COLOR_GPIO_OFFSET)); 
+                        color = (frame_counter * (((hsync_get_counter() / 2)  * line_counter)) >> (color_shift_bits + 14)) & (0xFF);
+                        gpio_put_masked(color_gpoio_mask, (color << COLOR_GPIO_OFFSET)); 
                     }
                     break;
 

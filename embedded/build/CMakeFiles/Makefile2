@@ -1705,10 +1705,10 @@ vga/CMakeFiles/ELF2UF2Build.dir/clean:
 
 # All Build rule for target.
 vga_pio/CMakeFiles/vga_pio.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
-vga_pio/CMakeFiles/vga_pio.dir/all: vga_pio/CMakeFiles/vga_pio_vga_vsync_pio_h.dir/all
-vga_pio/CMakeFiles/vga_pio.dir/all: vga_pio/CMakeFiles/vga_pio_vga_rgb_pio_h.dir/all
 vga_pio/CMakeFiles/vga_pio.dir/all: vga/CMakeFiles/ELF2UF2Build.dir/all
 vga_pio/CMakeFiles/vga_pio.dir/all: vga_pio/CMakeFiles/vga_pio_vga_hsync_pio_h.dir/all
+vga_pio/CMakeFiles/vga_pio.dir/all: vga_pio/CMakeFiles/vga_pio_vga_vsync_pio_h.dir/all
+vga_pio/CMakeFiles/vga_pio.dir/all: vga_pio/CMakeFiles/vga_pio_vga_rgb_pio_h.dir/all
 	$(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio.dir\build.make vga_pio/CMakeFiles/vga_pio.dir/depend
 	$(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio.dir\build.make vga_pio/CMakeFiles/vga_pio.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97 "Built target vga_pio"
