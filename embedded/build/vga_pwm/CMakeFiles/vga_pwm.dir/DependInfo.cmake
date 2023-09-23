@@ -144,10 +144,10 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c" "vga_pwm/CMakeFiles/vga_pwm.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj" "gcc" "vga_pwm/CMakeFiles/vga_pwm.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj.d"
   "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c" "vga_pwm/CMakeFiles/vga_pwm.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj" "gcc" "vga_pwm/CMakeFiles/vga_pwm.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj.d"
   "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c" "vga_pwm/CMakeFiles/vga_pwm.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj" "gcc" "vga_pwm/CMakeFiles/vga_pwm.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj.d"
-  "D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/vga_pwm/vga_gpio.c" "vga_pwm/CMakeFiles/vga_pwm.dir/vga_gpio.c.obj" "gcc" "vga_pwm/CMakeFiles/vga_pwm.dir/vga_gpio.c.obj.d"
   "D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/vga_pwm/vga_pwm.c" "vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm.c.obj" "gcc" "vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm.c.obj.d"
-  "D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/vga_pwm/vga_sync.c" "vga_pwm/CMakeFiles/vga_pwm.dir/vga_sync.c.obj" "gcc" "vga_pwm/CMakeFiles/vga_pwm.dir/vga_sync.c.obj.d"
-  "D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/vga_pwm/vga_uart.c" "vga_pwm/CMakeFiles/vga_pwm.dir/vga_uart.c.obj" "gcc" "vga_pwm/CMakeFiles/vga_pwm.dir/vga_uart.c.obj.d"
+  "D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/vga_pwm/vga_pwm_gpio.c" "vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_gpio.c.obj" "gcc" "vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_gpio.c.obj.d"
+  "D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/vga_pwm/vga_pwm_sync.c" "vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_sync.c.obj" "gcc" "vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_sync.c.obj.d"
+  "D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/vga_pwm/vga_pwm_uart.c" "vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_uart.c.obj" "gcc" "vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_uart.c.obj.d"
   "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp" "vga_pwm/CMakeFiles/vga_pwm.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj" "gcc" "vga_pwm/CMakeFiles/vga_pwm.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj.d"
   )
 

@@ -10,6 +10,12 @@
         "dma.h": "c",
         "gpio.h": "c",
         "pwm.h": "c",
-        "vga_pwm.h": "c"
+        "vga_pwm.h": "c",
+        "vga_pio.h": "c",
+        "vga_pio_dma.h": "c",
+        "vga_pio_gpio.h": "c",
+        "vga_pwm_sync.h": "c",
+        "vga_pwm_uart.h": "c",
+        "vga_hsync.pio.h": "c"
     }
 }

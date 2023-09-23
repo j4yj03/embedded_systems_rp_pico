@@ -78,9 +78,10 @@ inline void configure_pwm_hsync()
 
     pwm_set_chan_level(slice_num_hsync, 0, hsync_duty);
 
+#ifdef VGA_UART_DEBUG
     uart_puts(UART_ID, "\n\rStart HSYNC! pwm_slice: ");
     uart_puts(UART_ID, itoa(slice_num_hsync, int_string, 10));
-
+#endif
 
 }
 /*
@@ -99,7 +100,9 @@ void configure_pwm_irq()
 
     pwm_set_irq_enabled(slice_num_hsync, true);
     irq_set_enabled(PWM_IRQ_WRAP, true);
+#ifdef VGA_UART_DEBUG
 
     uart_puts(UART_ID, "\n\rPWM Interrupt enabled!");
+#endif
 
 }

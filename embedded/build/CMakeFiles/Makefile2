@@ -1550,12 +1550,12 @@ pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default.dir/clean:
 pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default.dir/all
 	$(MAKE) $(MAKESILENT) -f pico-sdk\src\rp2_common\boot_stage2\CMakeFiles\bs2_default_bin.dir\build.make pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/depend
 	$(MAKE) $(MAKESILENT) -f pico-sdk\src\rp2_common\boot_stage2\CMakeFiles\bs2_default_bin.dir\build.make pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=15 "Built target bs2_default_bin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num= "Built target bs2_default_bin"
 .PHONY : pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/all
 
 # Build rule for subdir invocation for target.
 pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles 0
 .PHONY : pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/rule
@@ -1576,12 +1576,12 @@ pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/clean:
 pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default.dir/all
 	$(MAKE) $(MAKESILENT) -f pico-sdk\src\rp2_common\boot_stage2\CMakeFiles\bs2_default_padded_checksummed_asm.dir\build.make pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/depend
 	$(MAKE) $(MAKESILENT) -f pico-sdk\src\rp2_common\boot_stage2\CMakeFiles\bs2_default_padded_checksummed_asm.dir\build.make pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=16 "Built target bs2_default_padded_checksummed_asm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=15,16 "Built target bs2_default_padded_checksummed_asm"
 .PHONY : pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
 
 # Build rule for subdir invocation for target.
 pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles 0
 .PHONY : pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/rule
@@ -1655,7 +1655,7 @@ vga_pwm/CMakeFiles/vga_pwm.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFil
 vga_pwm/CMakeFiles/vga_pwm.dir/all: vga_pwm/CMakeFiles/ELF2UF2Build.dir/all
 	$(MAKE) $(MAKESILENT) -f vga_pwm\CMakeFiles\vga_pwm.dir\build.make vga_pwm/CMakeFiles/vga_pwm.dir/depend
 	$(MAKE) $(MAKESILENT) -f vga_pwm\CMakeFiles\vga_pwm.dir\build.make vga_pwm/CMakeFiles/vga_pwm.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Built target vga_pwm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Built target vga_pwm"
 .PHONY : vga_pwm/CMakeFiles/vga_pwm.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1705,18 +1705,18 @@ vga_pwm/CMakeFiles/ELF2UF2Build.dir/clean:
 
 # All Build rule for target.
 vga_pio/CMakeFiles/vga_pio.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
-vga_pio/CMakeFiles/vga_pio.dir/all: vga_pio/CMakeFiles/vga_pio_vga_vsync_pio_h.dir/all
-vga_pio/CMakeFiles/vga_pio.dir/all: vga_pio/CMakeFiles/vga_pio_vga_rgb_pio_h.dir/all
-vga_pio/CMakeFiles/vga_pio.dir/all: vga_pwm/CMakeFiles/ELF2UF2Build.dir/all
 vga_pio/CMakeFiles/vga_pio.dir/all: vga_pio/CMakeFiles/vga_pio_vga_hsync_pio_h.dir/all
+vga_pio/CMakeFiles/vga_pio.dir/all: vga_pio/CMakeFiles/vga_pio_vga_vsync_pio_h.dir/all
+vga_pio/CMakeFiles/vga_pio.dir/all: vga_pwm/CMakeFiles/ELF2UF2Build.dir/all
+vga_pio/CMakeFiles/vga_pio.dir/all: vga_pio/CMakeFiles/vga_pio_vga_rgb_pio_h.dir/all
 	$(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio.dir\build.make vga_pio/CMakeFiles/vga_pio.dir/depend
 	$(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio.dir\build.make vga_pio/CMakeFiles/vga_pio.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56 "Built target vga_pio"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57 "Built target vga_pio"
 .PHONY : vga_pio/CMakeFiles/vga_pio.dir/all
 
 # Build rule for subdir invocation for target.
 vga_pio/CMakeFiles/vga_pio.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles 57
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles 59
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 vga_pio/CMakeFiles/vga_pio.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles 0
 .PHONY : vga_pio/CMakeFiles/vga_pio.dir/rule
@@ -1737,7 +1737,7 @@ vga_pio/CMakeFiles/vga_pio.dir/clean:
 vga_pio/CMakeFiles/vga_pio_vga_hsync_pio_h.dir/all: pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/PioasmBuild.dir/all
 	$(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio_vga_hsync_pio_h.dir\build.make vga_pio/CMakeFiles/vga_pio_vga_hsync_pio_h.dir/depend
 	$(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio_vga_hsync_pio_h.dir\build.make vga_pio/CMakeFiles/vga_pio_vga_hsync_pio_h.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=57 "Built target vga_pio_vga_hsync_pio_h"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=58 "Built target vga_pio_vga_hsync_pio_h"
 .PHONY : vga_pio/CMakeFiles/vga_pio_vga_hsync_pio_h.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1763,7 +1763,7 @@ vga_pio/CMakeFiles/vga_pio_vga_hsync_pio_h.dir/clean:
 vga_pio/CMakeFiles/vga_pio_vga_vsync_pio_h.dir/all: pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/PioasmBuild.dir/all
 	$(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio_vga_vsync_pio_h.dir\build.make vga_pio/CMakeFiles/vga_pio_vga_vsync_pio_h.dir/depend
 	$(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio_vga_vsync_pio_h.dir\build.make vga_pio/CMakeFiles/vga_pio_vga_vsync_pio_h.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=59 "Built target vga_pio_vga_vsync_pio_h"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=60 "Built target vga_pio_vga_vsync_pio_h"
 .PHONY : vga_pio/CMakeFiles/vga_pio_vga_vsync_pio_h.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1789,7 +1789,7 @@ vga_pio/CMakeFiles/vga_pio_vga_vsync_pio_h.dir/clean:
 vga_pio/CMakeFiles/vga_pio_vga_rgb_pio_h.dir/all: pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/PioasmBuild.dir/all
 	$(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio_vga_rgb_pio_h.dir\build.make vga_pio/CMakeFiles/vga_pio_vga_rgb_pio_h.dir/depend
 	$(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio_vga_rgb_pio_h.dir\build.make vga_pio/CMakeFiles/vga_pio_vga_rgb_pio_h.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=58 "Built target vga_pio_vga_rgb_pio_h"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=59 "Built target vga_pio_vga_rgb_pio_h"
 .PHONY : vga_pio/CMakeFiles/vga_pio_vga_rgb_pio_h.dir/all
 
 # Build rule for subdir invocation for target.

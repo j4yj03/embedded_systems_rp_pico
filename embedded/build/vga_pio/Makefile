@@ -1147,6 +1147,78 @@ vga_pio.c.s:
 	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio.dir\build.make vga_pio/CMakeFiles/vga_pio.dir/vga_pio.c.s
 .PHONY : vga_pio.c.s
 
+vga_pio_dma.obj: vga_pio_dma.c.obj
+.PHONY : vga_pio_dma.obj
+
+# target to build an object file
+vga_pio_dma.c.obj:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio.dir\build.make vga_pio/CMakeFiles/vga_pio.dir/vga_pio_dma.c.obj
+.PHONY : vga_pio_dma.c.obj
+
+vga_pio_dma.i: vga_pio_dma.c.i
+.PHONY : vga_pio_dma.i
+
+# target to preprocess a source file
+vga_pio_dma.c.i:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio.dir\build.make vga_pio/CMakeFiles/vga_pio.dir/vga_pio_dma.c.i
+.PHONY : vga_pio_dma.c.i
+
+vga_pio_dma.s: vga_pio_dma.c.s
+.PHONY : vga_pio_dma.s
+
+# target to generate assembly for a file
+vga_pio_dma.c.s:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio.dir\build.make vga_pio/CMakeFiles/vga_pio.dir/vga_pio_dma.c.s
+.PHONY : vga_pio_dma.c.s
+
+vga_pio_gpio.obj: vga_pio_gpio.c.obj
+.PHONY : vga_pio_gpio.obj
+
+# target to build an object file
+vga_pio_gpio.c.obj:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio.dir\build.make vga_pio/CMakeFiles/vga_pio.dir/vga_pio_gpio.c.obj
+.PHONY : vga_pio_gpio.c.obj
+
+vga_pio_gpio.i: vga_pio_gpio.c.i
+.PHONY : vga_pio_gpio.i
+
+# target to preprocess a source file
+vga_pio_gpio.c.i:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio.dir\build.make vga_pio/CMakeFiles/vga_pio.dir/vga_pio_gpio.c.i
+.PHONY : vga_pio_gpio.c.i
+
+vga_pio_gpio.s: vga_pio_gpio.c.s
+.PHONY : vga_pio_gpio.s
+
+# target to generate assembly for a file
+vga_pio_gpio.c.s:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio.dir\build.make vga_pio/CMakeFiles/vga_pio.dir/vga_pio_gpio.c.s
+.PHONY : vga_pio_gpio.c.s
+
+vga_pio_uart.obj: vga_pio_uart.c.obj
+.PHONY : vga_pio_uart.obj
+
+# target to build an object file
+vga_pio_uart.c.obj:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio.dir\build.make vga_pio/CMakeFiles/vga_pio.dir/vga_pio_uart.c.obj
+.PHONY : vga_pio_uart.c.obj
+
+vga_pio_uart.i: vga_pio_uart.c.i
+.PHONY : vga_pio_uart.i
+
+# target to preprocess a source file
+vga_pio_uart.c.i:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio.dir\build.make vga_pio/CMakeFiles/vga_pio.dir/vga_pio_uart.c.i
+.PHONY : vga_pio_uart.c.i
+
+vga_pio_uart.s: vga_pio_uart.c.s
+.PHONY : vga_pio_uart.s
+
+# target to generate assembly for a file
+vga_pio_uart.c.s:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio.dir\build.make vga_pio/CMakeFiles/vga_pio.dir/vga_pio_uart.c.s
+.PHONY : vga_pio_uart.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -1281,6 +1353,15 @@ help:
 	@echo ... vga_pio.obj
 	@echo ... vga_pio.i
 	@echo ... vga_pio.s
+	@echo ... vga_pio_dma.obj
+	@echo ... vga_pio_dma.i
+	@echo ... vga_pio_dma.s
+	@echo ... vga_pio_gpio.obj
+	@echo ... vga_pio_gpio.i
+	@echo ... vga_pio_gpio.s
+	@echo ... vga_pio_uart.obj
+	@echo ... vga_pio_uart.i
+	@echo ... vga_pio_uart.s
 .PHONY : help
 
 

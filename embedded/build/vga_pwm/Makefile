@@ -1071,30 +1071,6 @@ D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
 	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pwm\CMakeFiles\vga_pwm.dir\build.make vga_pwm/CMakeFiles/vga_pwm.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 .PHONY : D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
-vga_gpio.obj: vga_gpio.c.obj
-.PHONY : vga_gpio.obj
-
-# target to build an object file
-vga_gpio.c.obj:
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pwm\CMakeFiles\vga_pwm.dir\build.make vga_pwm/CMakeFiles/vga_pwm.dir/vga_gpio.c.obj
-.PHONY : vga_gpio.c.obj
-
-vga_gpio.i: vga_gpio.c.i
-.PHONY : vga_gpio.i
-
-# target to preprocess a source file
-vga_gpio.c.i:
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pwm\CMakeFiles\vga_pwm.dir\build.make vga_pwm/CMakeFiles/vga_pwm.dir/vga_gpio.c.i
-.PHONY : vga_gpio.c.i
-
-vga_gpio.s: vga_gpio.c.s
-.PHONY : vga_gpio.s
-
-# target to generate assembly for a file
-vga_gpio.c.s:
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pwm\CMakeFiles\vga_pwm.dir\build.make vga_pwm/CMakeFiles/vga_pwm.dir/vga_gpio.c.s
-.PHONY : vga_gpio.c.s
-
 vga_pwm.obj: vga_pwm.c.obj
 .PHONY : vga_pwm.obj
 
@@ -1119,53 +1095,77 @@ vga_pwm.c.s:
 	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pwm\CMakeFiles\vga_pwm.dir\build.make vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm.c.s
 .PHONY : vga_pwm.c.s
 
-vga_sync.obj: vga_sync.c.obj
-.PHONY : vga_sync.obj
+vga_pwm_gpio.obj: vga_pwm_gpio.c.obj
+.PHONY : vga_pwm_gpio.obj
 
 # target to build an object file
-vga_sync.c.obj:
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pwm\CMakeFiles\vga_pwm.dir\build.make vga_pwm/CMakeFiles/vga_pwm.dir/vga_sync.c.obj
-.PHONY : vga_sync.c.obj
+vga_pwm_gpio.c.obj:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pwm\CMakeFiles\vga_pwm.dir\build.make vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_gpio.c.obj
+.PHONY : vga_pwm_gpio.c.obj
 
-vga_sync.i: vga_sync.c.i
-.PHONY : vga_sync.i
+vga_pwm_gpio.i: vga_pwm_gpio.c.i
+.PHONY : vga_pwm_gpio.i
 
 # target to preprocess a source file
-vga_sync.c.i:
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pwm\CMakeFiles\vga_pwm.dir\build.make vga_pwm/CMakeFiles/vga_pwm.dir/vga_sync.c.i
-.PHONY : vga_sync.c.i
+vga_pwm_gpio.c.i:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pwm\CMakeFiles\vga_pwm.dir\build.make vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_gpio.c.i
+.PHONY : vga_pwm_gpio.c.i
 
-vga_sync.s: vga_sync.c.s
-.PHONY : vga_sync.s
+vga_pwm_gpio.s: vga_pwm_gpio.c.s
+.PHONY : vga_pwm_gpio.s
 
 # target to generate assembly for a file
-vga_sync.c.s:
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pwm\CMakeFiles\vga_pwm.dir\build.make vga_pwm/CMakeFiles/vga_pwm.dir/vga_sync.c.s
-.PHONY : vga_sync.c.s
+vga_pwm_gpio.c.s:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pwm\CMakeFiles\vga_pwm.dir\build.make vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_gpio.c.s
+.PHONY : vga_pwm_gpio.c.s
 
-vga_uart.obj: vga_uart.c.obj
-.PHONY : vga_uart.obj
+vga_pwm_sync.obj: vga_pwm_sync.c.obj
+.PHONY : vga_pwm_sync.obj
 
 # target to build an object file
-vga_uart.c.obj:
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pwm\CMakeFiles\vga_pwm.dir\build.make vga_pwm/CMakeFiles/vga_pwm.dir/vga_uart.c.obj
-.PHONY : vga_uart.c.obj
+vga_pwm_sync.c.obj:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pwm\CMakeFiles\vga_pwm.dir\build.make vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_sync.c.obj
+.PHONY : vga_pwm_sync.c.obj
 
-vga_uart.i: vga_uart.c.i
-.PHONY : vga_uart.i
+vga_pwm_sync.i: vga_pwm_sync.c.i
+.PHONY : vga_pwm_sync.i
 
 # target to preprocess a source file
-vga_uart.c.i:
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pwm\CMakeFiles\vga_pwm.dir\build.make vga_pwm/CMakeFiles/vga_pwm.dir/vga_uart.c.i
-.PHONY : vga_uart.c.i
+vga_pwm_sync.c.i:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pwm\CMakeFiles\vga_pwm.dir\build.make vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_sync.c.i
+.PHONY : vga_pwm_sync.c.i
 
-vga_uart.s: vga_uart.c.s
-.PHONY : vga_uart.s
+vga_pwm_sync.s: vga_pwm_sync.c.s
+.PHONY : vga_pwm_sync.s
 
 # target to generate assembly for a file
-vga_uart.c.s:
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pwm\CMakeFiles\vga_pwm.dir\build.make vga_pwm/CMakeFiles/vga_pwm.dir/vga_uart.c.s
-.PHONY : vga_uart.c.s
+vga_pwm_sync.c.s:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pwm\CMakeFiles\vga_pwm.dir\build.make vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_sync.c.s
+.PHONY : vga_pwm_sync.c.s
+
+vga_pwm_uart.obj: vga_pwm_uart.c.obj
+.PHONY : vga_pwm_uart.obj
+
+# target to build an object file
+vga_pwm_uart.c.obj:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pwm\CMakeFiles\vga_pwm.dir\build.make vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_uart.c.obj
+.PHONY : vga_pwm_uart.c.obj
+
+vga_pwm_uart.i: vga_pwm_uart.c.i
+.PHONY : vga_pwm_uart.i
+
+# target to preprocess a source file
+vga_pwm_uart.c.i:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pwm\CMakeFiles\vga_pwm.dir\build.make vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_uart.c.i
+.PHONY : vga_pwm_uart.c.i
+
+vga_pwm_uart.s: vga_pwm_uart.c.s
+.PHONY : vga_pwm_uart.s
+
+# target to generate assembly for a file
+vga_pwm_uart.c.s:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pwm\CMakeFiles\vga_pwm.dir\build.make vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_uart.c.s
+.PHONY : vga_pwm_uart.c.s
 
 # Help Target
 help:
@@ -1293,18 +1293,18 @@ help:
 	@echo ... D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj
 	@echo ... D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i
 	@echo ... D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s
-	@echo ... vga_gpio.obj
-	@echo ... vga_gpio.i
-	@echo ... vga_gpio.s
 	@echo ... vga_pwm.obj
 	@echo ... vga_pwm.i
 	@echo ... vga_pwm.s
-	@echo ... vga_sync.obj
-	@echo ... vga_sync.i
-	@echo ... vga_sync.s
-	@echo ... vga_uart.obj
-	@echo ... vga_uart.i
-	@echo ... vga_uart.s
+	@echo ... vga_pwm_gpio.obj
+	@echo ... vga_pwm_gpio.i
+	@echo ... vga_pwm_gpio.s
+	@echo ... vga_pwm_sync.obj
+	@echo ... vga_pwm_sync.i
+	@echo ... vga_pwm_sync.s
+	@echo ... vga_pwm_uart.obj
+	@echo ... vga_pwm_uart.i
+	@echo ... vga_pwm_uart.s
 .PHONY : help
 
 

@@ -20,7 +20,7 @@ int color_shift_bits = 10;
 
 int color_gpoio_mask = COLOR_GPIO_MASK_256;
 
-int animation = 0;
+int color_animation = 0;
 
 semaphore_t display_on;
 
@@ -78,13 +78,12 @@ void generate_line(int n_bins)
 }
 
 
-/** \brief main initialisation and mainloop. Video generation in mainloop depends on animation value
+/** \brief main initialisation and mainloop. Video generation in mainloop depends on color_animation value
 */
 int main()
 {
-
     configure_uart();   // UART
-  
+
     configure_gpio();   // GPIOs (colorpins, syncpins, buttons + button irq)
 
     configure_pwm_hsync(); // HSYNC pwm
@@ -113,7 +112,7 @@ int main()
         };
 
         // generate and output pixeldata
-        switch(animation)
+        switch(color_animation)
         {
             default: break;
 

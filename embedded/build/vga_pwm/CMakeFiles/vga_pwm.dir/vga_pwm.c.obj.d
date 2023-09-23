@@ -34,7 +34,7 @@ vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm.c.obj: \
  d:\vsrm\armcc\10_2021_10\arm-none-eabi\include\machine\stdlib.h \
  d:\vsrm\armcc\10_2021_10\arm-none-eabi\include\alloca.h \
  d:\vsrm\armcc\10_2021_10\arm-none-eabi\include\math.h \
- D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pwm\vga_sync.h \
+ D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pwm\vga_pwm_sync.h \
  D:\VSRM\sdk\pico\pico-sdk\src\rp2_common\hardware_pwm\include/hardware/pwm.h \
  D:\VSRM\sdk\pico\pico-sdk\src\common\pico_base\include/pico.h \
  D:\VSRM\sdk\pico\pico-sdk\src\common\pico_base\include/pico/types.h \
@@ -59,8 +59,8 @@ vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm.c.obj: \
  D:\VSRM\sdk\pico\pico-sdk\src\rp2_common\hardware_base\include/hardware/address_mapped.h \
  D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/pwm.h \
  D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/dreq.h \
- D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pwm\vga_gpio.h \
- D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pwm\vga_uart.h \
+ D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pwm\vga_pwm_gpio.h \
+ D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pwm\vga_pwm_uart.h \
  D:\VSRM\sdk\pico\pico-sdk\src\rp2_common\hardware_uart\include/hardware/uart.h \
  D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_structs\include/hardware/structs/uart.h \
  D:\VSRM\sdk\pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/uart.h \

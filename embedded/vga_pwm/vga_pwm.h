@@ -9,9 +9,9 @@
 #include <math.h>
 //#include <string.h>
 
-#include "vga_sync.h"
-#include "vga_gpio.h"
-#include "vga_uart.h"
+#include "vga_pwm_sync.h"
+#include "vga_pwm_gpio.h"
+#include "vga_pwm_uart.h"
 
 //#include "pico/time.h"
 #include "pico/stdlib.h"
@@ -34,31 +34,21 @@
 #define FRAME_WIDTH 324 //320 //640
 #define FRAME_HEIGHT 240 //240 //480
 
-
-
-extern int COLOR_BITMASKS[];
-
-extern int COLOR_ANIMATION[];
-
 extern char int_string[];
 
 extern int line_counter;
-
 extern int frame_counter;
 
-extern int color;
+extern int COLOR_BITMASKS[];
 
+extern int color;
 extern int color_shift_bits;
 extern int color_bit_depth_index;
 extern int color_gpoio_mask;
+extern int color_animation;
 
-extern int animation;
-
-extern bool hsync_high;
-
-extern int first_visible_col;
-
-extern int last_visible_col;
+extern int FIRST_VISIBLE_COL;
+extern int LAST_VISIBLE_COL;
 
 
 extern semaphore_t display_on; 

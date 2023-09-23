@@ -38,7 +38,7 @@ void change_color_param(unsigned int gpio)
                             break;
                         }
                         
-                        animation = (animation + 1) % 6;
+                        color_animation = (color_animation + 1) % 6;
 
                         break;
                         
@@ -46,7 +46,7 @@ void change_color_param(unsigned int gpio)
 
 #ifdef VGA_UART_DEBUG
     uart_puts(UART_ID,"\n\ranimation id: ");
-    uart_puts(UART_ID, itoa(animation, int_string, 10));
+    uart_puts(UART_ID, itoa(color_animation, int_string, 10));
     uart_puts(UART_ID," - color bits shifted right by: ");
     uart_puts(UART_ID, itoa(color_shift_bits, int_string, 10));
 #endif
@@ -114,6 +114,8 @@ inline void configure_gpio() {
 
     gpio_put(PICO_DEFAULT_LED_PIN, 1);
 
+#ifdef VGA_UART_DEBUG
     uart_puts(UART_ID,"\n\rHello GPIO!");
+#endif
 
 }

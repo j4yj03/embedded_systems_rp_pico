@@ -82,47 +82,47 @@ vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vga_pwm.dir/vga_pwm.c.s"
 	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pwm && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pwm\vga_pwm.c -o CMakeFiles\vga_pwm.dir\vga_pwm.c.s
 
-vga_pwm/CMakeFiles/vga_pwm.dir/vga_uart.c.obj: vga_pwm/CMakeFiles/vga_pwm.dir/flags.make
-vga_pwm/CMakeFiles/vga_pwm.dir/vga_uart.c.obj: D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/vga_pwm/vga_uart.c
-vga_pwm/CMakeFiles/vga_pwm.dir/vga_uart.c.obj: vga_pwm/CMakeFiles/vga_pwm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object vga_pwm/CMakeFiles/vga_pwm.dir/vga_uart.c.obj"
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pwm && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT vga_pwm/CMakeFiles/vga_pwm.dir/vga_uart.c.obj -MF CMakeFiles\vga_pwm.dir\vga_uart.c.obj.d -o CMakeFiles\vga_pwm.dir\vga_uart.c.obj -c D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pwm\vga_uart.c
+vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_uart.c.obj: vga_pwm/CMakeFiles/vga_pwm.dir/flags.make
+vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_uart.c.obj: D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/vga_pwm/vga_pwm_uart.c
+vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_uart.c.obj: vga_pwm/CMakeFiles/vga_pwm.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_uart.c.obj"
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pwm && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_uart.c.obj -MF CMakeFiles\vga_pwm.dir\vga_pwm_uart.c.obj.d -o CMakeFiles\vga_pwm.dir\vga_pwm_uart.c.obj -c D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pwm\vga_pwm_uart.c
 
-vga_pwm/CMakeFiles/vga_pwm.dir/vga_uart.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vga_pwm.dir/vga_uart.c.i"
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pwm && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pwm\vga_uart.c > CMakeFiles\vga_pwm.dir\vga_uart.c.i
+vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_uart.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vga_pwm.dir/vga_pwm_uart.c.i"
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pwm && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pwm\vga_pwm_uart.c > CMakeFiles\vga_pwm.dir\vga_pwm_uart.c.i
 
-vga_pwm/CMakeFiles/vga_pwm.dir/vga_uart.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vga_pwm.dir/vga_uart.c.s"
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pwm && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pwm\vga_uart.c -o CMakeFiles\vga_pwm.dir\vga_uart.c.s
+vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_uart.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vga_pwm.dir/vga_pwm_uart.c.s"
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pwm && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pwm\vga_pwm_uart.c -o CMakeFiles\vga_pwm.dir\vga_pwm_uart.c.s
 
-vga_pwm/CMakeFiles/vga_pwm.dir/vga_sync.c.obj: vga_pwm/CMakeFiles/vga_pwm.dir/flags.make
-vga_pwm/CMakeFiles/vga_pwm.dir/vga_sync.c.obj: D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/vga_pwm/vga_sync.c
-vga_pwm/CMakeFiles/vga_pwm.dir/vga_sync.c.obj: vga_pwm/CMakeFiles/vga_pwm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object vga_pwm/CMakeFiles/vga_pwm.dir/vga_sync.c.obj"
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pwm && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT vga_pwm/CMakeFiles/vga_pwm.dir/vga_sync.c.obj -MF CMakeFiles\vga_pwm.dir\vga_sync.c.obj.d -o CMakeFiles\vga_pwm.dir\vga_sync.c.obj -c D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pwm\vga_sync.c
+vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_sync.c.obj: vga_pwm/CMakeFiles/vga_pwm.dir/flags.make
+vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_sync.c.obj: D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/vga_pwm/vga_pwm_sync.c
+vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_sync.c.obj: vga_pwm/CMakeFiles/vga_pwm.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_sync.c.obj"
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pwm && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_sync.c.obj -MF CMakeFiles\vga_pwm.dir\vga_pwm_sync.c.obj.d -o CMakeFiles\vga_pwm.dir\vga_pwm_sync.c.obj -c D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pwm\vga_pwm_sync.c
 
-vga_pwm/CMakeFiles/vga_pwm.dir/vga_sync.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vga_pwm.dir/vga_sync.c.i"
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pwm && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pwm\vga_sync.c > CMakeFiles\vga_pwm.dir\vga_sync.c.i
+vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_sync.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vga_pwm.dir/vga_pwm_sync.c.i"
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pwm && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pwm\vga_pwm_sync.c > CMakeFiles\vga_pwm.dir\vga_pwm_sync.c.i
 
-vga_pwm/CMakeFiles/vga_pwm.dir/vga_sync.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vga_pwm.dir/vga_sync.c.s"
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pwm && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pwm\vga_sync.c -o CMakeFiles\vga_pwm.dir\vga_sync.c.s
+vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_sync.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vga_pwm.dir/vga_pwm_sync.c.s"
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pwm && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pwm\vga_pwm_sync.c -o CMakeFiles\vga_pwm.dir\vga_pwm_sync.c.s
 
-vga_pwm/CMakeFiles/vga_pwm.dir/vga_gpio.c.obj: vga_pwm/CMakeFiles/vga_pwm.dir/flags.make
-vga_pwm/CMakeFiles/vga_pwm.dir/vga_gpio.c.obj: D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/vga_pwm/vga_gpio.c
-vga_pwm/CMakeFiles/vga_pwm.dir/vga_gpio.c.obj: vga_pwm/CMakeFiles/vga_pwm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object vga_pwm/CMakeFiles/vga_pwm.dir/vga_gpio.c.obj"
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pwm && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT vga_pwm/CMakeFiles/vga_pwm.dir/vga_gpio.c.obj -MF CMakeFiles\vga_pwm.dir\vga_gpio.c.obj.d -o CMakeFiles\vga_pwm.dir\vga_gpio.c.obj -c D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pwm\vga_gpio.c
+vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_gpio.c.obj: vga_pwm/CMakeFiles/vga_pwm.dir/flags.make
+vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_gpio.c.obj: D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/vga_pwm/vga_pwm_gpio.c
+vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_gpio.c.obj: vga_pwm/CMakeFiles/vga_pwm.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_gpio.c.obj"
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pwm && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_gpio.c.obj -MF CMakeFiles\vga_pwm.dir\vga_pwm_gpio.c.obj.d -o CMakeFiles\vga_pwm.dir\vga_pwm_gpio.c.obj -c D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pwm\vga_pwm_gpio.c
 
-vga_pwm/CMakeFiles/vga_pwm.dir/vga_gpio.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vga_pwm.dir/vga_gpio.c.i"
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pwm && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pwm\vga_gpio.c > CMakeFiles\vga_pwm.dir\vga_gpio.c.i
+vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_gpio.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vga_pwm.dir/vga_pwm_gpio.c.i"
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pwm && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pwm\vga_pwm_gpio.c > CMakeFiles\vga_pwm.dir\vga_pwm_gpio.c.i
 
-vga_pwm/CMakeFiles/vga_pwm.dir/vga_gpio.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vga_pwm.dir/vga_gpio.c.s"
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pwm && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pwm\vga_gpio.c -o CMakeFiles\vga_pwm.dir\vga_gpio.c.s
+vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_gpio.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vga_pwm.dir/vga_pwm_gpio.c.s"
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pwm && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pwm\vga_pwm_gpio.c -o CMakeFiles\vga_pwm.dir\vga_pwm_gpio.c.s
 
 vga_pwm/CMakeFiles/vga_pwm.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: vga_pwm/CMakeFiles/vga_pwm.dir/flags.make
 vga_pwm/CMakeFiles/vga_pwm.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
@@ -760,9 +760,9 @@ vga_pwm/CMakeFiles/vga_pwm.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware
 # Object files for target vga_pwm
 vga_pwm_OBJECTS = \
 "CMakeFiles/vga_pwm.dir/vga_pwm.c.obj" \
-"CMakeFiles/vga_pwm.dir/vga_uart.c.obj" \
-"CMakeFiles/vga_pwm.dir/vga_sync.c.obj" \
-"CMakeFiles/vga_pwm.dir/vga_gpio.c.obj" \
+"CMakeFiles/vga_pwm.dir/vga_pwm_uart.c.obj" \
+"CMakeFiles/vga_pwm.dir/vga_pwm_sync.c.obj" \
+"CMakeFiles/vga_pwm.dir/vga_pwm_gpio.c.obj" \
 "CMakeFiles/vga_pwm.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj" \
 "CMakeFiles/vga_pwm.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj" \
 "CMakeFiles/vga_pwm.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj" \
@@ -814,9 +814,9 @@ vga_pwm_OBJECTS = \
 vga_pwm_EXTERNAL_OBJECTS =
 
 vga_pwm/vga_pwm.elf: vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm.c.obj
-vga_pwm/vga_pwm.elf: vga_pwm/CMakeFiles/vga_pwm.dir/vga_uart.c.obj
-vga_pwm/vga_pwm.elf: vga_pwm/CMakeFiles/vga_pwm.dir/vga_sync.c.obj
-vga_pwm/vga_pwm.elf: vga_pwm/CMakeFiles/vga_pwm.dir/vga_gpio.c.obj
+vga_pwm/vga_pwm.elf: vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_uart.c.obj
+vga_pwm/vga_pwm.elf: vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_sync.c.obj
+vga_pwm/vga_pwm.elf: vga_pwm/CMakeFiles/vga_pwm.dir/vga_pwm_gpio.c.obj
 vga_pwm/vga_pwm.elf: vga_pwm/CMakeFiles/vga_pwm.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 vga_pwm/vga_pwm.elf: vga_pwm/CMakeFiles/vga_pwm.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 vga_pwm/vga_pwm.elf: vga_pwm/CMakeFiles/vga_pwm.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj

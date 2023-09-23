@@ -105,7 +105,6 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_int64_ops/include"
   "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_mem_ops/include"
   "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/boot_stage2/include"
-  "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pwm/include"
   "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/include"
   "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/include"
   )
@@ -148,6 +147,9 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c" "vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj" "gcc" "vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj.d"
   "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c" "vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj" "gcc" "vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj.d"
   "D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/vga_pio/vga_pio.c" "vga_pio/CMakeFiles/vga_pio.dir/vga_pio.c.obj" "gcc" "vga_pio/CMakeFiles/vga_pio.dir/vga_pio.c.obj.d"
+  "D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/vga_pio/vga_pio_dma.c" "vga_pio/CMakeFiles/vga_pio.dir/vga_pio_dma.c.obj" "gcc" "vga_pio/CMakeFiles/vga_pio.dir/vga_pio_dma.c.obj.d"
+  "D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/vga_pio/vga_pio_gpio.c" "vga_pio/CMakeFiles/vga_pio.dir/vga_pio_gpio.c.obj" "gcc" "vga_pio/CMakeFiles/vga_pio.dir/vga_pio_gpio.c.obj.d"
+  "D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/vga_pio/vga_pio_uart.c" "vga_pio/CMakeFiles/vga_pio.dir/vga_pio_uart.c.obj" "gcc" "vga_pio/CMakeFiles/vga_pio.dir/vga_pio_uart.c.obj.d"
   "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp" "vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj" "gcc" "vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj.d"
   )
 
