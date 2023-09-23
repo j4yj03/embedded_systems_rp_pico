@@ -9,6 +9,7 @@
         "stdlib.h": "c",
         "dma.h": "c",
         "gpio.h": "c",
-        "pwm.h": "c"
+        "pwm.h": "c",
+        "vga_pwm.h": "c"
     }
 }

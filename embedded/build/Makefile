@@ -181,17 +181,17 @@ cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast:
 .PHONY : cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast
 
 #=============================================================================
-# Target rules for targets named vga
+# Target rules for targets named vga_pwm
 
 # Build rule for target.
-vga: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 vga
-.PHONY : vga
+vga_pwm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 vga_pwm
+.PHONY : vga_pwm
 
 # fast build rule for target.
-vga/fast:
-	$(MAKE) $(MAKESILENT) -f vga\CMakeFiles\vga.dir\build.make vga/CMakeFiles/vga.dir/build
-.PHONY : vga/fast
+vga_pwm/fast:
+	$(MAKE) $(MAKESILENT) -f vga_pwm\CMakeFiles\vga_pwm.dir\build.make vga_pwm/CMakeFiles/vga_pwm.dir/build
+.PHONY : vga_pwm/fast
 
 #=============================================================================
 # Target rules for targets named ELF2UF2Build
@@ -203,7 +203,7 @@ ELF2UF2Build: cmake_check_build_system
 
 # fast build rule for target.
 ELF2UF2Build/fast:
-	$(MAKE) $(MAKESILENT) -f vga\CMakeFiles\ELF2UF2Build.dir\build.make vga/CMakeFiles/ELF2UF2Build.dir/build
+	$(MAKE) $(MAKESILENT) -f vga_pwm\CMakeFiles\ELF2UF2Build.dir\build.make vga_pwm/CMakeFiles/ELF2UF2Build.dir/build
 .PHONY : ELF2UF2Build/fast
 
 #=============================================================================
@@ -275,8 +275,8 @@ help:
 	@echo ... vga_pio_vga_rgb_pio_h
 	@echo ... vga_pio_vga_vsync_pio_h
 	@echo ... bs2_default
-	@echo ... vga
 	@echo ... vga_pio
+	@echo ... vga_pwm
 .PHONY : help
 
 
