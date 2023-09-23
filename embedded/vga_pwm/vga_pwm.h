@@ -1,6 +1,8 @@
 #ifndef VGA_H
 #define	VGA_H
 
+//#define VGA_UART_DEBUG
+
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -29,18 +31,8 @@
 #define SLEEP_MS 1000
 
 
-#define FRAME_WIDTH 320 //320 //640
+#define FRAME_WIDTH 324 //320 //640
 #define FRAME_HEIGHT 240 //240 //480
-
-/*
-    4000 clocks @ 125MHz TOP (32 µs)
-
-    3200 clocks @ 125MHz displaytime (25.6µs)
-    800 clocks @ 125MHz blanking (6.4µs) 
-    
-*/
-#define FIRST_VISIBLE_COL 600  // 18% (3.84µs PW + 1.92µs BP)
-#define LAST_VISIBLE_COL 3900 // 98% (32µs TOP - 0.640µs FP)
 
 
 

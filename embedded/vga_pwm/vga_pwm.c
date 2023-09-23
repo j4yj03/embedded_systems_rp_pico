@@ -13,7 +13,6 @@ int colorlines[4][FRAME_WIDTH] = {{0}};
 int bits[8] = {0x0, 0x07, 0x3F, 0x38, 0xF8, 0xF, 0xC0, 0xFF};
 int chess[2] = {0x0, 0xFF};
 
-//unsigned int old_frame = 0;
 
 int line_counter, frame_counter, color, color_bit_depth_index, px_idx, colorline_idx, tmp_idx = 0;
 
@@ -25,9 +24,18 @@ int animation = 0;
 
 semaphore_t display_on;
 
-//bool hsync_high = false;
 
 
+
+/*
+    4000 clocks @ 125MHz TOP (32 µs)
+
+    3200 clocks @ 125MHz displaytime (25.6µs)
+    800 clocks @ 125MHz blanking (6.4µs) 
+    
+*/
+int FIRST_VISIBLE_COL = 600;  // 18% (3.84µs PW + 1.92µs BP)
+int LAST_VISIBLE_COL = 3900; // 98% (32µs TOP - 0.640µs FP)
 
 
 
@@ -56,7 +64,7 @@ void generate_line(int n_bins)
         {
             for(px_idx = start_idx; px_idx < end_idx; px_idx++)
             {
-                colorlines[colorline_idx][px_idx] = bits[(color_idx + colorline_idx) % 8];
+                colorlines[colorline_idx][px_idx] = bits[(color_idx + colorline_idx + bin) % 8];
             }
         }
 
@@ -70,6 +78,8 @@ void generate_line(int n_bins)
 }
 
 
+/** \brief main initialisation and mainloop. Video generation in mainloop depends on animation value
+*/
 int main()
 {
 
@@ -145,7 +155,7 @@ int main()
             case 3: // zur Laufzeit berechnetes Schachbrett
                     while(hsync_get_counter() < LAST_VISIBLE_COL)
                     {
-                        tmp_idx = (int) (line_counter / 24) ^ (hsync_get_counter() / 4);                       
+                        tmp_idx = (int) (line_counter / (24)) ^ (hsync_get_counter() / 4);                       
                         gpio_put_masked(color_gpoio_mask, (chess[tmp_idx % 2] << COLOR_GPIO_OFFSET));
                 
                     };

@@ -2,10 +2,12 @@
 
     
 
-
+/** \brief change color output parameters acording to gpio irq
+ * \param width which gpio
+ * 
+*/
 void change_color_param(unsigned int gpio)
 {
-
     switch(gpio)
     {
         default: break;
@@ -28,8 +30,6 @@ void change_color_param(unsigned int gpio)
 
                         if (gpio_get(VGA_BUTTON_1))
                         {
-                            
-
                             color_bit_depth_index = (color_bit_depth_index + 1) % 3;
                             // drive on board LED when in 256 color mode
                             gpio_put(PICO_DEFAULT_LED_PIN, (color_bit_depth_index == 0));
@@ -38,16 +38,18 @@ void change_color_param(unsigned int gpio)
                             break;
                         }
                         
-                        
                         animation = (animation + 1) % 6;
 
                         break;
                         
     }    
+
+#ifdef VGA_UART_DEBUG
     uart_puts(UART_ID,"\n\ranimation id: ");
     uart_puts(UART_ID, itoa(animation, int_string, 10));
     uart_puts(UART_ID," - color bits shifted right by: ");
     uart_puts(UART_ID, itoa(color_shift_bits, int_string, 10));
+#endif
 }
 
 
