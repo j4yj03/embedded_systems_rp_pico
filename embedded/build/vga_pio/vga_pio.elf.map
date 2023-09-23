@@ -1075,6 +1075,59 @@ Discarded input sections
  .comment       0x00000000       0x4a CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .ARM.attributes
                 0x00000000       0x2c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .text          0x00000000        0x0 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .data          0x00000000        0x0 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .text._pio_find_offset_for_program
+                0x00000000       0x6c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .rodata._pio_add_program_at_offset.str1.4
+                0x00000000       0x11 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .text._pio_add_program_at_offset
+                0x00000000       0x90 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .rodata.pio_sm_claim.str1.4
+                0x00000000       0x40 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .text.pio_sm_claim
+                0x00000000       0x30 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .text.pio_claim_sm_mask
+                0x00000000       0x24 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .text.pio_sm_unclaim
+                0x00000000       0x20 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .rodata.pio_claim_unused_sm.str1.4
+                0x00000000       0x24 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .text.pio_claim_unused_sm
+                0x00000000       0x3c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .text.pio_sm_is_claimed
+                0x00000000       0x20 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .text.pio_can_add_program
+                0x00000000       0x26 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .text.pio_can_add_program_at_offset
+                0x00000000       0x50 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .text.pio_add_program
+                0x00000000       0x38 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .text.pio_add_program_at_offset
+                0x00000000       0x20 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .text.pio_remove_program
+                0x00000000       0x34 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .text.pio_clear_instruction_memory
+                0x00000000       0x3c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .text.pio_sm_set_pins
+                0x00000000       0xb2 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .text.pio_sm_set_pins_with_mask
+                0x00000000       0xb6 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .text.pio_sm_set_pindirs_with_mask
+                0x00000000       0xb8 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .text.pio_sm_set_consecutive_pindirs
+                0x00000000       0xc8 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .text.pio_sm_init
+                0x00000000       0xa8 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .text.pio_sm_drain_tx_fifo
+                0x00000000       0x48 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .bss._used_instruction_space
+                0x00000000        0x8 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .bss.claimed   0x00000000        0x1 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .comment       0x00000000       0x4a CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .ARM.attributes
+                0x00000000       0x2c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
  .text          0x00000000        0x0 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
  .data          0x00000000        0x0 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
  .bss           0x00000000        0x0 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
@@ -1112,9 +1165,9 @@ Discarded input sections
  .comment       0x00000000       0x4a CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
  .ARM.attributes
                 0x00000000       0x2c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
- .text          0x00000000        0x0 C:\Users\Sidney\AppData\Local\Temp\cc0RA1lN.o
- .data          0x00000000        0x0 C:\Users\Sidney\AppData\Local\Temp\cc0RA1lN.o
- .bss           0x00000000        0x0 C:\Users\Sidney\AppData\Local\Temp\cc0RA1lN.o
+ .text          0x00000000        0x0 C:\Users\Sidney\AppData\Local\Temp\cc6fSNFI.o
+ .data          0x00000000        0x0 C:\Users\Sidney\AppData\Local\Temp\cc6fSNFI.o
+ .bss           0x00000000        0x0 C:\Users\Sidney\AppData\Local\Temp\cc6fSNFI.o
  .data          0x00000000        0x0 d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .text          0x00000000        0x0 d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-calloc.o)
@@ -1330,7 +1383,7 @@ LOAD d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../ar
 .boot2          0x10000000      0x100
                 0x10000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x10000000      0x100 C:\Users\Sidney\AppData\Local\Temp\cc0RA1lN.o
+ .boot2         0x10000000      0x100 C:\Users\Sidney\AppData\Local\Temp\cc6fSNFI.o
                 0x10000100                __boot2_end__ = .
                 0x00000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
@@ -1941,8 +1994,9 @@ LOAD CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standa
 LOAD CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 LOAD CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 LOAD CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+LOAD CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
 LOAD CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
-LOAD C:\Users\Sidney\AppData\Local\Temp\cc0RA1lN.o
+LOAD C:\Users\Sidney\AppData\Local\Temp\cc6fSNFI.o
 LOAD d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++.a
 LOAD d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libm.a
 START GROUP
@@ -2026,7 +2080,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x000004ec       0x2c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .ARM.attributes
-                0x00000518       0x22 C:\Users\Sidney\AppData\Local\Temp\cc0RA1lN.o
+                0x00000518       0x22 C:\Users\Sidney\AppData\Local\Temp\cc6fSNFI.o
  .ARM.attributes
                 0x0000053a       0x1e d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .ARM.attributes

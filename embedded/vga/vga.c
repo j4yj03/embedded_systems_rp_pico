@@ -5,7 +5,9 @@ char int_string[10];
 
 int COLOR_BITMASKS[3] = {COLOR_GPIO_MASK_256, COLOR_GPIO_MASK_64, COLOR_GPIO_MASK_8};
 
-int color_lines[2][FRAME_WIDTH] = {{0}};
+const int n_colorlines = 4;
+
+int colorlines[4][FRAME_WIDTH] = {{0}};
 
 
 int bits[8] = {0x0, 0x07, 0x3F, 0x38, 0xF8, 0xF, 0xC0, 0xFF};
@@ -13,13 +15,13 @@ int chess[2] = {0x0, 0xFF};
 
 //unsigned int old_frame = 0;
 
-int temp_index, hysnc_count, line_counter, frame_counter, color, color_bit_depth_index, idx, value = 0;
+int temp_index, hysnc_count, line_counter, frame_counter, color, color_bit_depth_index, px_idx, colorline_idx = 0;
 
-int color_param_1 = 3;
+int color_param_1 = 10;
 
 int color_bit_mask = COLOR_GPIO_MASK_256;
 
-int animation = 3;
+int animation = 0;
 
 semaphore_t display_on;
 
@@ -48,9 +50,10 @@ void generate_line(int n_bins)
 
     // each bin consists of 320 / width pixel
     int bin_size = FRAME_WIDTH / n_bins;
-    int start_idx, end_idx, color_idx = 0;
+    int bin, start_idx, end_idx, color_idx = 0;
+    
 
-    for (int bin = 0; bin < n_bins; bin++)
+    for (bin = 0; bin < n_bins; bin++)
     {
         // calculate start idx
         start_idx = bin * bin_size;
@@ -58,11 +61,15 @@ void generate_line(int n_bins)
 
         color_idx++; 
 
-        for(int px_idx = start_idx; px_idx < end_idx; px_idx++)
+        for(colorline_idx = 0; colorline_idx < n_colorlines; colorline_idx++)
         {
-            color_lines[0][px_idx] = chess[color_idx % 2]; //((((start_idx + px_idx) | end_idx) & hysnc_count)) & (0xFF);
-            color_lines[1][px_idx] = chess[(color_idx + 1) % 2]; //((((start_idx - px_idx) | end_idx) & hysnc_count)) & (0xFF);
+            for(px_idx = start_idx; px_idx < end_idx; px_idx++)
+            {
+                colorlines[colorline_idx][px_idx] = bits[(color_idx + colorline_idx) % 8];
+            }
         }
+
+        
     };
     
     uart_puts(UART_ID, "\n\rPixels generated! n bins=");
@@ -121,19 +128,22 @@ int main()
             case 1: // vertikale Streifen
                     while(hsync_get_counter() < last_visible_col)
                     {
-                        temp_index = (int) ((hsync_get_counter()) / (4096 >> color_param_1));
+                        temp_index = (int) ((hsync_get_counter()) / (256));
                         gpio_put_masked(color_bit_mask, (bits[temp_index % 8] << COLOR_GPIO_OFFSET));
 
                     };
                     break;
 
-            case 2: // live generiertes schachbrett
-                    while(hsync_get_counter() < last_visible_col)
-                    {
-                        temp_index = (int) (line_counter / (24)) ^ ((hsync_get_counter()) / 4);                       
-                        gpio_put_masked(color_bit_mask, (chess[temp_index % 2] << COLOR_GPIO_OFFSET));
-                
-                    };
+            case 2: // berechnetes Schachbrett aus n_colorlines farbarrays
+
+                    // each colorline is displayed 40 times
+                    colorline_idx = ((int) (line_counter / 40)) % n_colorlines;
+    
+                    for (px_idx = 0; px_idx < FRAME_WIDTH; px_idx++)          
+                    {       
+                        color = colorlines[colorline_idx][px_idx];
+                        gpio_put_masked(color_bit_mask, (color << COLOR_GPIO_OFFSET));
+                    }
                     break;
             /*
             case 3: // aufsteigende horizontale Steifen
@@ -141,15 +151,13 @@ int main()
                     gpio_put_masked(vga.color_bit_mask, (vga.color << COLOR_GPIO_OFFSET)); 
                     break;
                     */
-            case 3: // berechnetes Schachbrett aus zwei farbarrays
-
-                    value = (int) (line_counter / 40) % 2;
-    
-                    for (idx = 0; idx < FRAME_WIDTH; idx++)          
-                    {       
-                        color = color_lines[value][idx];
-                        gpio_put_masked(color_bit_mask, (color << COLOR_GPIO_OFFSET));
-                    }
+            case 3: // zur Laufzeit berechnetes Schachbrett
+                    while(hsync_get_counter() < last_visible_col)
+                    {
+                        temp_index = (int) (line_counter / (24)) ^ ((hsync_get_counter()) / 4);                       
+                        gpio_put_masked(color_bit_mask, (chess[temp_index % 2] << COLOR_GPIO_OFFSET));
+                
+                    };
                     break;
 
                     

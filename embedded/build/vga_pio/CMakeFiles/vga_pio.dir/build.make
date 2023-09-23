@@ -701,10 +701,24 @@ vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_std
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s"
 	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pio && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\VSRM\sdk\pico\pico-sdk\src\rp2_common\pico_stdio_uart\stdio_uart.c -o CMakeFiles\vga_pio.dir\D_\VSRM\sdk\pico\pico-sdk\src\rp2_common\pico_stdio_uart\stdio_uart.c.s
 
+vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: vga_pio/CMakeFiles/vga_pio.dir/flags.make
+vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c
+vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: vga_pio/CMakeFiles/vga_pio.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj"
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pio && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj -MF CMakeFiles\vga_pio.dir\D_\VSRM\sdk\pico\pico-sdk\src\rp2_common\hardware_pio\pio.c.obj.d -o CMakeFiles\vga_pio.dir\D_\VSRM\sdk\pico\pico-sdk\src\rp2_common\hardware_pio\pio.c.obj -c D:\VSRM\sdk\pico\pico-sdk\src\rp2_common\hardware_pio\pio.c
+
+vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i"
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pio && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\VSRM\sdk\pico\pico-sdk\src\rp2_common\hardware_pio\pio.c > CMakeFiles\vga_pio.dir\D_\VSRM\sdk\pico\pico-sdk\src\rp2_common\hardware_pio\pio.c.i
+
+vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s"
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pio && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\VSRM\sdk\pico\pico-sdk\src\rp2_common\hardware_pio\pio.c -o CMakeFiles\vga_pio.dir\D_\VSRM\sdk\pico\pico-sdk\src\rp2_common\hardware_pio\pio.c.s
+
 vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj: vga_pio/CMakeFiles/vga_pio.dir/flags.make
 vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj: D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c
 vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj: vga_pio/CMakeFiles/vga_pio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj"
 	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pio && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj -MF CMakeFiles\vga_pio.dir\D_\VSRM\sdk\pico\pico-sdk\src\rp2_common\hardware_dma\dma.c.obj.d -o CMakeFiles\vga_pio.dir\D_\VSRM\sdk\pico\pico-sdk\src\rp2_common\hardware_dma\dma.c.obj -c D:\VSRM\sdk\pico\pico-sdk\src\rp2_common\hardware_dma\dma.c
 
 vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i: cmake_force
@@ -763,6 +777,7 @@ vga_pio_OBJECTS = \
 "CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj" \
 "CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj" \
 "CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj" \
+"CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj" \
 "CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj"
 
 # External object files for target vga_pio
@@ -814,12 +829,13 @@ vga_pio/vga_pio.elf: vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/sr
 vga_pio/vga_pio.elf: vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 vga_pio/vga_pio.elf: vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 vga_pio/vga_pio.elf: vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+vga_pio/vga_pio.elf: vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
 vga_pio/vga_pio.elf: vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
 vga_pio/vga_pio.elf: vga_pio/CMakeFiles/vga_pio.dir/build.make
 vga_pio/vga_pio.elf: pico-sdk/src/rp2_common/boot_stage2/bs2_default_padded_checksummed.S
 vga_pio/vga_pio.elf: vga_pio/CMakeFiles/vga_pio.dir/objects1.rsp
 vga_pio/vga_pio.elf: vga_pio/CMakeFiles/vga_pio.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Linking CXX executable vga_pio.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Linking CXX executable vga_pio.elf"
 	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pio && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\vga_pio.dir\link.txt --verbose=$(VERBOSE)
 	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pio && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-objcopy.exe -Oihex D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/build/vga_pio/vga_pio.elf vga_pio.hex
 	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pio && D:\VSRM\armcc\10_2021_10\bin\arm-none-eabi-objcopy.exe -Obinary D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/build/vga_pio/vga_pio.elf vga_pio.bin

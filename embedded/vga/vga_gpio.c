@@ -18,7 +18,7 @@ void change_color_param(unsigned int gpio)
                             break;
                         }
 
-                        color_param_1 = (color_param_1 + 1) % 17;
+                        color_param_1 = (color_param_1 + 1) % 20;
                         break;
         
 

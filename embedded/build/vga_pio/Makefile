@@ -130,18 +130,46 @@ vga_pio/fast:
 .PHONY : vga_pio/fast
 
 # Convenience name for target.
-vga_pio/CMakeFiles/ELF2UF2Build.dir/rule:
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 vga_pio/CMakeFiles/ELF2UF2Build.dir/rule
-.PHONY : vga_pio/CMakeFiles/ELF2UF2Build.dir/rule
+vga_pio/CMakeFiles/vga_pio_vga_hsync_pio_h.dir/rule:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 vga_pio/CMakeFiles/vga_pio_vga_hsync_pio_h.dir/rule
+.PHONY : vga_pio/CMakeFiles/vga_pio_vga_hsync_pio_h.dir/rule
 
 # Convenience name for target.
-ELF2UF2Build: vga_pio/CMakeFiles/ELF2UF2Build.dir/rule
-.PHONY : ELF2UF2Build
+vga_pio_vga_hsync_pio_h: vga_pio/CMakeFiles/vga_pio_vga_hsync_pio_h.dir/rule
+.PHONY : vga_pio_vga_hsync_pio_h
 
 # fast build rule for target.
-ELF2UF2Build/fast:
-	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\ELF2UF2Build.dir\build.make vga_pio/CMakeFiles/ELF2UF2Build.dir/build
-.PHONY : ELF2UF2Build/fast
+vga_pio_vga_hsync_pio_h/fast:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio_vga_hsync_pio_h.dir\build.make vga_pio/CMakeFiles/vga_pio_vga_hsync_pio_h.dir/build
+.PHONY : vga_pio_vga_hsync_pio_h/fast
+
+# Convenience name for target.
+vga_pio/CMakeFiles/vga_pio_vga_vsync_pio_h.dir/rule:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 vga_pio/CMakeFiles/vga_pio_vga_vsync_pio_h.dir/rule
+.PHONY : vga_pio/CMakeFiles/vga_pio_vga_vsync_pio_h.dir/rule
+
+# Convenience name for target.
+vga_pio_vga_vsync_pio_h: vga_pio/CMakeFiles/vga_pio_vga_vsync_pio_h.dir/rule
+.PHONY : vga_pio_vga_vsync_pio_h
+
+# fast build rule for target.
+vga_pio_vga_vsync_pio_h/fast:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio_vga_vsync_pio_h.dir\build.make vga_pio/CMakeFiles/vga_pio_vga_vsync_pio_h.dir/build
+.PHONY : vga_pio_vga_vsync_pio_h/fast
+
+# Convenience name for target.
+vga_pio/CMakeFiles/vga_pio_vga_rgb_pio_h.dir/rule:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 vga_pio/CMakeFiles/vga_pio_vga_rgb_pio_h.dir/rule
+.PHONY : vga_pio/CMakeFiles/vga_pio_vga_rgb_pio_h.dir/rule
+
+# Convenience name for target.
+vga_pio_vga_rgb_pio_h: vga_pio/CMakeFiles/vga_pio_vga_rgb_pio_h.dir/rule
+.PHONY : vga_pio_vga_rgb_pio_h
+
+# fast build rule for target.
+vga_pio_vga_rgb_pio_h/fast:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio_vga_rgb_pio_h.dir\build.make vga_pio/CMakeFiles/vga_pio_vga_rgb_pio_h.dir/build
+.PHONY : vga_pio_vga_rgb_pio_h/fast
 
 D_/VSRM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.obj: D_/VSRM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 .PHONY : D_/VSRM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.obj
@@ -494,6 +522,30 @@ D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj: D_/
 D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj:
 	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio.dir\build.make vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 .PHONY : D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+
+D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.obj: D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+.PHONY : D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.obj
+
+# target to build an object file
+D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio.dir\build.make vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+.PHONY : D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+
+D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.i: D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+.PHONY : D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.i
+
+# target to preprocess a source file
+D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio.dir\build.make vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+.PHONY : D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+
+D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.s: D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
+.PHONY : D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.s
+
+# target to generate assembly for a file
+D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s:
+	cd /d D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build && $(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio.dir\build.make vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
+.PHONY : D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
 
 D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj: D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 .PHONY : D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj
@@ -1103,7 +1155,9 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... ELF2UF2Build
+	@echo ... vga_pio_vga_hsync_pio_h
+	@echo ... vga_pio_vga_rgb_pio_h
+	@echo ... vga_pio_vga_vsync_pio_h
 	@echo ... vga_pio
 	@echo ... D_/VSRM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.obj
 	@echo ... D_/VSRM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.i
@@ -1149,6 +1203,9 @@ help:
 	@echo ... D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i
 	@echo ... D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.s
 	@echo ... D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj
+	@echo ... D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.obj
+	@echo ... D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.i
+	@echo ... D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.s
 	@echo ... D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj
 	@echo ... D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i
 	@echo ... D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s

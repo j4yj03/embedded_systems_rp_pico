@@ -66,6 +66,7 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
+  "vga_pio"
   "D:/VSRM/sdk/pico/pico-sdk/src/common/pico_stdlib/include"
   "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/include"
   "D:/VSRM/sdk/pico/pico-sdk/src/common/pico_base/include"
@@ -105,6 +106,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_mem_ops/include"
   "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/boot_stage2/include"
   "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pwm/include"
+  "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/include"
   "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/include"
   )
 
@@ -124,6 +126,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c" "vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj" "gcc" "vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj.d"
   "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c" "vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj" "gcc" "vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj.d"
   "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c" "vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj" "gcc" "vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj.d"
+  "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c" "vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj" "gcc" "vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj.d"
   "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c" "vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj" "gcc" "vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj.d"
   "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c" "vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj" "gcc" "vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj.d"
   "D:/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c" "vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj" "gcc" "vga_pio/CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj.d"
