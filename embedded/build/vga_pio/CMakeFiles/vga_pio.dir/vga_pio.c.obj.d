@@ -30,6 +30,10 @@ vga_pio/CMakeFiles/vga_pio.dir/vga_pio.c.obj: \
  d:\vsrm\armcc\10_2021_10\arm-none-eabi\include\sys\sched.h \
  d:\vsrm\armcc\10_2021_10\arm-none-eabi\include\machine\types.h \
  d:\vsrm\armcc\10_2021_10\arm-none-eabi\include\sys\stdio.h \
+ d:\vsrm\armcc\10_2021_10\arm-none-eabi\include\stdlib.h \
+ d:\vsrm\armcc\10_2021_10\arm-none-eabi\include\machine\stdlib.h \
+ d:\vsrm\armcc\10_2021_10\arm-none-eabi\include\alloca.h \
+ d:\vsrm\armcc\10_2021_10\arm-none-eabi\include\math.h \
  D:\VSRM\sdk\pico\pico-sdk\src\common\pico_stdlib\include/pico/stdlib.h \
  D:\VSRM\sdk\pico\pico-sdk\src\common\pico_base\include/pico.h \
  D:\VSRM\sdk\pico\pico-sdk\src\common\pico_base\include/pico/types.h \

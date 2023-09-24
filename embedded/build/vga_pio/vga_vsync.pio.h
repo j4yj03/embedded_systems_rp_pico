@@ -13,7 +13,7 @@
 // --------- //
 
 #define vga_vsync_wrap_target 1
-#define vga_vsync_wrap 13
+#define vga_vsync_wrap 12
 
 static const uint16_t vga_vsync_program_instructions[] = {
     0x80a0, //  0: pull   block                      
@@ -25,19 +25,18 @@ static const uint16_t vga_vsync_program_instructions[] = {
     0xe049, //  5: set    y, 9                       
     0x20c0, //  6: wait   1 irq, 0                   
     0x0086, //  7: jmp    y--, 6                     
-    0xe000, //  8: set    pins, 0                    
+    0x30c0, //  8: wait   1 irq, 0        side 0     
     0x20c0, //  9: wait   1 irq, 0                   
-    0x20c0, // 10: wait   1 irq, 0                   
-    0xe05f, // 11: set    y, 31                      
-    0x38c0, // 12: wait   1 irq, 0        side 1     
-    0x008c, // 13: jmp    y--, 12                    
+    0xe05f, // 10: set    y, 31                      
+    0x38c0, // 11: wait   1 irq, 0        side 1     
+    0x008b, // 12: jmp    y--, 11                    
             //     .wrap
 };
 
 #if !PICO_NO_HARDWARE
 static const struct pio_program vga_vsync_program = {
     .instructions = vga_vsync_program_instructions,
-    .length = 14,
+    .length = 13,
     .origin = -1,
 };
 

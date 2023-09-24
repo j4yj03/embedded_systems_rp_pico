@@ -22,8 +22,6 @@
 #define VSYNC_GPIO_MASK (1ul << VSYNC_GPIO_OFFSET)
 
 
-extern void configure_button();
-
 extern void configure_gpio();
 
 #endif

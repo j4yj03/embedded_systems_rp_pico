@@ -1,13 +1,9 @@
 #include "vga_pio.h"
 
 
-
-
 void configure_dma()
 {
-
-    address_pointer = &vga_data_array[0];
-
+    
     // Channel Zero (sends color data to PIO VGA machine)
     dma_channel_config c0 = dma_channel_get_default_config(DMA_CHAN_DATA);  // default configs
     channel_config_set_transfer_data_size(&c0, DMA_SIZE_8);              // 8-bit txfers
@@ -19,8 +15,8 @@ void configure_dma()
     dma_channel_configure(
         DMA_CHAN_DATA,                 // Channel to be configured
         &c0,                        // The configuration we just created
-        &pio->txf[RGB_PIO_SM],          // write address (RGB PIO TX FIFO)
-        &vga_data_array,            // The initial read address (pixel color array)
+        &pio_0->txf[RGB_PIO_SM],          // write address (RGB PIO TX FIFO)
+        &vga_data_array_start,            // The initial read address (pixel color array)
         N_PIXEL,                    // Number of transfers; in this case each is 1 byte.
         false                       // Don't start immediately.
     );
@@ -36,7 +32,7 @@ void configure_dma()
         DMA_CHAN_CONF,                         // Channel to be configured
         &c1,                                // The configuration we just created
         &dma_hw->ch[DMA_CHAN_DATA].read_addr,  // Write address (channel 0 read address)
-        &address_pointer,                   // Read address (POINTER TO AN ADDRESS)
+        &vga_data_array_start,                   // Read address (POINTER TO AN ADDRESS)
         1,                                  // Number of transfers, in this case each is 4 byte
         false                               // Don't start immediately.
     );

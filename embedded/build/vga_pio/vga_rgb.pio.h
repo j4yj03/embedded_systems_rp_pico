@@ -19,13 +19,13 @@ static const uint16_t vga_rgb_program_instructions[] = {
     0x80a0, //  0: pull   block                      
     0xa047, //  1: mov    y, osr                     
             //     .wrap_target
-    0xe000, //  2: set    pins, 0                    
-    0xa022, //  3: mov    x, y                       
-    0x23c1, //  4: wait   1 irq, 1               [3] 
-    0x80a0, //  5: pull   block                      
-    0x6403, //  6: out    pins, 3                [4] 
-    0x6203, //  7: out    pins, 3                [2] 
-    0x0045, //  8: jmp    x--, 5                     
+    0xa0e3, //  2: mov    osr, null                  
+    0x6308, //  3: out    pins, 8                [3] 
+    0xa022, //  4: mov    x, y                       
+    0x23c1, //  5: wait   1 irq, 1               [3] 
+    0x80a0, //  6: pull   block                      
+    0x6708, //  7: out    pins, 8                [7] 
+    0x0046, //  8: jmp    x--, 6                     
             //     .wrap
 };
 
@@ -50,16 +50,19 @@ static inline void vga_rgb_program_init(PIO pio, uint sm, uint offset, uint pin)
     pio_sm_config c = vga_rgb_program_get_default_config(offset);
     // Map the state machine's SET and OUT pin group to three pins, the `pin`
     // parameter to this function is the lowest one. These groups overlap.
-    sm_config_set_set_pins(&c, pin, 3);
-    sm_config_set_out_pins(&c, pin, 3);
+    //sm_config_set_set_pins(&c, pin, 5);
+    //sm_config_set_sideset_pins(&c, pin + 7);
+    sm_config_set_out_pins(&c, pin, 8);
     // Set clock division (Commented out, this one runs at full speed)
     // sm_config_set_clkdiv(&c, 5) ;
     // Set this pin's GPIO function (connect PIO to the pad)
-    pio_gpio_init(pio, pin);
-    pio_gpio_init(pio, pin+1);
-    pio_gpio_init(pio, pin+2);
+    int n_pins = 8;
+    for(int pin_num = 0; pin_num < n_pins; pin_num++ )
+    {
+        pio_gpio_init(pio, pin + pin_num);
+    }
     // Set the pin direction to output at the PIO (3 pins)
-    pio_sm_set_consecutive_pindirs(pio, sm, pin, 3, true);
+    pio_sm_set_consecutive_pindirs(pio, sm, pin, 8, true);
     // Load our configuration, and jump to the start of the program
     pio_sm_init(pio, sm, offset, &c);
     // Set the state machine running (commented out, I'll start this in the C)

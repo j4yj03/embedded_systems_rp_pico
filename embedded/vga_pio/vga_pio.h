@@ -2,6 +2,9 @@
 #define	VGA_PIO_H
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
 #include "hardware/pio.h"
@@ -17,15 +20,21 @@
 #include "vga_rgb.pio.h"
 
 
+#define VGA_UART_DEBUG true
+
+
+
+
+
+#define FRAME_WIDTH 320 //320 //640
+#define FRAME_HEIGHT 240 //240 //480
+
+#define PIXEL_OFFSET 0 //FRAME_WIDTH * 2
+
 // VGA timing constants
 #define HSYNC_ACTIVE   655    // (active + frontporch - 1) - one cycle delay for mov
 #define VSYNC_ACTIVE   479    // (active - 1)
-#define RGB_ACTIVE 319    // (horizontal active)/2 - 1
-// #define RGB_ACTIVE 639 // change to this if 1 pixel/byte
-
-
-#define FRAME_WIDTH 480 //320 //640
-#define FRAME_HEIGHT 320 //240 //480
+#define RGB_ACTIVE (FRAME_WIDTH - 1) 
 
 #define N_PIXEL (FRAME_WIDTH * FRAME_HEIGHT) 
 
@@ -38,10 +47,15 @@
 // Pixel color array that is DMA's to the PIO machines and
 // a pointer to the ADDRESS of this color array.
 // Note that this array is automatically initialized to all 0's (black)
-extern char vga_data_array[N_PIXEL];
+extern char vga_data_array[];
+extern char * vga_data_array_start;
+extern int vga_data_array_address[];
 
 
-extern PIO pio;
+extern char int_string[10];
+
+
+extern PIO pio_0;
 
 extern int COLOR_BITMASKS[];
 extern int color_bitmask_idx;

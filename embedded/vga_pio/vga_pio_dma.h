@@ -5,7 +5,6 @@
 #define DMA_CHAN_DATA 0
 #define DMA_CHAN_CONF 1
 
-extern char * address_pointer;
 
 extern void configure_dma();
 

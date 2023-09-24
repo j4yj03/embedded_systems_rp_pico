@@ -1,5 +1,5 @@
 {
-    "cmake.sourceDirectory": "D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded/vga",
+    "cmake.sourceDirectory": "D:/Documents/Uni/embeddedpico/embedded_systems_rp_pico/embedded",
     "files.associations": {
         "uart.h": "c",
         "irq.h": "c",

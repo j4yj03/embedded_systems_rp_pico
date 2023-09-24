@@ -22,7 +22,7 @@ void change_color_param(unsigned int gpio)
                             break;
                         }
 
-                        color_shift_bits = (color_shift_bits + 1) % 20;
+                        color_shift_bits = (color_shift_bits + 1) % 40;
                         break;
         
 
@@ -85,13 +85,13 @@ void on_button(uint gpio, uint32_t events)
 */
 inline void configure_gpio() {
 
-    gpio_init_mask(COLOR_GPIO_MASK_256 | VSYNC_GPIO_MASK);
-    gpio_set_dir_out_masked(COLOR_GPIO_MASK_256 | VSYNC_GPIO_MASK);
+    //gpio_init_mask(COLOR_GPIO_MASK_256 | VSYNC_GPIO_MASK);
+    //gpio_set_dir_out_masked(COLOR_GPIO_MASK_256 | VSYNC_GPIO_MASK);
 
     //gpio_init_mask(V_SYNC_GPIO_MASK);
     //gpio_set_dir_out_masked(V_SYNC_GPIO_MASK);
 
-    gpio_clr_mask(VSYNC_GPIO_MASK | COLOR_GPIO_MASK_256);
+    //gpio_clr_mask(VSYNC_GPIO_MASK | COLOR_GPIO_MASK_256);
     //gpio_clr_mask(COLOR_GPIO_MASK);
 
 

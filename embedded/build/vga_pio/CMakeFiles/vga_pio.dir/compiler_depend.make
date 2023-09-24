@@ -1682,6 +1682,10 @@ vga_pio/CMakeFiles/vga_pio.dir/vga_pio.c.obj: D:/Documents/Uni/embeddedpico/embe
   D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/sys/sched.h \
   D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/machine/types.h \
   D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/sys/stdio.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/stdlib.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/machine/stdlib.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/alloca.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/math.h \
   D:/VSRM/sdk/pico/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h \
   D:/VSRM/sdk/pico/pico-sdk/src/common/pico_base/include/pico.h \
   D:/VSRM/sdk/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
@@ -1768,6 +1772,10 @@ vga_pio/CMakeFiles/vga_pio.dir/vga_pio_dma.c.obj: D:/Documents/Uni/embeddedpico/
   D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/sys/sched.h \
   D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/machine/types.h \
   D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/sys/stdio.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/stdlib.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/machine/stdlib.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/alloca.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/math.h \
   D:/VSRM/sdk/pico/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h \
   D:/VSRM/sdk/pico/pico-sdk/src/common/pico_base/include/pico.h \
   D:/VSRM/sdk/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
@@ -1854,6 +1862,10 @@ vga_pio/CMakeFiles/vga_pio.dir/vga_pio_gpio.c.obj: D:/Documents/Uni/embeddedpico
   D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/sys/sched.h \
   D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/machine/types.h \
   D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/sys/stdio.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/stdlib.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/machine/stdlib.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/alloca.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/math.h \
   D:/VSRM/sdk/pico/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h \
   D:/VSRM/sdk/pico/pico-sdk/src/common/pico_base/include/pico.h \
   D:/VSRM/sdk/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
@@ -1940,6 +1952,10 @@ vga_pio/CMakeFiles/vga_pio.dir/vga_pio_uart.c.obj: D:/Documents/Uni/embeddedpico
   D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/sys/sched.h \
   D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/machine/types.h \
   D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/sys/stdio.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/stdlib.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/machine/stdlib.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/alloca.h \
+  D:/VSRM/armcc/10_2021_10/arm-none-eabi/include/math.h \
   D:/VSRM/sdk/pico/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h \
   D:/VSRM/sdk/pico/pico-sdk/src/common/pico_base/include/pico.h \
   D:/VSRM/sdk/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
