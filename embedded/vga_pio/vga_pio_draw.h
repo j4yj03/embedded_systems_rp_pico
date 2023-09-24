@@ -7,9 +7,9 @@
 
 extern void draw_function_0();
 extern void draw_function_1();
-extern void draw_function_2(int frame_counter);
+extern void draw_function_2();
 extern void draw_function_3(int frame_counter);
 extern void draw_function_4(int frame_counter);
 extern void draw_function_5(int frame_counter);
-
+extern void draw_function_6(int frame_counter);
 #endif

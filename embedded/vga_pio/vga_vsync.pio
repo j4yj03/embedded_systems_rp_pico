@@ -16,18 +16,18 @@ pull block                        ; pull active timing value from fifo to osr
 ; ACTIVE
 mov x, osr                        
 activefront:
-    wait 1 irq 0                  ; wait for hsync to go high
+    wait 1 irq 0                 ; wait for hsync to go high
     irq 1                         ; signal rgb state machine that we're in active mode
     jmp x-- activefront           
 
 ; FRONTPORCH
-set y, 9                          
-frontporch:
-    wait 1 irq 0                  
-    jmp y-- frontporch            
+;set y, 9                          
+;frontporch:
+;    wait 1 irq 0                  
+;    jmp y-- frontporch            
 
 ; SYNC PULSE
-;set pins 0 [3]
+
 wait 1 irq 0 side 0                ;
 wait 1 irq 0                       ; wait for two scanlines
 
@@ -37,6 +37,8 @@ backporch:
     wait 1 irq 0   side 1         ; wait for hsync and side set vsync high
     jmp y-- backporch             ;
 
+;wait 1 irq 0 [7]
+;wait 1 irq 0 [7]
 .wrap                             ; Program wraps from here
 
 

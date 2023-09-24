@@ -38,7 +38,7 @@ void change_color_param(unsigned int gpio)
                             break;
                         }
                         
-                        vga_animation = (vga_animation + 1) % 6;
+                        vga_animation = (vga_animation + 1) % 7;
 
                         break;
                         

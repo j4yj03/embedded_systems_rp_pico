@@ -128,11 +128,31 @@ void draw_function_1()
     }
 }
 
+/** \brief horizontale streifen
+*/
+void draw_function_2()
+{
+    int color, x, y;
+
+    color = 0;
+    px_idx = 0;
+
+    for (y = 0; y < FRAME_HEIGHT; y++)
+    {
+        for (x = 0; x < FRAME_WIDTH; x++) 
+        {
+            color = colors[(y / 60) % 8];
+            px_idx = ((FRAME_WIDTH * y) + x);
+            drawPixel(px_idx, color) ;    //     Draw a pixel to the screen
+        }
+    }
+
+}
+
 /** \brief diagonal wachsende rechtecke
 */
-void draw_function_2(int frame_counter)
+void draw_function_3(int frame_counter)
 {
-
     int color, x, y;
 
     color = 0;
@@ -149,28 +169,7 @@ void draw_function_2(int frame_counter)
     }
 }
 
-/** \brief abc
-*/
-void draw_function_3(int frame_counter)
-{
-
-    int color, x, y;
-
-    color = 0;
-    px_idx = 0;
-
-    for (y = 0; y < FRAME_HEIGHT; y++) 
-    {     
-        for (x = 0; x < FRAME_WIDTH + 0; x++) 
-        {
-            color = ((((y & (0xFF)) ^ (x & (0xFF))) | frame_counter) >> (color_shift_bits)) & (0xFF);
-            px_idx = ((FRAME_WIDTH * (y)) + (x - 0));
-            drawPixel(px_idx, color) ;    //     Draw a pixel to the screen
-        }
-    }
-}
-
-/** \brief abc
+/** \brief diagonally expanding rectangles
 */
 void draw_function_4(int frame_counter)
 {
@@ -191,9 +190,32 @@ void draw_function_4(int frame_counter)
     }
 }
 
-/** \brief diagonally expanding rectangles
+/** \brief chaos
 */
 void draw_function_5(int frame_counter)
+{
+
+    int color, xy, value;
+
+    color = 0;
+    px_idx = 0;
+
+
+
+    for (xy = 0; xy < FRAME_HEIGHT * FRAME_WIDTH; xy++) 
+    {     
+        value = (int) * &dma_hw->ch[DMA_CHAN_DATA].read_addr;
+
+        color = ((((xy * value) / 800) * (frame_counter)) >> (color_shift_bits)) & (0xFF);
+
+        drawPixel(xy, color) ;    //     Draw a pixel to the screen
+        
+    }
+}
+
+/** \brief diagonally expanding rectangles
+*/
+void draw_function_6(int frame_counter)
 {
 
     int color, x, y;

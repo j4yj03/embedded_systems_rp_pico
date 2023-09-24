@@ -79,6 +79,8 @@ int main()
             case 3: draw_function_3(frame_counter); break;
             case 4: draw_function_4(frame_counter); break;
             case 5: draw_function_5(frame_counter); break;
+            case 6: draw_function_6(frame_counter); break;
+            case 7: break;
         }
         
         frame_counter++;
