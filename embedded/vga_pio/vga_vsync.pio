@@ -10,38 +10,31 @@
 
 
 
-pull block                        ; Pull from FIFO to OSR (only once)
-.wrap_target                      ; Program wraps to here
+pull block                        ; pull active timing value from fifo to osr
+.wrap_target                      
 
 ; ACTIVE
-mov x, osr                        ; Copy value from OSR to x scratch register
+mov x, osr                        
 activefront:
-    wait 1 irq 0                 ; Wait for hsync to go high
-    ;nop [7]                              ; Wait for hsync to go high
-    irq 1                         ; Signal that we're in active mode
-    jmp x-- activefront           ; Remain in active mode, decrementing counter
+    wait 1 irq 0                  ; wait for hsync to go high
+    irq 1                         ; signal rgb state machine that we're in active mode
+    jmp x-- activefront           
 
 ; FRONTPORCH
-;irq clear 1
-set y, 9                          ;
+set y, 9                          
 frontporch:
-    wait 1 irq 0                  ;
-    jmp y-- frontporch            ;
+    wait 1 irq 0                  
+    jmp y-- frontporch            
 
 ; SYNC PULSE
-;set pins, 0                       ; Set pin low
-wait 1 irq 0 side 0                     ; Wait for one line
-wait 1 irq 0                      ; Wait for a second line
+wait 1 irq 0 side 0                ;
+wait 1 irq 0                       ; wait for two scanlines
 
 ; BACKPORCH
-set y, 31                         ; First part of back porch into y scratch register (and delays a cycle)
-;wait 1 irq 0 
-;set pins, 1                      ; Raise high for back porch 
+set y, 31                         ; 
 backporch:
-    wait 1 irq 0   side 1         ; Wait for hsync to go high and side set vsync high
+    wait 1 irq 0   side 1         ; wait for hsync and side set vsync high
     jmp y-- backporch             ;
-
-;wait 1 irq 0                      ; Wait for final (33rd) backporch line (eliminated)
 
 .wrap                             ; Program wraps from here
 
@@ -50,32 +43,18 @@ backporch:
 % c-sdk {
 static inline void vga_vsync_program_init(PIO pio, uint sm, uint offset, uint pin) {
 
-    // creates state machine configuration object c, sets
-    // to default configurations. I believe this function is auto-generated
-    // and gets a name of <program name>_program_get_default_config
-    // Yes, page 40 of SDK guide
     pio_sm_config c = vga_vsync_program_get_default_config(offset);
 
-    // Map the state machine's SET pin group to one pin, namely the `pin`
-    // parameter to this function.
     sm_config_set_set_pins(&c, pin, 1);
     sm_config_set_sideset_pins(&c, pin);
 
-    // Set clock division (div by 5 for 25 MHz state machine)
     sm_config_set_clkdiv(&c, 5) ;
 
-    // Set this pin's GPIO function (connect PIO to the pad)
     pio_gpio_init(pio, pin);
-    // pio_gpio_init(pio, pin+1);
     
-    // Set the pin direction to output at the PIO
     pio_sm_set_consecutive_pindirs(pio, sm, pin, 1, true);
 
-    // Load our configuration, and jump to the start of the program
     pio_sm_init(pio, sm, offset, &c);
 
-    // Set the state machine running (commented out so can be synchronized with hsync)
-    // pio_sm_set_enabled(pio, sm, true);
-}
 %}
 

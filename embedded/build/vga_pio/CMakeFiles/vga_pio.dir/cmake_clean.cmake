@@ -86,6 +86,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/vga_pio.dir/vga_pio.c.obj.d"
   "CMakeFiles/vga_pio.dir/vga_pio_dma.c.obj"
   "CMakeFiles/vga_pio.dir/vga_pio_dma.c.obj.d"
+  "CMakeFiles/vga_pio.dir/vga_pio_draw.c.obj"
+  "CMakeFiles/vga_pio.dir/vga_pio_draw.c.obj.d"
   "CMakeFiles/vga_pio.dir/vga_pio_gpio.c.obj"
   "CMakeFiles/vga_pio.dir/vga_pio_gpio.c.obj.d"
   "CMakeFiles/vga_pio.dir/vga_pio_uart.c.obj"

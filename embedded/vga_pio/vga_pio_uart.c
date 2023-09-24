@@ -2,7 +2,7 @@
 
 
 
-/** \brief configure uart
+/** \brief configure uart channel for debugging
  *   
 */
 inline void configure_uart()

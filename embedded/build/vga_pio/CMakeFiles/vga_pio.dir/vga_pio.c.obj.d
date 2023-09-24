@@ -85,6 +85,7 @@ vga_pio/CMakeFiles/vga_pio.dir/vga_pio.c.obj: \
  D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pio\vga_pio_dma.h \
  D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pio\vga_pio_gpio.h \
  D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pio\vga_pio_uart.h \
+ D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\vga_pio\vga_pio_draw.h \
  D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pio/vga_hsync.pio.h \
  D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pio/vga_vsync.pio.h \
  D:\Documents\Uni\embeddedpico\embedded_systems_rp_pico\embedded\build\vga_pio/vga_rgb.pio.h

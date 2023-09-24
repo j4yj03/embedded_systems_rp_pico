@@ -38,7 +38,7 @@ void change_color_param(unsigned int gpio)
                             break;
                         }
                         
-                        color_animation = (color_animation + 1) % 6;
+                        vga_animation = (vga_animation + 1) % 6;
 
                         break;
                         
@@ -46,13 +46,16 @@ void change_color_param(unsigned int gpio)
 
 #ifdef VGA_UART_DEBUG
     uart_puts(UART_ID,"\n\ranimation id: ");
-    uart_puts(UART_ID, itoa(color_animation, int_string, 10));
+    uart_puts(UART_ID, itoa(vga_animation, int_string, 10));
     uart_puts(UART_ID," - color bits shifted right by: ");
     uart_puts(UART_ID, itoa(color_shift_bits, int_string, 10));
 #endif
 }
 
-
+/** \brief event handler for button gpio irq
+ * \param width which gpio
+ * \param events which event happend
+*/
 void on_button(uint gpio, uint32_t events)
 {
     /* check/register debounce on gpio 
@@ -80,8 +83,7 @@ void on_button(uint gpio, uint32_t events)
 
 }  
 
-/** \brief configure gpio for color output
- *   
+/** \brief configure gpio buttons and on board led
 */
 inline void configure_gpio() {
 

@@ -13,6 +13,7 @@
 #include "vga_pio_dma.h"
 #include "vga_pio_gpio.h"
 #include "vga_pio_uart.h"
+#include "vga_pio_draw.h"
 
 // pioasm assembled programs:
 #include "vga_hsync.pio.h"
@@ -49,7 +50,9 @@
 // Note that this array is automatically initialized to all 0's (black)
 extern char vga_data_array[];
 extern char * vga_data_array_start;
-extern int vga_data_array_address[];
+extern char * vga_data_array_offsets[];
+extern char * vga_data_array_offsets_start;
+extern int vga_data_array_offsets_size;
 
 
 extern char int_string[10];
@@ -61,6 +64,6 @@ extern int COLOR_BITMASKS[];
 extern int color_bitmask_idx;
 extern int color_gpoio_bitmask;
 extern int color_shift_bits;
-extern int color_animation;
+extern int vga_animation;
 
 #endif
