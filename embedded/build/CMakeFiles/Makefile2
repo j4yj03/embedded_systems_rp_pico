@@ -1705,9 +1705,9 @@ vga_pwm/CMakeFiles/ELF2UF2Build.dir/clean:
 
 # All Build rule for target.
 vga_pio/CMakeFiles/vga_pio.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
-vga_pio/CMakeFiles/vga_pio.dir/all: vga_pwm/CMakeFiles/ELF2UF2Build.dir/all
 vga_pio/CMakeFiles/vga_pio.dir/all: vga_pio/CMakeFiles/vga_pio_vga_vsync_pio_h.dir/all
 vga_pio/CMakeFiles/vga_pio.dir/all: vga_pio/CMakeFiles/vga_pio_vga_hsync_pio_h.dir/all
+vga_pio/CMakeFiles/vga_pio.dir/all: vga_pwm/CMakeFiles/ELF2UF2Build.dir/all
 vga_pio/CMakeFiles/vga_pio.dir/all: vga_pio/CMakeFiles/vga_pio_vga_rgb_pio_h.dir/all
 	$(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio.dir\build.make vga_pio/CMakeFiles/vga_pio.dir/depend
 	$(MAKE) $(MAKESILENT) -f vga_pio\CMakeFiles\vga_pio.dir\build.make vga_pio/CMakeFiles/vga_pio.dir/build

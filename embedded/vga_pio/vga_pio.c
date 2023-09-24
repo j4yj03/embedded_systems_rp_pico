@@ -75,12 +75,12 @@ int main()
             default: break;
             case 0: draw_function_0(); break;
             case 1: draw_function_1(); break;
-            case 2: draw_function_2(frame_counter); break;
+            case 2: draw_function_2(); break;
             case 3: draw_function_3(frame_counter); break;
             case 4: draw_function_4(frame_counter); break;
             case 5: draw_function_5(frame_counter); break;
             case 6: draw_function_6(frame_counter); break;
-            case 7: break;
+            case 7: draw_function_7(frame_counter); break;
         }
         
         frame_counter++;

@@ -115,13 +115,13 @@ void draw_function_1()
             ycounter = 0 ;                      //     Zero the counter
             idx = (idx + 3) % 8 ;               //     Increment the color index
         }                                       //
-        ycounter +=1 ;                          //   Increment the y-counter
+        ycounter++ ;                          //   Increment the y-counter
         for (x = 0; x < FRAME_WIDTH; x++) {                 //   For each x-coordinate . . .
             if (xcounter == (FRAME_WIDTH / 16)) {               //     If the x-counter is 80 . . .
                 xcounter = 0;                   //        Zero the x-counter
                 idx = (idx + 1) % 8 ;         //        Increment the color index
             }                                   //
-            xcounter += 1 ;                     //     Increment the x-counter
+            xcounter++ ;                     //     Increment the x-counter
             px_idx = ((FRAME_WIDTH * y) + x);
             drawPixel(px_idx, colors[idx]) ;    //     Draw a pixel to the screen
         }
@@ -149,9 +149,38 @@ void draw_function_2()
 
 }
 
+/** \brief streifen in der mitte
+*/
+void draw_function_3()
+{
+    int color, x, y;
+
+    color = 0;
+    px_idx = 0;
+
+    for (y = 0; y < FRAME_HEIGHT; y++)
+    {
+        for (x = 0; x < FRAME_WIDTH; x++) 
+        {
+            if (y > 200 && y < 280) 
+            {
+                color = colors[((y / 32) + 3) % 8];
+            }  
+            else
+            {
+                color = chess[1];
+            }
+
+            px_idx = ((FRAME_WIDTH * y) + x);
+            drawPixel(px_idx, color) ;    //     Draw a pixel to the screen
+        }
+    }
+
+}
+
 /** \brief diagonal wachsende rechtecke
 */
-void draw_function_3(int frame_counter)
+void draw_function_4(int frame_counter)
 {
     int color, x, y;
 
@@ -169,9 +198,9 @@ void draw_function_3(int frame_counter)
     }
 }
 
-/** \brief diagonally expanding rectangles
+/** \brief diagonal wachsende rechtecke #2
 */
-void draw_function_4(int frame_counter)
+void draw_function_5(int frame_counter)
 {
 
     int color, x, y;
@@ -183,7 +212,7 @@ void draw_function_4(int frame_counter)
     {                     
         for (x = 0; x < FRAME_WIDTH + 0; x++) 
         { 
-            color = ((((y * 0xFF) ^ (x * 0xFF)) - frame_counter) >> color_shift_bits) & (0xFF);
+            color = ((((y * 0xFF) ^ (x * 0xFF)) *~ frame_counter) >> color_shift_bits) & (0xFF);
             px_idx = ((FRAME_WIDTH * (y)) + (x - 0));
             drawPixel(px_idx, color) ;    //     Draw a pixel to the screen
         }
@@ -192,7 +221,7 @@ void draw_function_4(int frame_counter)
 
 /** \brief chaos
 */
-void draw_function_5(int frame_counter)
+void draw_function_6(int frame_counter)
 {
 
     int color, xy, value;
@@ -213,9 +242,9 @@ void draw_function_5(int frame_counter)
     }
 }
 
-/** \brief diagonally expanding rectangles
+/** \brief exponentielles mosaik muster
 */
-void draw_function_6(int frame_counter)
+void draw_function_7(int frame_counter)
 {
 
     int color, x, y;
