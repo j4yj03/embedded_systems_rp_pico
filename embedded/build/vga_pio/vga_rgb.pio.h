@@ -43,30 +43,15 @@ static inline pio_sm_config vga_rgb_program_get_default_config(uint offset) {
 }
 
 static inline void vga_rgb_program_init(PIO pio, uint sm, uint offset, uint pin) {
-    // creates state machine configuration object c, sets
-    // to default configurations. I believe this function is auto-generated
-    // and gets a name of <program name>_program_get_default_config
-    // Yes, page 40 of SDK guide
     pio_sm_config c = vga_rgb_program_get_default_config(offset);
-    // Map the state machine's SET and OUT pin group to three pins, the `pin`
-    // parameter to this function is the lowest one. These groups overlap.
-    //sm_config_set_set_pins(&c, pin, 5);
-    //sm_config_set_sideset_pins(&c, pin + 7);
     sm_config_set_out_pins(&c, pin, 8);
-    // Set clock division (Commented out, this one runs at full speed)
-    // sm_config_set_clkdiv(&c, 5) ;
-    // Set this pin's GPIO function (connect PIO to the pad)
     int n_pins = 8;
     for(int pin_num = 0; pin_num < n_pins; pin_num++ )
     {
         pio_gpio_init(pio, pin + pin_num);
     }
-    // Set the pin direction to output at the PIO (3 pins)
     pio_sm_set_consecutive_pindirs(pio, sm, pin, 8, true);
-    // Load our configuration, and jump to the start of the program
     pio_sm_init(pio, sm, offset, &c);
-    // Set the state machine running (commented out, I'll start this in the C)
-    // pio_sm_set_enabled(pio, sm, true);
 }
 
 #endif

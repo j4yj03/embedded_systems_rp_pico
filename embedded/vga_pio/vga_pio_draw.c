@@ -10,7 +10,7 @@ int chess[2] = {0x0, 0xFF};
 char vga_data_array[N_PIXEL + PIXEL_OFFSET] = {0};
 // initial starting adress of vga data array
 char * vga_data_array_start = &vga_data_array[0];
-char * vga_data_array_offsets[FRAME_HEIGHT];
+char * vga_data_array_offsets[FRAME_HEIGHT * 2];
 char * vga_data_array_offsets_start = &vga_data_array_offsets[0];
 int vga_data_array_offsets_size;
 
@@ -28,10 +28,11 @@ int vga_animation, color, color_bitmask_idx = 0;
 void load_scanline_adress()
 {
 
-    for (int i = 0; i < FRAME_HEIGHT; i++)
+    for (int i = 0; i < FRAME_HEIGHT; i = i + 2)
     {
         
         vga_data_array_offsets[i] = &vga_data_array[i * FRAME_WIDTH];
+        vga_data_array_offsets[i + 1] = &vga_data_array[i * FRAME_WIDTH];
 
 #ifdef VGA_UART_DEBUG
    // uart_puts(UART_ID,"\n\rvga scan line start adress ");
