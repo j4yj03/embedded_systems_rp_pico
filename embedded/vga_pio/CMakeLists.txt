@@ -8,6 +8,7 @@ add_executable(vga_pio
         vga_pio_uart.c
         vga_pio_gpio.c
         vga_pio_dma.c
+        vga_pio_draw.c
         )
 
 # must match with pio filename and executable name from above

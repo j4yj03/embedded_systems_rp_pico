@@ -1,5 +1,11 @@
-# Embedded Systems
+# VGA PIO
 
-## Getting started
+## Überblick
 
-Projekt VGA enthält den code für die Videoausgabe am Pico rp2040
+Dieses Projekt realisiert eine VGA Ausgabe auf dem rp2040 mithilfe der Pico spezifischen PIO Co-Prozessoren.
+
+- vga_pio.c
+- vga_pio_uart.c
+- vga_pio_gpio.c
+- vga_pio_dma.c
+- vga_pio_draw.c
