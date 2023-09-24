@@ -49,10 +49,10 @@ void configure_pio()
 #endif
 }
 
-
+/** \brief main function
+*/ 
 int main()
 {
-    //stdio_init_all();
 
     configure_uart();
 
@@ -65,28 +65,23 @@ int main()
     load_scanline_adress();
 
 
-    
-
     frame_counter = 0;
 
-    while (true) {
 
-
+    while (true)    // main cpu loop
+    {              
         switch(vga_animation)
         {
             default: break;
-
             case 0: draw_function_0(); break;
             case 1: draw_function_1(); break;
             case 2: draw_function_2(frame_counter); break;
             case 3: draw_function_3(frame_counter); break;
             case 4: draw_function_4(frame_counter); break;
             case 5: draw_function_5(frame_counter); break;
-                
         }
         
         frame_counter++;
-
 
 #ifdef VGA_UART_DEBUG
     uart_puts(UART_ID,"\n\rdma read addr: ");
