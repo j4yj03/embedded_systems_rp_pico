@@ -62,7 +62,7 @@ int main()
 
     configure_dma();
 
-    load_scanline_adress();
+    //load_scanline_adress();
 
 
     frame_counter = 0;

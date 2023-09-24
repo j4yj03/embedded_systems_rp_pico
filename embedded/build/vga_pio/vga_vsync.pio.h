@@ -22,7 +22,7 @@ static const uint16_t vga_vsync_program_instructions[] = {
     0x20c0, //  2: wait   1 irq, 0                   
     0xc001, //  3: irq    nowait 1                   
     0x0042, //  4: jmp    x--, 2                     
-    0xe049, //  5: set    y, 9                       
+    0xe04a, //  5: set    y, 10                      
     0x20c0, //  6: wait   1 irq, 0                   
     0x0086, //  7: jmp    y--, 6                     
     0x30c0, //  8: wait   1 irq, 0        side 0     

@@ -21,16 +21,16 @@
 #include "vga_rgb.pio.h"
 
 
+
+/////////////////////////////////////////
+// comment out to disable debug messages
 #define VGA_UART_DEBUG true
-
-
-
+/////////////////////////////////////////
 
 
 #define FRAME_WIDTH 320 //320 //640
-#define FRAME_HEIGHT 240 //240 //480
+#define FRAME_HEIGHT 480 //240 //480
 
-#define PIXEL_OFFSET 0 //FRAME_WIDTH * 2
 
 // VGA timing constants
 #define HSYNC_ACTIVE   655    // (active + frontporch - 1) - one cycle delay for mov

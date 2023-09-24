@@ -20,7 +20,8 @@ void configure_dma()
         &c0,                       
         &pio_0->txf[RGB_PIO_SM],          // write address
         &vga_data_array[0],            // the initial read address
-        N_PIXEL,                    
+        N_PIXEL, 
+        //FRAME_WIDTH,                   
         false                       
     );
 
@@ -39,38 +40,7 @@ void configure_dma()
         &vga_data_array_start,
         1,
         false
-    );
-
-    /*/Channel Two (retrigger the first channel for line doubling)
-
-    dma_channel_config c2 = dma_channel_get_default_config(DMA_CHAN_TRIG);   // default configs
-    
-    channel_config_set_transfer_data_size(&c2, DMA_SIZE_32);              // 32-bit txfers
-    channel_config_set_read_increment(&c2, false);                        // no read incrementing
-    channel_config_set_write_increment(&c2, false);                       // no write incrementing
-    channel_config_set_chain_to(&c2, DMA_CHAN_DATA);                         // chain to other channel
-
-    dma_channel_configure(
-        DMA_CHAN_TRIG,                         // Channel to be configured
-        &c2,                                // The configuration we just created
-        &dma_hw->ch[DMA_CHAN_DATA].al3_read_addr_trig,  // Write address (channel 0 read address)
-        &dma_hw->ch[DMA_CHAN_DATA].read_addr,   // Read address (POINTER TO AN ADDRESS)
-        1,                                  // Number of transfers, in this case each is 4 byte
-        false                               // Don't start immediately.
-    );*/
-
-#ifdef VGA_UART_DEBUG
-    uart_puts(UART_ID,"\n\rdma initial read addr ");
-    uart_puts(UART_ID, itoa( (int) * &dma_hw->ch[DMA_CHAN_DATA].read_addr, int_string, 16));
-#endif
-
-#ifdef VGA_UART_DEBUG
-    uart_puts(UART_ID," - dma initial conf addr ");
-    uart_puts(UART_ID, itoa(&vga_data_array_offsets_start, int_string, 16));
-    uart_puts(UART_ID," - ");
-    uart_puts(UART_ID, itoa( (int) * &dma_hw->ch[DMA_CHAN_CONF].read_addr, int_string, 16));
-#endif
-    
+    );    
 
     dma_start_channel_mask((1u << DMA_CHAN_DATA)) ;
 #ifdef VGA_UART_DEBUG

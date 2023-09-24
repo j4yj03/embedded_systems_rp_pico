@@ -4,7 +4,8 @@
 
 #define DMA_CHAN_DATA 0
 #define DMA_CHAN_CONF 1
-#define DMA_CHAN_TRIG 2
+//#define DMA_CHAN_TRIG 2
+//#define DMA_CHAN_BUFF 3
 
 
 extern void configure_dma();

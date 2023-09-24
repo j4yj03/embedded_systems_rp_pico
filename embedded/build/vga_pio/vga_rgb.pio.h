@@ -20,9 +20,9 @@ static const uint16_t vga_rgb_program_instructions[] = {
     0xa047, //  1: mov    y, osr                     
             //     .wrap_target
     0xa0e3, //  2: mov    osr, null                  
-    0x6308, //  3: out    pins, 8                [3] 
+    0x6008, //  3: out    pins, 8                    
     0xa022, //  4: mov    x, y                       
-    0x23c1, //  5: wait   1 irq, 1               [3] 
+    0x20c1, //  5: wait   1 irq, 1                   
     0x80a0, //  6: pull   block                      
     0x6708, //  7: out    pins, 8                [7] 
     0x0046, //  8: jmp    x--, 6                     
