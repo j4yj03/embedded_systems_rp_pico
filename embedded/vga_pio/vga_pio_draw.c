@@ -11,18 +11,17 @@ char vga_data_array[N_PIXEL] = {0};
 // initial starting adress of vga data array
 char * vga_data_array_start = &vga_data_array[0];
 
+int color_gpoio_bitmask = COLOR_GPIO_MASK_256;
+int px_idx, tmp_idx = 0;
+int vga_animation, color, color_bitmask_idx, color_shift_bits = 0;
+
+
+
+
+
 //char * vga_data_array_offsets_start = &vga_data_array_start[0];
 //char * vga_data_array_offsets[FRAME_HEIGHT * 2];
 //int vga_data_array_offsets_size;
-
-int px_idx, tmp_idx = 0;
-
-int color_shift_bits = 0;
-int color_gpoio_bitmask = COLOR_GPIO_MASK_256;
-
-int vga_animation, color, color_bitmask_idx = 0;
-
-
 
 /** \brief store addresses of first pixel of each scanline two times in array (line doubling)
 
@@ -76,7 +75,7 @@ inline void drawPixel(int px, char color)
     vga_data_array[px] = (color) ;
 }
 //
-/** \brief generated checker board
+/** \brief berechnetes s/w schachbrettmuster
 */
 void draw_function_0()
 {
@@ -99,7 +98,7 @@ void draw_function_0()
 }
 
 
-/** \brief generated colorful checker board (different approach)
+/** \brief berechnetes farb schachbrettmuster mit verwzeigungen 
 */
 void draw_function_1()
 {
@@ -149,7 +148,7 @@ void draw_function_2()
 
 }
 
-/** \brief streifen in der mitte
+/** \brief buntes Kreuz im zentrum
 */
 void draw_function_3()
 {
@@ -162,11 +161,20 @@ void draw_function_3()
     {
         for (x = 0; x < FRAME_WIDTH; x++) 
         {
-            if (y > 200 && y < 280) 
+
+            if((y > 230 && y < 250) && (x > 155 && x < 165))   // weißer Mittelpunkt (top layer)
+            {
+                color = chess[1];
+            } 
+            else if((y > 80 && y < 400) && (x > 140 && x < 180)) // vertikale Streifen (middle layer)
+            {
+                color = colors[((x / 32) + 1) % 8];
+            }
+            else if ((y > 200 && y < 280) && (x > 40 && x < 280)) // horizontal Streifen (middle layer)
             {
                 color = colors[((y / 32) + 3) % 8];
-            }  
-            else
+            } 
+            else                                                  // weißer hintergrund (bottom layer)
             {
                 color = chess[1];
             }

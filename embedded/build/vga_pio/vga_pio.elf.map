@@ -1130,9 +1130,9 @@ Discarded input sections
  .comment       0x00000000       0x4a CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
  .ARM.attributes
                 0x00000000       0x2c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
- .text          0x00000000        0x0 C:\Users\Sidney\AppData\Local\Temp\ccux2RVU.o
- .data          0x00000000        0x0 C:\Users\Sidney\AppData\Local\Temp\ccux2RVU.o
- .bss           0x00000000        0x0 C:\Users\Sidney\AppData\Local\Temp\ccux2RVU.o
+ .text          0x00000000        0x0 C:\Users\Sidney\AppData\Local\Temp\ccgdVMHA.o
+ .data          0x00000000        0x0 C:\Users\Sidney\AppData\Local\Temp\ccgdVMHA.o
+ .bss           0x00000000        0x0 C:\Users\Sidney\AppData\Local\Temp\ccgdVMHA.o
  .data          0x00000000        0x0 d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .text          0x00000000        0x0 d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-calloc.o)
@@ -1356,11 +1356,11 @@ LOAD d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../ar
 .boot2          0x10000000      0x100
                 0x10000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x10000000      0x100 C:\Users\Sidney\AppData\Local\Temp\ccux2RVU.o
+ .boot2         0x10000000      0x100 C:\Users\Sidney\AppData\Local\Temp\ccgdVMHA.o
                 0x10000100                __boot2_end__ = .
                 0x00000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x10000100     0x32b8
+.text           0x10000100     0x3350
                 0x10000100                __logical_binary_start = .
  *(.vectors)
  .vectors       0x10000100       0xd4 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1452,308 +1452,308 @@ LOAD d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../ar
                 0x10000e64       0x6c CMakeFiles/vga_pio.dir/vga_pio_draw.c.obj
                 0x10000e64                draw_function_2
  .text.draw_function_3
-                0x10000ed0       0x80 CMakeFiles/vga_pio.dir/vga_pio_draw.c.obj
+                0x10000ed0      0x118 CMakeFiles/vga_pio.dir/vga_pio_draw.c.obj
                 0x10000ed0                draw_function_3
  .text.draw_function_4
-                0x10000f50       0x44 CMakeFiles/vga_pio.dir/vga_pio_draw.c.obj
-                0x10000f50                draw_function_4
+                0x10000fe8       0x44 CMakeFiles/vga_pio.dir/vga_pio_draw.c.obj
+                0x10000fe8                draw_function_4
  .text.draw_function_5
-                0x10000f94       0x50 CMakeFiles/vga_pio.dir/vga_pio_draw.c.obj
-                0x10000f94                draw_function_5
+                0x1000102c       0x50 CMakeFiles/vga_pio.dir/vga_pio_draw.c.obj
+                0x1000102c                draw_function_5
  .text.draw_function_6
-                0x10000fe4       0x68 CMakeFiles/vga_pio.dir/vga_pio_draw.c.obj
-                0x10000fe4                draw_function_6
+                0x1000107c       0x68 CMakeFiles/vga_pio.dir/vga_pio_draw.c.obj
+                0x1000107c                draw_function_6
  .text.draw_function_7
-                0x1000104c       0x54 CMakeFiles/vga_pio.dir/vga_pio_draw.c.obj
-                0x1000104c                draw_function_7
+                0x100010e4       0x54 CMakeFiles/vga_pio.dir/vga_pio_draw.c.obj
+                0x100010e4                draw_function_7
  .text.gpio_set_function
-                0x100010a0       0x30 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x100010a0                gpio_set_function
+                0x10001138       0x30 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10001138                gpio_set_function
  .text.gpio_set_pulls
-                0x100010d0       0x2c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x100010d0                gpio_set_pulls
+                0x10001168       0x2c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10001168                gpio_set_pulls
  .text.gpio_set_irq_callback
-                0x100010fc       0x48 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x100010fc                gpio_set_irq_callback
+                0x10001194       0x48 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10001194                gpio_set_irq_callback
  .text.gpio_acknowledge_irq
-                0x10001144       0x1c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10001144                gpio_acknowledge_irq
+                0x100011dc       0x1c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x100011dc                gpio_acknowledge_irq
  .text.gpio_set_irq_enabled
-                0x10001160       0x4c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10001160                gpio_set_irq_enabled
+                0x100011f8       0x4c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x100011f8                gpio_set_irq_enabled
  .text.gpio_set_irq_enabled_with_callback
-                0x100011ac       0x20 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x100011ac                gpio_set_irq_enabled_with_callback
+                0x10001244       0x20 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10001244                gpio_set_irq_enabled_with_callback
  .text.gpio_default_irq_handler
-                0x100011cc       0xb4 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10001264       0xb4 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .text.gpio_init
-                0x10001280       0x16 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10001280                gpio_init
- *fill*         0x10001296        0x2 
+                0x10001318       0x16 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10001318                gpio_init
+ *fill*         0x1000132e        0x2 
  .text.running_on_fpga
-                0x10001298       0x10 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
-                0x10001298                running_on_fpga
+                0x10001330       0x10 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+                0x10001330                running_on_fpga
  .text.hw_claim_lock
-                0x100012a8       0x18 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x100012a8                hw_claim_lock
+                0x10001340       0x18 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10001340                hw_claim_lock
  .text.hw_claim_unlock
-                0x100012c0       0x14 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x100012c0                hw_claim_unlock
+                0x10001358       0x14 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10001358                hw_claim_unlock
  .text.hw_claim_or_assert
-                0x100012d4       0x30 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x100012d4                hw_claim_or_assert
+                0x1000136c       0x30 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x1000136c                hw_claim_or_assert
  .text.spin_locks_reset
-                0x10001304       0x1c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x10001304                spin_locks_reset
+                0x1000139c       0x1c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x1000139c                spin_locks_reset
  .text.next_striped_spin_lock_num
-                0x10001320       0x20 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x10001320                next_striped_spin_lock_num
+                0x100013b8       0x20 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x100013b8                next_striped_spin_lock_num
  .text.set_raw_irq_handler_and_unlock
-                0x10001340       0x28 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100013d8       0x28 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .text.irq_is_enabled
-                0x10001368       0x18 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001368                irq_is_enabled
+                0x10001400       0x18 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001400                irq_is_enabled
  .text.irq_set_mask_enabled
-                0x10001380       0x20 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001380                irq_set_mask_enabled
+                0x10001418       0x20 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001418                irq_set_mask_enabled
  .text.irq_set_enabled
-                0x100013a0        0xe CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100013a0                irq_set_enabled
- *fill*         0x100013ae        0x2 
+                0x10001438        0xe CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001438                irq_set_enabled
+ *fill*         0x10001446        0x2 
  .text.irq_get_vtable_handler
-                0x100013b0       0x10 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100013b0                irq_get_vtable_handler
+                0x10001448       0x10 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001448                irq_get_vtable_handler
  .text.irq_set_exclusive_handler
-                0x100013c0       0x44 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100013c0                irq_set_exclusive_handler
+                0x10001458       0x44 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001458                irq_set_exclusive_handler
  .text.irq_add_shared_handler
-                0x10001404      0x1dc CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001404                irq_add_shared_handler
+                0x1000149c      0x1dc CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x1000149c                irq_add_shared_handler
  .text.irq_remove_handler
-                0x100015e0      0x1a4 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100015e0                irq_remove_handler
+                0x10001678      0x1a4 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001678                irq_remove_handler
  .text.irq_add_tail_to_free_list
-                0x10001784       0xa0 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001784                irq_add_tail_to_free_list
+                0x1000181c       0xa0 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x1000181c                irq_add_tail_to_free_list
  .text.irq_init_priorities
-                0x10001824       0x48 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001824                irq_init_priorities
+                0x100018bc       0x48 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100018bc                irq_init_priorities
  .text.lock_init
-                0x1000186c       0x10 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
-                0x1000186c                lock_init
+                0x10001904       0x10 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+                0x10001904                lock_init
  .text.mutex_init
-                0x1000187c       0x1a CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x1000187c                mutex_init
+                0x10001914       0x1a CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x10001914                mutex_init
  .text.recursive_mutex_init
-                0x10001896       0x1e CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x10001896                recursive_mutex_init
+                0x1000192e       0x1e CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x1000192e                recursive_mutex_init
  .text.ph_add_child_node
-                0x100018b4       0x26 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x100018da        0x2 
+                0x1000194c       0x26 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10001972        0x2 
  .text.timer_pool_entry_comparator
-                0x100018dc       0x34 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x100018dc                timer_pool_entry_comparator
+                0x10001974       0x34 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001974                timer_pool_entry_comparator
  .text.alarm_pool_post_alloc_init
-                0x10001910       0x40 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x100019a8       0x40 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.sleep_until_callback
-                0x10001950       0x30 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x100019e8       0x30 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.add_alarm_under_lock
-                0x10001980       0xe0 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001a18       0xe0 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_alarm_callback
-                0x10001a60      0x1e4 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001af8      0x1e4 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_init_default
-                0x10001c44       0x40 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001c44                alarm_pool_init_default
+                0x10001cdc       0x40 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001cdc                alarm_pool_init_default
  .text.alarm_pool_add_alarm_at
-                0x10001c84       0xfc CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001c84                alarm_pool_add_alarm_at
+                0x10001d1c       0xfc CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001d1c                alarm_pool_add_alarm_at
  .text.alarm_pool_cancel_alarm
-                0x10001d80       0x76 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001d80                alarm_pool_cancel_alarm
- *fill*         0x10001df6        0x2 
+                0x10001e18       0x76 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001e18                alarm_pool_cancel_alarm
+ *fill*         0x10001e8e        0x2 
  .text.best_effort_wfe_or_timeout
-                0x10001df8       0x90 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001df8                best_effort_wfe_or_timeout
+                0x10001e90       0x90 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001e90                best_effort_wfe_or_timeout
  .text.hardware_alarm_irq_handler
-                0x10001e88       0x9c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001f20       0x9c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .text.hardware_alarm_claim
-                0x10001f24       0x18 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001f24                hardware_alarm_claim
+                0x10001fbc       0x18 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001fbc                hardware_alarm_claim
  .text.time_us_64
-                0x10001f3c       0x14 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001f3c                time_us_64
+                0x10001fd4       0x14 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001fd4                time_us_64
  .text.hardware_alarm_set_callback
-                0x10001f50       0x90 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001f50                hardware_alarm_set_callback
+                0x10001fe8       0x90 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001fe8                hardware_alarm_set_callback
  .text.hardware_alarm_set_target
-                0x10001fe0       0xc0 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001fe0                hardware_alarm_set_target
+                0x10002078       0xc0 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10002078                hardware_alarm_set_target
  .text.hardware_alarm_cancel
-                0x100020a0       0x40 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x100020a0                hardware_alarm_cancel
+                0x10002138       0x40 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10002138                hardware_alarm_cancel
  .text.ph_add_child_node
-                0x100020e0       0x26 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10002178       0x26 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_merge_nodes
-                0x10002106       0x3a CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x1000219e       0x3a CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_clear
-                0x10002140       0x38 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10002140                ph_clear
+                0x100021d8       0x38 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x100021d8                ph_clear
  .text.ph_post_alloc_init
-                0x10002178        0xe CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10002178                ph_post_alloc_init
+                0x10002210        0xe CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10002210                ph_post_alloc_init
  .text.ph_merge_two_pass
-                0x10002186       0x4e CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10002186                ph_merge_two_pass
+                0x1000221e       0x4e CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x1000221e                ph_merge_two_pass
  .text.ph_remove_any_head
-                0x100021d4       0x58 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x1000226c       0x58 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_remove_head
-                0x1000222c       0x14 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x1000222c                ph_remove_head
+                0x100022c4       0x14 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x100022c4                ph_remove_head
  .text.ph_remove_and_free_node
-                0x10002240       0x7a CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10002240                ph_remove_and_free_node
- *fill*         0x100022ba        0x2 
+                0x100022d8       0x7a CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x100022d8                ph_remove_and_free_node
+ *fill*         0x10002352        0x2 
  .text.uart_set_baudrate
-                0x100022bc       0x5c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x100022bc                uart_set_baudrate
+                0x10002354       0x5c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x10002354                uart_set_baudrate
  .text.clock_configure
-                0x10002318      0x10c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x10002318                clock_configure
+                0x100023b0      0x10c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x100023b0                clock_configure
  .text.clocks_init
-                0x10002424       0xfc CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x10002424                clocks_init
+                0x100024bc       0xfc CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x100024bc                clocks_init
  .text.clock_get_hz
-                0x10002520        0xc CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x10002520                clock_get_hz
+                0x100025b8        0xc CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x100025b8                clock_get_hz
  .text.pll_init
-                0x1000252c       0xb0 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-                0x1000252c                pll_init
+                0x100025c4       0xb0 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x100025c4                pll_init
  .text.watchdog_start_tick
-                0x100025dc       0x10 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x100025dc                watchdog_start_tick
+                0x10002674       0x10 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x10002674                watchdog_start_tick
  .text.xosc_init
-                0x100025ec       0x28 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-                0x100025ec                xosc_init
+                0x10002684       0x28 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x10002684                xosc_init
  .text.runtime_init
-                0x10002614       0xfc CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10002614                runtime_init
- .text._exit    0x10002710        0x4 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10002710                _exit
- .text.exit     0x10002714        0x6 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10002714                exit
- *fill*         0x1000271a        0x2 
- .text.panic    0x1000271c       0x30 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x1000271c                panic
+                0x100026ac       0xfc CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100026ac                runtime_init
+ .text._exit    0x100027a8        0x4 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100027a8                _exit
+ .text.exit     0x100027ac        0x6 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100027ac                exit
+ *fill*         0x100027b2        0x2 
+ .text.panic    0x100027b4       0x30 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100027b4                panic
  .text.hard_assertion_failure
-                0x1000274c        0xc CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x1000274c                hard_assertion_failure
+                0x100027e4        0xc CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100027e4                hard_assertion_failure
  .text._out_char
-                0x10002758        0xe CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x10002766        0x2 
+                0x100027f0        0xe CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x100027fe        0x2 
  .text.weak_raw_vprintf
-                0x10002768       0x30 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x10002768                weak_raw_vprintf
- .text          0x10002798       0x10 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x10002800       0x30 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10002800                weak_raw_vprintf
+ .text          0x10002830       0x10 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .text.rom_func_lookup
-                0x100027a8       0x10 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x100027a8                rom_func_lookup
+                0x10002840       0x10 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x10002840                rom_func_lookup
  .text.rom_data_lookup
-                0x100027b8       0x10 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x100027b8                rom_data_lookup
+                0x10002850       0x10 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x10002850                rom_data_lookup
  .text.rom_funcs_lookup
-                0x100027c8       0x2a CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x100027c8                rom_funcs_lookup
- *fill*         0x100027f2        0x2 
+                0x10002860       0x2a CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x10002860                rom_funcs_lookup
+ *fill*         0x1000288a        0x2 
  .text.__wrap___aeabi_idiv
-                0x100027f4       0x50 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x100027f4                __wrap___aeabi_idivmod
-                0x100027f4                divmod_s32s32
-                0x100027f4                div_s32s32
-                0x100027f4                __wrap___aeabi_idiv
-                0x100027fc                divmod_s32s32_unsafe
-                0x10002828                divmod_s32s32_savestate
+                0x1000288c       0x50 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x1000288c                __wrap___aeabi_idivmod
+                0x1000288c                divmod_s32s32
+                0x1000288c                div_s32s32
+                0x1000288c                __wrap___aeabi_idiv
+                0x10002894                divmod_s32s32_unsafe
+                0x100028c0                divmod_s32s32_savestate
  .text.__wrap___aeabi_uidiv
-                0x10002844       0x4c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x10002844                __wrap___aeabi_uidiv
-                0x10002844                __wrap___aeabi_uidivmod
-                0x10002844                div_u32u32
-                0x10002844                divmod_u32u32
-                0x1000284c                divmod_u32u32_unsafe
-                0x10002874                divmod_u32u32_savestate
+                0x100028dc       0x4c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x100028dc                __wrap___aeabi_uidiv
+                0x100028dc                __wrap___aeabi_uidivmod
+                0x100028dc                div_u32u32
+                0x100028dc                divmod_u32u32
+                0x100028e4                divmod_u32u32_unsafe
+                0x1000290c                divmod_u32u32_savestate
  .text.__wrap___aeabi_ldiv
-                0x10002890      0x424 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x10002890                div_s64s64
-                0x10002890                divmod_s64s64
-                0x10002890                __wrap___aeabi_ldivmod
-                0x100028c0                divmod_u64u64
-                0x100028c0                div_u64u64
-                0x100028c0                __wrap___aeabi_uldivmod
-                0x100028d0                divmod_u64u64_savestate
-                0x100028f0                divmod_s64s64_unsafe
-                0x10002978                divmod_u64u64_unsafe
+                0x10002928      0x424 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x10002928                div_s64s64
+                0x10002928                divmod_s64s64
+                0x10002928                __wrap___aeabi_ldivmod
+                0x10002958                divmod_u64u64
+                0x10002958                div_u64u64
+                0x10002958                __wrap___aeabi_uldivmod
+                0x10002968                divmod_u64u64_savestate
+                0x10002988                divmod_s64s64_unsafe
+                0x10002a10                divmod_u64u64_unsafe
  .text.__aeabi_double_init
-                0x10002cb4       0x58 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x10002cb4                __aeabi_double_init
+                0x10002d4c       0x58 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x10002d4c                __aeabi_double_init
  .text.double_table_shim_on_use_helper
-                0x10002d0c       0x2c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10002d0c                double_table_shim_on_use_helper
+                0x10002da4       0x2c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10002da4                double_table_shim_on_use_helper
  .text.__aeabi_float_init
-                0x10002d38       0x5c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x10002d38                __aeabi_float_init
+                0x10002dd0       0x5c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x10002dd0                __aeabi_float_init
  .text.float_table_shim_on_use_helper
-                0x10002d94       0x2c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-                0x10002d94                float_table_shim_on_use_helper
- .text          0x10002dc0       0x10 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x10002dc0                __aeabi_mem_init
- .text.memcpy   0x10002dd0        0xc CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x10002dd0                __wrap_memcpy
-                0x10002dd0                __wrap___aeabi_memcpy
+                0x10002e2c       0x2c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x10002e2c                float_table_shim_on_use_helper
+ .text          0x10002e58       0x10 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x10002e58                __aeabi_mem_init
+ .text.memcpy   0x10002e68        0xc CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x10002e68                __wrap_memcpy
+                0x10002e68                __wrap___aeabi_memcpy
  .text.stdio_out_chars_no_crlf
-                0x10002ddc        0xe CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x10002dea        0x2 
+                0x10002e74        0xe CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x10002e82        0x2 
  .text.stdio_out_chars_crlf
-                0x10002dec       0x94 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10002e84       0x94 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdout_serialize_begin
-                0x10002e80       0x30 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10002e80                stdout_serialize_begin
+                0x10002f18       0x30 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10002f18                stdout_serialize_begin
  .text.stdout_serialize_end
-                0x10002eb0       0x10 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10002eb0                stdout_serialize_end
+                0x10002f48       0x10 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10002f48                stdout_serialize_end
  .text.stdio_put_string
-                0x10002ec0       0xa8 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10002f58       0xa8 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.__wrap_putchar
-                0x10002f68       0x1c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10002f68                __wrap_putchar
+                0x10003000       0x1c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10003000                __wrap_putchar
  .text.stdio_flush
-                0x10002f84       0x20 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10002f84                stdio_flush
+                0x1000301c       0x20 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x1000301c                stdio_flush
  .text.__wrap_puts
-                0x10002fa4       0x1e CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10002fa4                __wrap_puts
- *fill*         0x10002fc2        0x2 
+                0x1000303c       0x1e CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x1000303c                __wrap_puts
+ *fill*         0x1000305a        0x2 
  .text._pio_find_offset_for_program
-                0x10002fc4       0x6c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+                0x1000305c       0x6c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
  .text._pio_add_program_at_offset
-                0x10003030       0x90 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+                0x100030c8       0x90 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
  .text.pio_add_program
-                0x100030c0       0x38 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
-                0x100030c0                pio_add_program
+                0x10003158       0x38 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+                0x10003158                pio_add_program
  .text.pio_sm_set_consecutive_pindirs
-                0x100030f8       0xc8 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
-                0x100030f8                pio_sm_set_consecutive_pindirs
+                0x10003190       0xc8 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+                0x10003190                pio_sm_set_consecutive_pindirs
  .text.pio_sm_init
-                0x100031c0       0xa8 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
-                0x100031c0                pio_sm_init
- .text.itoa     0x10003268       0x30 d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-itoa.o)
-                0x10003268                itoa
- .text.strlen   0x10003298       0x5c d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-strlen-stub.o)
-                0x10003298                strlen
- .text.__utoa   0x100032f4       0x80 d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-utoa.o)
-                0x100032f4                __utoa
+                0x10003258       0xa8 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+                0x10003258                pio_sm_init
+ .text.itoa     0x10003300       0x30 d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-itoa.o)
+                0x10003300                itoa
+ .text.strlen   0x10003330       0x5c d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-strlen-stub.o)
+                0x10003330                strlen
+ .text.__utoa   0x1000338c       0x80 d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-utoa.o)
+                0x1000338c                __utoa
  *(.fini)
- .fini          0x10003374        0x4 d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
-                0x10003374                _fini
- .fini.__stub   0x10003378       0x40 linker stubs
+ .fini          0x1000340c        0x4 d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
+                0x1000340c                _fini
+ .fini.__stub   0x10003410       0x40 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -1765,128 +1765,128 @@ LOAD d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../ar
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.eh_frame*)
- .eh_frame      0x100033b8        0x0 d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x100033b8                . = ALIGN (0x4)
+ .eh_frame      0x10003450        0x0 d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x10003450                . = ALIGN (0x4)
 
-.glue_7         0x100033b8        0x0
- .glue_7        0x100033b8        0x0 linker stubs
+.glue_7         0x10003450        0x0
+ .glue_7        0x10003450        0x0 linker stubs
 
-.glue_7t        0x100033b8        0x0
- .glue_7t       0x100033b8        0x0 linker stubs
+.glue_7t        0x10003450        0x0
+ .glue_7t       0x10003450        0x0 linker stubs
 
-.vfp11_veneer   0x100033b8        0x0
- .vfp11_veneer  0x100033b8        0x0 linker stubs
+.vfp11_veneer   0x10003450        0x0
+ .vfp11_veneer  0x10003450        0x0 linker stubs
 
-.v4_bx          0x100033b8        0x0
- .v4_bx         0x100033b8        0x0 linker stubs
+.v4_bx          0x10003450        0x0
+ .v4_bx         0x10003450        0x0 linker stubs
 
-.iplt           0x100033b8        0x0
- .iplt          0x100033b8        0x0 d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x10003450        0x0
+ .iplt          0x10003450        0x0 d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x100033b8      0x27c
+.rodata         0x10003450      0x27c
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata.configure_pio.str1.4
-                0x100033b8       0x46 CMakeFiles/vga_pio.dir/vga_pio.c.obj
- *fill*         0x100033fe        0x2 
+                0x10003450       0x46 CMakeFiles/vga_pio.dir/vga_pio.c.obj
+ *fill*         0x10003496        0x2 
  .rodata.main.str1.4
-                0x10003400       0x27 CMakeFiles/vga_pio.dir/vga_pio.c.obj
- *fill*         0x10003427        0x1 
- .rodata.main   0x10003428       0x20 CMakeFiles/vga_pio.dir/vga_pio.c.obj
+                0x10003498       0x27 CMakeFiles/vga_pio.dir/vga_pio.c.obj
+ *fill*         0x100034bf        0x1 
+ .rodata.main   0x100034c0       0x20 CMakeFiles/vga_pio.dir/vga_pio.c.obj
  .rodata.vga_hsync_program
-                0x10003448        0x6 CMakeFiles/vga_pio.dir/vga_pio.c.obj
- *fill*         0x1000344e        0x2 
+                0x100034e0        0x6 CMakeFiles/vga_pio.dir/vga_pio.c.obj
+ *fill*         0x100034e6        0x2 
  .rodata.vga_hsync_program_instructions
-                0x10003450       0x12 CMakeFiles/vga_pio.dir/vga_pio.c.obj
- *fill*         0x10003462        0x2 
+                0x100034e8       0x12 CMakeFiles/vga_pio.dir/vga_pio.c.obj
+ *fill*         0x100034fa        0x2 
  .rodata.vga_rgb_program
-                0x10003464        0x6 CMakeFiles/vga_pio.dir/vga_pio.c.obj
- *fill*         0x1000346a        0x2 
+                0x100034fc        0x6 CMakeFiles/vga_pio.dir/vga_pio.c.obj
+ *fill*         0x10003502        0x2 
  .rodata.vga_rgb_program_instructions
-                0x1000346c       0x12 CMakeFiles/vga_pio.dir/vga_pio.c.obj
- *fill*         0x1000347e        0x2 
+                0x10003504       0x12 CMakeFiles/vga_pio.dir/vga_pio.c.obj
+ *fill*         0x10003516        0x2 
  .rodata.vga_vsync_program
-                0x10003480        0x6 CMakeFiles/vga_pio.dir/vga_pio.c.obj
- *fill*         0x10003486        0x2 
+                0x10003518        0x6 CMakeFiles/vga_pio.dir/vga_pio.c.obj
+ *fill*         0x1000351e        0x2 
  .rodata.vga_vsync_program_instructions
-                0x10003488       0x14 CMakeFiles/vga_pio.dir/vga_pio.c.obj
+                0x10003520       0x14 CMakeFiles/vga_pio.dir/vga_pio.c.obj
  .rodata.configure_uart.str1.4
-                0x1000349c        0xe CMakeFiles/vga_pio.dir/vga_pio_uart.c.obj
- *fill*         0x100034aa        0x2 
+                0x10003534        0xe CMakeFiles/vga_pio.dir/vga_pio_uart.c.obj
+ *fill*         0x10003542        0x2 
  .rodata.change_color_param.str1.4
-                0x100034ac       0x35 CMakeFiles/vga_pio.dir/vga_pio_gpio.c.obj
- *fill*         0x100034e1        0x3 
+                0x10003544       0x35 CMakeFiles/vga_pio.dir/vga_pio_gpio.c.obj
+ *fill*         0x10003579        0x3 
  .rodata.configure_gpio.str1.4
-                0x100034e4        0xe CMakeFiles/vga_pio.dir/vga_pio_gpio.c.obj
- *fill*         0x100034f2        0x2 
+                0x1000357c        0xe CMakeFiles/vga_pio.dir/vga_pio_gpio.c.obj
+ *fill*         0x1000358a        0x2 
  .rodata.configure_dma.str1.4
-                0x100034f4        0xd CMakeFiles/vga_pio.dir/vga_pio_dma.c.obj
- *fill*         0x10003501        0x3 
+                0x1000358c        0xd CMakeFiles/vga_pio.dir/vga_pio_dma.c.obj
+ *fill*         0x10003599        0x3 
  .rodata.hardware_alarm_claim.str1.4
-                0x10003504       0x22 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x10003526        0x2 
+                0x1000359c       0x22 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x100035be        0x2 
  .rodata.panic.str1.4
-                0x10003528       0x12 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x1000353a        0x2 
+                0x100035c0       0x12 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x100035d2        0x2 
  .rodata.hard_assertion_failure.str1.4
-                0x1000353c        0xc CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100035d4        0xc CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata.str1.4
-                0x10003548       0x7c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100035e0       0x7c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_44
-                0x100035c4        0xc CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1000365c        0xc CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_69
-                0x100035d0        0xc CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10003668        0xc CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_75
-                0x100035dc        0xc CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10003674        0xc CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_81
-                0x100035e8        0xc CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10003680        0xc CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.crlf_str.0
-                0x100035f4        0x2 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x100035f6        0x2 
+                0x1000368c        0x2 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x1000368e        0x2 
  .rodata._pio_add_program_at_offset.str1.4
-                0x100035f8       0x11 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- *fill*         0x10003609        0x3 
+                0x10003690       0x11 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ *fill*         0x100036a1        0x3 
  .rodata.__utoa.str1.4
-                0x1000360c       0x25 d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-utoa.o)
-                0x10003634                . = ALIGN (0x4)
- *fill*         0x10003631        0x3 
+                0x100036a4       0x25 d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-utoa.o)
+                0x100036cc                . = ALIGN (0x4)
+ *fill*         0x100036c9        0x3 
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x10003634                . = ALIGN (0x4)
+                0x100036cc                . = ALIGN (0x4)
 
-.rel.dyn        0x10003634        0x0
- .rel.iplt      0x10003634        0x0 d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x100036cc        0x0
+ .rel.iplt      0x100036cc        0x0 d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x10003634                __exidx_start = .
+                0x100036cc                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x10003634                __exidx_end = .
-                0x10003634                . = ALIGN (0x4)
-                0x10003634                __binary_info_start = .
+                0x100036cc                __exidx_end = .
+                0x100036cc                . = ALIGN (0x4)
+                0x100036cc                __binary_info_start = .
 
-.binary_info    0x10003634       0x20
+.binary_info    0x100036cc       0x20
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr22
-                0x10003634        0x4 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100036cc        0x4 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr30
-                0x10003638        0x4 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100036d0        0x4 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr38
-                0x1000363c        0x4 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100036d4        0x4 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr44
-                0x10003640        0x4 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100036d8        0x4 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr50
-                0x10003644        0x4 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100036dc        0x4 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr69
-                0x10003648        0x4 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100036e0        0x4 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr75
-                0x1000364c        0x4 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100036e4        0x4 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr81
-                0x10003650        0x4 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100036e8        0x4 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  *(.binary_info.*)
-                0x10003654                __binary_info_end = .
-                0x10003654                . = ALIGN (0x4)
-                0x10003654                __etext = .
+                0x100036ec                __binary_info_end = .
+                0x100036ec                . = ALIGN (0x4)
+                0x100036ec                __etext = .
 
 .ram_vector_table
                 0x20000000       0xc0
@@ -1895,7 +1895,7 @@ LOAD d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../ar
                 0x20000000       0xc0 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                 0x20000000                ram_vector_table
 
-.data           0x200000c0      0x21c load address 0x10003654
+.data           0x200000c0      0x21c load address 0x100036ec
                 0x200000c0                __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -1992,27 +1992,27 @@ LOAD d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../ar
                 0x200002dc                . = ALIGN (0x4)
                 0x200002dc                __data_end__ = .
 
-.igot.plt       0x200002dc        0x0 load address 0x10003870
+.igot.plt       0x200002dc        0x0 load address 0x10003908
  .igot.plt      0x200002dc        0x0 d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x200002dc        0x0 load address 0x10003870
+                0x200002dc        0x0 load address 0x10003908
                 0x200002dc                . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.scratch_x      0x20040000        0x0 load address 0x10003870
+.scratch_x      0x20040000        0x0 load address 0x10003908
                 0x20040000                __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x20040000                . = ALIGN (0x4)
                 0x20040000                __scratch_x_end__ = .
-                0x10003870                __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x10003908                __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x20041000        0x0 load address 0x10003870
+.scratch_y      0x20041000        0x0 load address 0x10003908
                 0x20041000                __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x20041000                . = ALIGN (0x4)
                 0x20041000                __scratch_y_end__ = .
-                0x10003870                __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x10003908                __scratch_y_source__ = LOADADDR (.scratch_y)
 
 .bss            0x200002e0    0x25c08
                 0x200002e0                . = ALIGN (0x4)
@@ -2099,8 +2099,8 @@ LOAD d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../ar
  *(.stack*)
  .stack         0x20041000      0x800 CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x10003870        0x0
-                0x10003870                __flash_binary_end = .
+.flash_end      0x10003908        0x0
+                0x10003908                __flash_binary_end = .
                 0x20040000                __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x20041000                __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x20042000                __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -2161,7 +2161,7 @@ LOAD CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/
 LOAD CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 LOAD CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
 LOAD CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
-LOAD C:\Users\Sidney\AppData\Local\Temp\ccux2RVU.o
+LOAD C:\Users\Sidney\AppData\Local\Temp\ccgdVMHA.o
 LOAD d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++.a
 LOAD d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libm.a
 START GROUP
@@ -2259,7 +2259,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x00000620       0x2c CMakeFiles/vga_pio.dir/D_/VSRM/sdk/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
  .ARM.attributes
-                0x0000064c       0x22 C:\Users\Sidney\AppData\Local\Temp\ccux2RVU.o
+                0x0000064c       0x22 C:\Users\Sidney\AppData\Local\Temp\ccgdVMHA.o
  .ARM.attributes
                 0x0000066e       0x1e d:/vsrm/armcc/10_2021_10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .ARM.attributes
