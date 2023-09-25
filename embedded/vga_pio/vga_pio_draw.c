@@ -16,49 +16,27 @@ int px_idx, tmp_idx = 0;
 int vga_animation, color, color_bitmask_idx, color_shift_bits = 0;
 
 
-
-
-
-//char * vga_data_array_offsets_start = &vga_data_array_start[0];
-//char * vga_data_array_offsets[FRAME_HEIGHT * 2];
-//int vga_data_array_offsets_size;
-
-/** \brief store addresses of first pixel of each scanline two times in array (line doubling)
-
-void load_scanline_adress()
-{
-    tmp_idx = 0;
-
-    for (int i = 0; i < FRAME_HEIGHT; i)
-    {
-        
-        for (int j = 0; j < 2 ; j++)
-        {
-            tmp_idx++;
-            vga_data_array_offsets[tmp_idx] = &vga_data_array[i * FRAME_WIDTH]; 
-
-#ifdef VGA_UART_DEBUG
-            uart_puts(UART_ID,"\n\rvga scan line start adress ");
-            uart_puts(UART_ID, itoa(tmp_idx, int_string, 10));
-            uart_puts(UART_ID,": ");
-            uart_puts(UART_ID, itoa(vga_data_array_offsets[tmp_idx], int_string, 16));
-#endif
-
-        };
-    };
-
-    vga_data_array_offsets_size = sizeof(vga_data_array_offsets) / 4 ;
-
-#ifdef VGA_UART_DEBUG
-    uart_puts(UART_ID,"\n\rvga offsets size: ");
-    uart_puts(UART_ID, itoa(vga_data_array_offsets_size, int_string, 10));
-#endif
-};
+/** \brief main called by the mainloop to fill the vga_data_array with pixeldata
+    \param frame_counter the current frame counter value
 */
+void fill_vga_data_array(int frame_counter)
+{
 
+    // which animation should be calculated.
+    switch(vga_animation)
+    {
+        default: break;
+        case 0: draw_function_0(); break;   // berechnetes s/w schachbrettmuster
+        case 1: draw_function_1(); break;   // berechnetes farb schachbrettmuster mit verwzeigungen 
+        case 2: draw_function_2(); break;   // horizontale streifen
+        case 3: draw_function_3(frame_counter); break;  // buntes Kreuz im zentrum
+        case 4: draw_function_4(frame_counter); break;  // diagonal wachsende rechtecke
+        case 5: draw_function_5(frame_counter); break;  // diagonal wachsende rechtecke #2
+        case 6: draw_function_6(frame_counter); break;  // chaos
+        case 7: draw_function_7(frame_counter); break;  // exponentielles mosaik muster
+    }
 
-
-
+}
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -187,6 +165,7 @@ void draw_function_3()
 }
 
 /** \brief diagonal wachsende rechtecke
+    \param frame_counter the current frame counter value
 */
 void draw_function_4(int frame_counter)
 {
@@ -207,6 +186,7 @@ void draw_function_4(int frame_counter)
 }
 
 /** \brief diagonal wachsende rechtecke #2
+    \param frame_counter the current frame counter value
 */
 void draw_function_5(int frame_counter)
 {
@@ -228,6 +208,7 @@ void draw_function_5(int frame_counter)
 }
 
 /** \brief chaos
+    \param frame_counter the current frame counter value
 */
 void draw_function_6(int frame_counter)
 {
@@ -251,6 +232,7 @@ void draw_function_6(int frame_counter)
 }
 
 /** \brief exponentielles mosaik muster
+    \param frame_counter the current frame counter value
 */
 void draw_function_7(int frame_counter)
 {

@@ -23,8 +23,8 @@
 
 
 /////////////////////////////////////////
-// comment out to disable debug messages
-#define VGA_UART_DEBUG true
+// uncomment for debug messages
+// #define VGA_UART_DEBUG true
 /////////////////////////////////////////
 
 

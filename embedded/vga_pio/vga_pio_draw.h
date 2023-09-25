@@ -5,6 +5,8 @@
 
 //extern void load_scanline_adress();
 
+extern void fill_vga_data_array(int frame_counter);
+
 extern void draw_function_0();
 extern void draw_function_1();
 extern void draw_function_2();
