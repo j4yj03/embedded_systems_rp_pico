@@ -4,6 +4,8 @@
 
 Dieses Projekt realisiert eine VGA Ausgabe auf dem rp2040 mithilfe der Pico spezifischen PIO Co-Prozessoren.
 
+![image info](../uml/blockdiagram.png)
+
 > `vga_pio.c` main funktion
 <br>
 
